@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import SearchBox from "@/components/shared/SearchBox";
 
 const Header = () => {
@@ -13,23 +14,16 @@ const Header = () => {
                         <button type="button" className="sidebar-mobile-toggle d-flex !leading-[0]">
                             {/* <iconify-icon icon="heroicons:bars-3-solid" className="icon !text-[30px]"></iconify-icon> */}
                         </button>
-                        {/* <form className="navbar-search">
-                            <input type="text" name="search" placeholder="Search" />
-                        </form> */}
+
                         <SearchBox />
                     </div>
                 </div>
                 
                 <div className="col-auto">
                     <div className="flex flex-wrap items-center gap-3">
-                        <button type="button" id="theme-toggle" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700 dark:text-white">
-                            <span id="theme-toggle-dark-icon" className="">
-                                <i className="ri-sun-line"></i>
-                            </span>
-                            <span id="theme-toggle-light-icon" className="hidden">
-                                <i className="ri-moon-line"></i>
-                            </span>
-                        </button>
+
+                        {/* Light & Dark Mode */}
+                        <ModeToggle />
 
                          {/* Language Dropdown Start   */}
                         <div className="hidden sm:inline-block">
