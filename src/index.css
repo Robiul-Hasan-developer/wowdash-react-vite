@@ -98,13 +98,13 @@
 
     --popover-foreground: oklch(0.145 0 0);
 
-    --primary: oklch(0.205 0 0);
+    --primary: oklch(0.63 0.2 264.02);
 
     --primary-foreground: oklch(0.985 0 0);
 
     --secondary: oklch(0.97 0 0);
 
-    --secondary-foreground: oklch(0.205 0 0);
+    --secondary-foreground: oklch(0.63 0.2 264.02);
 
     --muted: oklch(0.97 0 0);
 
@@ -112,7 +112,7 @@
 
     --accent: oklch(0.97 0 0);
 
-    --accent-foreground: oklch(0.205 0 0);
+    --accent-foreground: oklch(0.63 0.2 264.02);
 
     --destructive: oklch(0.577 0.245 27.325);
 
@@ -136,13 +136,13 @@
 
     --sidebar-foreground: oklch(0.145 0 0);
 
-    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary: oklch(0.63 0.2 264.02);
 
     --sidebar-primary-foreground: oklch(0.985 0 0);
 
     --sidebar-accent: oklch(0.97 0 0);
 
-    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-accent-foreground: oklch(0.63 0.2 264.02);
 
     --sidebar-border: oklch(0.922 0 0);
 
@@ -155,17 +155,17 @@
 
     --foreground: oklch(0.985 0 0);
 
-    --card: oklch(0.205 0 0);
+    --card: oklch(0.63 0.2 264.02);
 
     --card-foreground: oklch(0.985 0 0);
 
-    --popover: oklch(0.205 0 0);
+    --popover: oklch(0.63 0.2 264.02);
 
     --popover-foreground: oklch(0.985 0 0);
 
     --primary: oklch(0.922 0 0);
 
-    --primary-foreground: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.63 0.2 264.02);
 
     --secondary: oklch(0.269 0 0);
 
@@ -197,7 +197,7 @@
 
     --chart-5: oklch(0.645 0.246 16.439);
 
-    --sidebar: oklch(0.205 0 0);
+    --sidebar: oklch(0.63 0.2 264.02);
 
     --sidebar-foreground: oklch(0.985 0 0);
 
@@ -222,3 +222,39 @@
     @apply bg-background text-foreground;
     }
 }
+
+  /* Thin scrollbar css start */
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-[50rem] hover:bg-slate-400;
+  }
+
+  .scrollbar-thin:active::-webkit-scrollbar-thumb {
+    @apply bg-slate-500;
+  }
+  /* Thin scrollbar css start */
+
+  /* Invisible scrollbar css start */
+  .scrollbar-invisible::-webkit-scrollbar-thumb {
+    @apply bg-transparent;
+  }
+
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb {
+    @apply bg-slate-300;
+  }
+
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb:active {
+    @apply bg-slate-500;
+  }
+  /* Invisible scrollbar css end */

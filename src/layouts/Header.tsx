@@ -1,0 +1,390 @@
+import SearchBox from "@/components/shared/SearchBox";
+
+const Header = () => {
+    return (
+        <div className="navbar-header border-b border-neutral-200 dark:border-neutral-600">
+            <div className="flex items-center justify-between">
+                <div className="col-auto">
+                    <div className="flex flex-wrap items-center gap-[16px]">
+                        <button type="button" className="sidebar-toggle">
+                            {/* <iconify-icon icon="heroicons:bars-3-solid" className="icon non-active"></iconify-icon> */}
+                            {/* <iconify-icon icon="iconoir:arrow-right" className="icon active"></iconify-icon> */}
+                        </button>
+                        <button type="button" className="sidebar-mobile-toggle d-flex !leading-[0]">
+                            {/* <iconify-icon icon="heroicons:bars-3-solid" className="icon !text-[30px]"></iconify-icon> */}
+                        </button>
+                        {/* <form className="navbar-search">
+                            <input type="text" name="search" placeholder="Search" />
+                        </form> */}
+                        <SearchBox />
+                    </div>
+                </div>
+                
+                <div className="col-auto">
+                    <div className="flex flex-wrap items-center gap-3">
+                        <button type="button" id="theme-toggle" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700 dark:text-white">
+                            <span id="theme-toggle-dark-icon" className="">
+                                <i className="ri-sun-line"></i>
+                            </span>
+                            <span id="theme-toggle-light-icon" className="hidden">
+                                <i className="ri-moon-line"></i>
+                            </span>
+                        </button>
+
+                         {/* Language Dropdown Start   */}
+                        <div className="hidden sm:inline-block">
+                            <button data-dropdown-toggle="dropdownInformation" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700 dark:text-white" type="button">
+                                <img src="assets/images/lang-flag.png" alt="image" className="h-6 w-6 rounded-full object-cover" />
+                            </button>
+                            <div id="dropdownInformation" className="dropdown-menu-sm z-10 hidden rounded-lg bg-white p-3 shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
+                                <div className="mb-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
+                                    <div>
+                                        <h6 className="mb-0 text-lg font-semibold text-neutral-900">
+                                            Choose Your Language
+                                        </h6>
+                                    </div>
+                                </div>
+
+                                <div className="scroll-sm max-h-[400px] overflow-y-auto pe-2">
+                                    <div className="mt-4 flex flex-col gap-4">
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="english">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag1.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">English</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="english" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="Japan">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag2.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">Japan</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="Japan" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="Franch">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag3.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">Franch</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="Franch" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="Germany">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag4.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">Germany</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="Germany" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="SouthKoria">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag5.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">South Koria</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="SouthKoria" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="Bangladesh">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag6.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">Bangladesh</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="Bangladesh" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="India">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag7.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">India</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="India" />
+                                        </div>
+
+                                        <div className="form-check style-check flex items-center justify-between">
+                                            <label className="form-check-label line-height-1 text-secondary-light font-medium" htmlFor="Koria">
+                                                <span className="hover-bXg-transparent hover-text-primary flex items-center gap-3 text-black">
+                                                    <img src="assets/images/flags/flag8.png" alt="" className="bg-success-subtle h-9 w-9 shrink-0 rounded-full text-success-600" />
+                                                        <span className="mb-0 text-base font-semibold">Koria</span>
+                                                </span>
+                                            </label>
+                                            <input className="form-check-input rounded-full" name="language" type="radio" id="Koria" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         {/* Language Dropdown End   */}
+
+                         {/* Message Dropdown Start   */}
+                        <button data-dropdown-toggle="dropdownMessage" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700" type="button">
+                            {/* <iconify-icon icon="mage:email" className="text-xl text-neutral-900 dark:text-white"></iconify-icon> */}
+                        </button>
+                        <div id="dropdownMessage" className="z-10 hidden w-full max-w-[394px] overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
+                            <div className="m-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
+                                <h6 className="mb-0 text-lg font-semibold text-neutral-900">
+                                    Messaage
+                                </h6>
+                                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-primary-600 dark:bg-neutral-600 dark:text-white">05</span>
+                            </div>
+                            <div className="scroll-sm !border-t-0">
+                                <div className="max-h-[400px] overflow-y-auto">
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-3.png" alt="Joseph image" />
+                                                    <span className="absolute bottom-[2px] end-[2px] h-2.5 w-2.5 rounded-full border border-white bg-success-500 dark:border-gray-600"></span>
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Robiul Hasan</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">hey! there i'm...</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex shrink-0 flex-col items-end gap-1">
+                                            <span className="text-sm text-neutral-500">12:30 PM</span>
+                                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-warning-600 text-xs text-white">8</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-4.png" alt="Joseph image" />
+                                                    <span className="absolute bottom-[2px] end-[2px] h-2.5 w-2.5 rounded-full border border-white bg-success-500 dark:border-gray-600"></span>
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Kathryn Murphy</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">hey! there i'm...</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex shrink-0 flex-col items-end gap-1">
+                                            <span className="text-sm text-neutral-500">12:30 PM</span>
+                                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-warning-600 text-xs text-white">8</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-5.png" alt="Joseph image" />
+                                                    <span className="absolute bottom-[2px] end-[2px] h-2.5 w-2.5 rounded-full border border-white bg-success-500 dark:border-gray-600"></span>
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Kathryn Murphy</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">hey! there i'm...</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex shrink-0 flex-col items-end gap-1">
+                                            <span className="text-sm text-neutral-500">12:30 PM</span>
+                                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-warning-600 text-xs text-white">8</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-6.png" alt="Joseph image" />
+                                                    <span className="absolute bottom-[2px] end-[2px] h-2.5 w-2.5 rounded-full border border-white bg-success-500 dark:border-gray-600"></span>
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Kathryn Murphy</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">hey! there i'm...</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex shrink-0 flex-col items-end gap-1">
+                                            <span className="text-sm text-neutral-500">12:30 PM</span>
+                                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-warning-600 text-xs text-white">8</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-7.png" alt="Joseph image" />
+                                                    <span className="absolute bottom-[2px] end-[2px] h-2.5 w-2.5 rounded-full border border-white bg-success-500 dark:border-gray-600"></span>
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Kathryn Murphy</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">hey! there i'm...</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex shrink-0 flex-col items-end gap-1">
+                                            <span className="text-sm text-neutral-500">12:30 PM</span>
+                                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-warning-600 text-xs text-white">8</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div className="px-4 py-3 text-center">
+                                    <a href="javascript:void(0)" className="text-center font-semibold text-primary-600 hover:underline dark:text-primary-600">See All Message
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                         {/* Message Dropdown End   */}
+
+                         {/* Notification Start   */}
+                        <button data-dropdown-toggle="dropdownNotification" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700" type="button">
+                            {/* <iconify-icon icon="iconoir:bell" className="text-xl text-neutral-900 dark:text-white"></iconify-icon> */}
+                        </button>
+                        <div id="dropdownNotification" className="z-10 hidden w-full max-w-[394px] overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
+                            <div className="m-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
+                                <h6 className="mb-0 text-lg font-semibold text-neutral-900">
+                                    Notification
+                                </h6>
+                                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-primary-600 dark:bg-neutral-600 dark:text-white">05</span>
+                            </div>
+                            <div className="scroll-sm !border-t-0">
+                                <div className="max-h-[400px] overflow-y-auto">
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-success-200 text-success-600 dark:bg-success-600/25">
+                                                {/* <iconify-icon icon="bitcoin-icons:verify-outline" className="text-2xl"></iconify-icon> */}
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Congratulations</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">
+                                                    Your profile has been Verified. Your profile has been
+                                                    Verified
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0">
+                                            <span className="text-sm text-neutral-500">23 Mins ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-4.png" alt="Joseph image" />
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Ronald Richards</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">
+                                                    You can stitch between artboards
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0">
+                                            <span className="text-sm text-neutral-500">23 Mins ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-600/25">
+                                                AM
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Arlene McCoy</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">
+                                                    Invite you to prototyping
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0">
+                                            <span className="text-sm text-neutral-500">23 Mins ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex-shrink-0">
+                                                <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-6.png" alt="Joseph image" />
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Annette Black</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">
+                                                    Invite you to prototyping
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0">
+                                            <span className="text-sm text-neutral-500">23 Mins ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                        <div className="flex items-center gap-3">
+                                            <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-600/25">
+                                                DR
+                                            </div>
+                                            <div>
+                                                <h6 className="fw-semibold mb-1 text-sm">Darlene Robertson</h6>
+                                                <p className="mb-0 line-clamp-1 text-sm">
+                                                    Invite you to prototyping
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0">
+                                            <span className="text-sm text-neutral-500">23 Mins ago</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div className="px-4 py-3 text-center">
+                                    <a href="javascript:void(0)" className="text-center font-semibold text-primary-600 hover:underline dark:text-primary-600">See All Notification
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                         {/* Notification End   */}
+
+                        <button data-dropdown-toggle="dropdownProfile" className="flex items-center justify-center rounded-full" type="button">
+                            <img src="assets/images/user.png" alt="image" className="object-fit-cover h-10 w-10 rounded-full" />
+                        </button>
+                        <div id="dropdownProfile" className="dropdown-menu-sm z-10 hidden rounded-lg bg-white p-3 shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
+                            <div className="mb-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
+                                <div>
+                                    <h6 className="mb-0 text-lg font-semibold text-neutral-900">
+                                        Robiul Hasan
+                                    </h6>
+                                    <span className="text-neutral-500">Admin</span>
+                                </div>
+                                <button type="button" className="hover:text-danger-600">
+                                    {/* <iconify-icon icon="radix-icons:cross-1" className="icon text-xl"></iconify-icon> */}
+                                </button>
+                            </div>
+
+                            <div className="scroll-sm max-h-[400px] overflow-y-auto pe-2">
+                                <ul className="flex flex-col">
+                                    <li>
+                                        <a className="flex items-center gap-4 px-0 py-2 text-black hover:text-primary-600" href="view-profile.html">
+                                            {/* <iconify-icon icon="solar:user-linear" className="icon text-xl"></iconify-icon> */}
+                                            My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a className="flex items-center gap-4 px-0 py-2 text-black hover:text-primary-600" href="email.html">
+                                            {/* <iconify-icon icon="tabler:message-check" className="icon text-xl"></iconify-icon> */}
+                                            Inbox</a>
+                                    </li>
+                                    <li>
+                                        <a className="flex items-center gap-4 px-0 py-2 text-black hover:text-primary-600" href="company.html">
+                                            {/* <iconify-icon icon="icon-park-outline:setting-two" className="icon text-xl"></iconify-icon> */}
+                                            Setting</a>
+                                    </li>
+                                    <li>
+                                        <a className="flex items-center gap-4 px-0 py-2 text-black hover:text-danger-600" href="javascript:void(0)">
+                                            {/* <iconify-icon icon="lucide:power" className="icon text-xl"></iconify-icon> */}
+                                            Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Header;
