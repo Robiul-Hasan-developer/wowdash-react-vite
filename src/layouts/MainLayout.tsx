@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import Nav from '../components/Nav';
 import Header from './Header';
 
 const MainLayout = () => {
@@ -7,9 +6,9 @@ const MainLayout = () => {
         <div className='flex gap-6'>
             <h1>My Sidebar</h1>
         
-            <div className="">
+            <div className="grow">
                 <Header />
-                <Nav />
+                {/* <Nav /> */}
                 <Outlet />
             </div>
 
