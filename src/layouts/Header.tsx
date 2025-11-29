@@ -1,4 +1,5 @@
 import { ModeToggle } from "@/components/mode-toggle";
+import LanguageSelect from "@/components/shared/LanguageSelect";
 import SearchBox from "@/components/shared/SearchBox";
 import SidebarToggle from "@/components/shared/SidebarToggle";
 
@@ -23,7 +24,8 @@ const Header = () => {
                     <ModeToggle />
 
                     {/* Language Dropdown Start   */}
-                    <div className="hidden sm:inline-block">
+                    <LanguageSelect />
+                    {/* <div className="hidden sm:inline-block">
                         <button data-dropdown-toggle="dropdownInformation" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700 dark:text-white" type="button">
                             <img src="assets/images/lang-flag.png" alt="image" className="h-6 w-6 rounded-full object-cover" />
                         </button>
@@ -120,12 +122,11 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* Language Dropdown End   */}
 
                     {/* Message Dropdown Start   */}
                     <button data-dropdown-toggle="dropdownMessage" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700" type="button">
-                        {/* <iconify-icon icon="mage:email" className="text-xl text-neutral-900 dark:text-white"></iconify-icon> */}
                     </button>
                     <div id="dropdownMessage" className="z-10 hidden w-full max-w-[394px] overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
                         <div className="m-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
@@ -228,7 +229,6 @@ const Header = () => {
 
                     {/* Notification Start   */}
                     <button data-dropdown-toggle="dropdownNotification" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700" type="button">
-                        {/* <iconify-icon icon="iconoir:bell" className="text-xl text-neutral-900 dark:text-white"></iconify-icon> */}
                     </button>
                     <div id="dropdownNotification" className="z-10 hidden w-full max-w-[394px] overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
                         <div className="m-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
@@ -371,6 +371,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
