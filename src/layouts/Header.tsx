@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import LanguageSelect from "@/components/shared/LanguageSelect";
 import MessageDropdown from "@/components/shared/MessageDropdown";
+import NotificationDropdown from "@/components/shared/NotificationDropdown";
 import SearchBox from "@/components/shared/SearchBox";
 import SidebarToggle from "@/components/shared/SidebarToggle";
 
@@ -33,106 +34,7 @@ const Header = () => {
                     {/* Message Dropdown End   */}
 
                     {/* Notification Start   */}
-                    <button data-dropdown-toggle="dropdownNotification" className="has-indicator flex h-10 w-10 items-center justify-center rounded-full bg-neutral-200 dark:bg-neutral-700" type="button">
-                    </button>
-                    <div id="dropdownNotification" className="z-10 hidden w-full max-w-[394px] overflow-hidden rounded-2xl bg-white shadow-lg dark:bg-neutral-700" data-popper-placement="bottom">
-                        <div className="m-4 flex items-center justify-between gap-2 rounded-lg bg-primary-50 px-4 py-3 dark:bg-primary-600/25">
-                            <h6 className="mb-0 text-lg font-semibold text-neutral-900">
-                                Notification
-                            </h6>
-                            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white font-bold text-primary-600 dark:bg-neutral-600 dark:text-white">05</span>
-                        </div>
-                        <div className="scroll-sm !border-t-0">
-                            <div className="max-h-[400px] overflow-y-auto">
-                                <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-success-200 text-success-600 dark:bg-success-600/25">
-                                            {/* <iconify-icon icon="bitcoin-icons:verify-outline" className="text-2xl"></iconify-icon> */}
-                                        </div>
-                                        <div>
-                                            <h6 className="fw-semibold mb-1 text-sm">Congratulations</h6>
-                                            <p className="mb-0 line-clamp-1 text-sm">
-                                                Your profile has been Verified. Your profile has been
-                                                Verified
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <span className="text-sm text-neutral-500">23 Mins ago</span>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative flex-shrink-0">
-                                            <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-4.png" alt="Joseph image" />
-                                        </div>
-                                        <div>
-                                            <h6 className="fw-semibold mb-1 text-sm">Ronald Richards</h6>
-                                            <p className="mb-0 line-clamp-1 text-sm">
-                                                You can stitch between artboards
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <span className="text-sm text-neutral-500">23 Mins ago</span>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-600/25">
-                                            AM
-                                        </div>
-                                        <div>
-                                            <h6 className="fw-semibold mb-1 text-sm">Arlene McCoy</h6>
-                                            <p className="mb-0 line-clamp-1 text-sm">
-                                                Invite you to prototyping
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <span className="text-sm text-neutral-500">23 Mins ago</span>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative flex-shrink-0">
-                                            <img className="h-11 w-11 rounded-full" src="assets/images/notification/profile-6.png" alt="Joseph image" />
-                                        </div>
-                                        <div>
-                                            <h6 className="fw-semibold mb-1 text-sm">Annette Black</h6>
-                                            <p className="mb-0 line-clamp-1 text-sm">
-                                                Invite you to prototyping
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <span className="text-sm text-neutral-500">23 Mins ago</span>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0)" className="flex justify-between gap-1 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <div className="flex items-center gap-3">
-                                        <div className="relative flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-600/25">
-                                            DR
-                                        </div>
-                                        <div>
-                                            <h6 className="fw-semibold mb-1 text-sm">Darlene Robertson</h6>
-                                            <p className="mb-0 line-clamp-1 text-sm">
-                                                Invite you to prototyping
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="shrink-0">
-                                        <span className="text-sm text-neutral-500">23 Mins ago</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div className="px-4 py-3 text-center">
-                                <a href="javascript:void(0)" className="text-center font-semibold text-primary-600 hover:underline dark:text-primary-600">See All Notification
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <NotificationDropdown />
                     {/* Notification End   */}
 
                     <button data-dropdown-toggle="dropdownProfile" className="flex items-center justify-center rounded-full" type="button">
