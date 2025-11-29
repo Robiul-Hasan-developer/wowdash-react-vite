@@ -5,6 +5,7 @@ import NotificationDropdown from "@/components/shared/NotificationDropdown";
 import ProfileDropdown from "@/components/shared/ProfileDropdown";
 import SearchBox from "@/components/shared/SearchBox";
 import SidebarToggle from "@/components/shared/SidebarToggle";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const Header = () => {
     return (
@@ -13,6 +14,7 @@ const Header = () => {
                 <div className="flex flex-wrap items-center gap-[16px]">
 
                     <SidebarToggle />
+                     <SidebarTrigger />
 
                     <SearchBox />
                 </div>
