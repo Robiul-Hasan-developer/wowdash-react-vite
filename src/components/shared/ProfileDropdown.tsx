@@ -6,8 +6,8 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { LogOutIcon, Mail, Settings, User } from "lucide-react";
 import userImg from "../../assets/images/user.png";
-import { Mail, Settings, User } from "lucide-react";
 // import { useSession } from "next-auth/react";
 import { Link } from "react-router-dom";
 
@@ -53,32 +53,34 @@ const ProfileDropdown = () => {
 
         <div className="max-h-[400px] overflow-y-auto scroll-sm pt-4">
           <ul className="flex flex-col gap-3">
-            <li>
+            <li className="flex">
               <Link
                 to="/view-profile"
-                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3"
+                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3 w-full"
               >
                 <User className="w-5 h-5" /> My Profile
               </Link>
             </li>
-            <li>
+            <li className="flex">
               <Link
                 to="/email"
-                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3"
+                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3 w-full"
               >
                 <Mail className="w-5 h-5" /> Inbox
               </Link>
             </li>
-            <li>
+            <li className="flex">
               <Link
                 to="/company"
-                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3"
+                className="text-black dark:text-white hover:text-primary dark:hover:text-primary flex items-center gap-3 w-full"
               >
                 <Settings className="w-5 h-5" /> Settings
               </Link>
             </li>
-            <li>
-              {/* <Logout /> */}
+            <li className="flex">
+              <Button variant="ghost" className="!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer text-black dark:text-neutral-200 hover:text-primary flex items-center gap-3">
+                <LogOutIcon className="size-5" /> Logout
+              </Button>
             </li>
           </ul>
         </div>

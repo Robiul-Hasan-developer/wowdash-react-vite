@@ -26,7 +26,7 @@ const SearchBox = () => {
     return (
         <Dialog>
             <DialogTrigger>
-                <InputGroup className="border border-neutral-300 dark:border dark:border-slate-600 !bg-transparent">
+                <InputGroup className="border border-neutral-300 dark:border dark:border-slate-600 !bg-transparent shadow-none">
                     <InputGroupInput placeholder="Search..." />
                     <InputGroupAddon>
                         <Search />

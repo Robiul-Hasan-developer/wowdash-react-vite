@@ -14,8 +14,6 @@ const Header = () => {
 
                     <SidebarToggle />
 
-                    {/* <button type="button" className="sidebar-mobile-toggle d-flex !leading-[0]"></button> */}
-
                     <SearchBox />
                 </div>
             </div>
