@@ -41,7 +41,7 @@ import { ChevronRight, type LucideIcon } from "lucide-react";
 // import Link from "next/link";
 // import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 interface SidebarItem {
   title?: string;
@@ -57,8 +57,10 @@ interface SidebarItem {
 };
 
 export function NavMain({ items }: { items: SidebarItem[] }) {
-  const pathname = '/';
 //   const isCollapsed = /;
+ const location = useLocation();
+  const pathname = location.pathname;
+
   const [openGroup, setOpenGroup] = useState<string | null>(null);
 
   const handleToggleGroup = (title?: string) => {
@@ -105,9 +107,12 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                   <CollapsibleContent>
                     <SidebarMenuSub className="gap-0 mt-2 space-y-1 px-0 ms-6">
                       {item.items.map((subItem) => {
-                        const isSubActive =
-                          pathname === subItem.url ||
-                          pathname.startsWith(subItem.url);
+                        // const isSubActive =
+                        //   pathname === subItem.url ||
+                        //   pathname.startsWith(subItem.url);
+
+                        const isSubActive = pathname === subItem.url ;;
+                        
                         return (
                           <SidebarMenuSubItem key={subItem.title}>
                             <SidebarMenuSubButton
@@ -119,7 +124,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                                   : ""
                               )}
                             >
-                              <Link
+                              <NavLink
                                 to={subItem.url}
                                 className="flex items-center gap-3.5"
                               >
@@ -127,8 +132,27 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                                   className={`w-2 h-2 rounded-[50%] ${subItem.circleColor}`}
                                 ></span>
                                 <span>{subItem.title}</span>
-                              </Link>
+                              </NavLink>
                             </SidebarMenuSubButton>
+                            {/* <SidebarMenuSubButton
+                              asChild
+                              className={cn(
+                                "py-5.5 px-3 text-base text-[#4b5563] dark:text-white hover:bg-primary/10 active:bg-primary/10 dark:hover:bg-slate-700",
+                                isSubActive
+                                  ? "bg-primary/10 font-bold dark:bg-slate-600"
+                                  : ""
+                              )}
+                            >
+                              <NavLink
+                                to={subItem.url}
+                                className="flex items-center gap-3.5"
+                              >
+                                <span
+                                  className={`w-2 h-2 rounded-[50%] ${subItem.circleColor}`}
+                                ></span>
+                                <span>{subItem.title}</span>
+                              </NavLink>
+                            </SidebarMenuSubButton> */}
                           </SidebarMenuSubItem>
                         );
                       })}

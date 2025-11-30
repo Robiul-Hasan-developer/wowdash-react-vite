@@ -14,7 +14,6 @@ function ThemeLogo() {
 
   useEffect(() => {
     setIsMounted(true);
-    console.log(theme);
   }, []);
 
   // Don't render until mounted to avoid hydration mismatch or wrong theme
