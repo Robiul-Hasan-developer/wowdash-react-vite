@@ -67,7 +67,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
   };
 
   return (
-    <SidebarGroup className={'p-0'}>
+    <SidebarGroup className={'relative flex w-full min-w-0 flex-col px-4 py-3'}>
       <SidebarMenu>
         {items.map((item) => {
           const isGroupActive = item.items?.some(
@@ -103,7 +103,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <SidebarMenuSub className="gap-0 mt-2 space-y-1 px-0">
+                    <SidebarMenuSub className="gap-0 mt-2 space-y-1 px-0 ms-6">
                       {item.items.map((subItem) => {
                         const isSubActive =
                           pathname === subItem.url ||
