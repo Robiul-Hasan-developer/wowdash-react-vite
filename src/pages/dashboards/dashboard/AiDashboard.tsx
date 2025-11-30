@@ -1,8 +1,9 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
-import { Suspense } from "react";
-import StatCard from "./components/stat-card";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
+import { Suspense } from "react";
 import SalesStaticCard from "./components/sales-static-card";
+import StatCard from "./components/stat-card";
+import TotalSubscriberCard from "./components/total-subscriber-card";
 
 const AiDashboard = () => {
     return (
@@ -22,11 +23,11 @@ const AiDashboard = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="xl:col-span-6 2xl:col-span-3">
+                <div className="xl:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TotalSubscriberCard />
                     </Suspense>
-                </div> */}
+                </div>
 
                 {/* <div className="xl:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
