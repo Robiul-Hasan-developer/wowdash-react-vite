@@ -21,7 +21,7 @@ export default function SidebarLayout({ children }: { children: React.ReactNode 
     return (
         <SidebarProvider>
             <AppSidebar />
-            <main>
+            <main className="grow">
                 {children}
             </main>
         </SidebarProvider>
