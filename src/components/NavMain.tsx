@@ -18,28 +18,22 @@
 
 
 
-
-
-
-
-
-
 "use client";
 
 import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
-    SidebarGroup,
-    SidebarGroupLabel,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-    SidebarMenuSub,
-    SidebarMenuSubButton,
-    SidebarMenuSubItem,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 // import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
 import { cn } from "@/lib/utils";
@@ -73,7 +67,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
   };
 
   return (
-    <SidebarGroup className={'px-1.5'}>
+    <SidebarGroup className={'p-0'}>
       <SidebarMenu>
         {items.map((item) => {
           const isGroupActive = item.items?.some(
@@ -109,7 +103,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <SidebarMenuSub className="gap-0 mt-2 space-y-1">
+                    <SidebarMenuSub className="gap-0 mt-2 space-y-1 px-0">
                       {item.items.map((subItem) => {
                         const isSubActive =
                           pathname === subItem.url ||

@@ -1,9 +1,9 @@
 // import Logout from "@/components/auth/logout";
 import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { LogOutIcon, Mail, Settings, User } from "lucide-react";
@@ -78,7 +78,7 @@ const ProfileDropdown = () => {
               </Link>
             </li>
             <li className="flex">
-              <Button variant="ghost" className="!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer text-black dark:text-neutral-200 hover:text-primary flex items-center gap-3">
+              <Button variant="ghost" className="!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer text-black dark:text-neutral-200 hover:text-primary flex items-center gap-3 text-[16px]">
                 <LogOutIcon className="size-5" /> Logout
               </Button>
             </li>

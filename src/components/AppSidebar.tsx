@@ -22,21 +22,18 @@
 
 import {
     Sidebar,
-    SidebarContent,
-    SidebarGroup,
-    SidebarGroupLabel
+    SidebarContent
 } from "@/components/ui/sidebar"
-import { NavMain } from "./NavMain"
 import { data } from "@/data/SidebarData"
+import { cn } from "@/lib/utils"
+import { NavMain } from "./NavMain"
 
 
 export function AppSidebar() {
     return (
         <Sidebar>
-            <SidebarContent>
-                <SidebarGroup>
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
-                    {/* <SidebarGroupContent>
+            <SidebarContent className={cn(`scrollbar-thin scrollbar-invisible hover:scrollbar-visible`)}>
+                {/* <SidebarGroupContent>
                         <SidebarMenu>
                             {items.map((item) => (
                                 <SidebarMenuItem key={item.title}>
@@ -53,7 +50,6 @@ export function AppSidebar() {
 
                 <NavMain items={data.navMain} />
 
-                </SidebarGroup>
             </SidebarContent>
         </Sidebar>
     )
