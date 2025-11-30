@@ -4,8 +4,8 @@ import MessageDropdown from "@/components/shared/MessageDropdown";
 import NotificationDropdown from "@/components/shared/NotificationDropdown";
 import ProfileDropdown from "@/components/shared/ProfileDropdown";
 import SearchBox from "@/components/shared/SearchBox";
-import SidebarToggle from "@/components/shared/SidebarToggle";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
     return (
@@ -13,8 +13,8 @@ const Header = () => {
             <div className="col-auto">
                 <div className="flex flex-wrap items-center gap-[16px]">
 
-                    <SidebarToggle />
-                     <SidebarTrigger />
+                    {/* <SidebarToggle /> */}
+                    <SidebarTrigger className={cn(`!p-0 h-auto w-auto !bg-transparent cursor-pointer text-neutral-700 hover:text-neutral-900 dark:text-neutral-200`)} />
 
                     <SearchBox />
                 </div>
