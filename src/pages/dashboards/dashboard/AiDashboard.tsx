@@ -2,6 +2,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import { Suspense } from "react";
 import StatCard from "./components/stat-card";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
+import SalesStaticCard from "./components/sales-static-card";
 
 const AiDashboard = () => {
     return (
@@ -14,49 +15,49 @@ const AiDashboard = () => {
                 </Suspense>
             </div>
 
-            {/* <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
                 <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <SalesStaticCard />
                     </Suspense>
                 </div>
 
-                <div className="xl:col-span-6 2xl:col-span-3">
+                {/* <div className="xl:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TotalSubscriberCard />
                     </Suspense>
-                </div>
+                </div> */}
 
-                <div className="xl:col-span-6 2xl:col-span-3">
+                {/* <div className="xl:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <UserOverviewCard />
                     </Suspense>
-                </div>
+                </div> */}
 
-                <div className="xl:col-span-12 2xl:col-span-9">
+                {/* <div className="xl:col-span-12 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TabsWithTableCard />
                     </Suspense>
-                </div>
+                </div> */}
 
-                <div className="xl:col-span-12 2xl:col-span-3">
+                {/* <div className="xl:col-span-12 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TopPerformerCard />
                     </Suspense>
-                </div>
+                </div> */}
 
-                <div className="xl:col-span-12 2xl:col-span-6">
+                {/* <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TopCountriesCard />
                     </Suspense>
-                </div>
+                </div> */}
 
-                <div className="xl:col-span-12 2xl:col-span-6">
+                {/* <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <GenerateContentCard />
                     </Suspense>
-                </div>
-            </div> */}
+                </div> */}
+            </div>
         </>
     );
 };

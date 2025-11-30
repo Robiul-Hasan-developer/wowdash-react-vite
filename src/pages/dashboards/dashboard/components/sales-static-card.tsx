@@ -1,10 +1,7 @@
 "use client";
 
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
-import CustomSelect from "@/components/shared/custom-select";
-import SalesStaticChart from "@/components/charts/sales-static-chart";
 
 const SalesStaticCard = () => {
   return (
@@ -12,10 +9,10 @@ const SalesStaticCard = () => {
       <CardContent className="px-0">
         <div className="flex flex-wrap items-center justify-between">
           <h6 className="text-lg mb-0">Sales Statistic</h6>
-          <CustomSelect
+          {/* <CustomSelect
             placeholder="Yearly"
             options={["Yearly", "Monthly", "Weekly", "Today"]}
-          />
+          /> */}
         </div>
 
         <div className="flex flex-wrap items-center gap-2 mt-2">
@@ -27,7 +24,7 @@ const SalesStaticCard = () => {
         </div>
 
         <div className="apexcharts-tooltip-style-1 mt-7">
-          <SalesStaticChart />
+          {/* <SalesStaticChart /> */}
         </div>
       </CardContent>
     </Card>
