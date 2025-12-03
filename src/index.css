@@ -259,7 +259,14 @@
   }
   /* Invisible scrollbar css end */
 
-
+@layer components {
+  .card {
+    @apply !py-0 !border-0;
+  }
+  .card-body {
+    @apply p-6;
+  }
+}
 
 
 

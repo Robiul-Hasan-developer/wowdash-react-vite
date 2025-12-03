@@ -1,12 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
-import React from 'react';
 import { ArrowDown } from "lucide-react";
-import TotalSubscriberChart from '@/components/charts/total-subscriber-chart';
+// import TotalSubscriberChart from '@/components/charts/total-subscriber-chart';
 
 const TotalSubscriberCard = () => {
     return (
-        <Card className="card">
-            <CardContent className="card-body p-0">
+        <Card className="card py-0 border-0">
+            <CardContent className="card-body p-6">
                 <h6 className="mb-3 font-semibold text-lg">Total Subscriber</h6>
                 <div className="flex items-center gap-2 mb-5">
                     <h6 className="font-semibold mb-0">5,000</h6>
@@ -16,7 +15,7 @@ const TotalSubscriberCard = () => {
                     - 20 Per Day
                 </div>
 
-                <TotalSubscriberChart />
+                {/* <TotalSubscriberChart /> */}
 
             </CardContent>
         </Card>
