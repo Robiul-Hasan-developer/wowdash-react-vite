@@ -1,5 +1,6 @@
 "use client";
 
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
 
@@ -9,10 +10,10 @@ const SalesStaticCard = () => {
       <CardContent className="card-body p-6">
         <div className="flex flex-wrap items-center justify-between">
           <h6 className="text-lg mb-0">Sales Statistic</h6>
-          {/* <CustomSelect
+          <CustomSelect
             placeholder="Yearly"
             options={["Yearly", "Monthly", "Weekly", "Today"]}
-          /> */}
+          />
         </div>
 
         <div className="flex flex-wrap items-center gap-2 mt-2">
