@@ -1,5 +1,6 @@
 "use client";
 
+import SalesStaticChart from "@/components/charts/SalesStaticChart";
 import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
@@ -25,7 +26,7 @@ const SalesStaticCard = () => {
         </div>
 
         <div className="apexcharts-tooltip-style-1 mt-7">
-          {/* <SalesStaticChart /> */}
+          <SalesStaticChart />
         </div>
       </CardContent>
     </Card>
