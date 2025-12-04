@@ -1,5 +1,4 @@
-import UserOverviewChart from '@/components/charts/user-overview-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const UserOverviewCard = () => {
@@ -15,7 +14,7 @@ const UserOverviewCard = () => {
                 </div>
 
                 <div className="apexcharts-tooltip-z-none">
-                    <UserOverviewChart />
+                    {/* <UserOverviewChart /> */}
                 </div>
 
                 <ul className="flex flex-wrap items-center justify-between mt-4 gap-3">

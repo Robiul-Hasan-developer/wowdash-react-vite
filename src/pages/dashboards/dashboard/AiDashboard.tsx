@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import SalesStaticCard from "./components/sales-static-card";
 import StatCard from "./components/stat-card";
 import TotalSubscriberCard from "./components/total-subscriber-card";
+import UserOverviewCard from "./components/user-overview-card";
 
 const AiDashboard = () => {
     return (
@@ -29,11 +30,11 @@ const AiDashboard = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="xl:col-span-6 2xl:col-span-3">
+                <div className="xl:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <UserOverviewCard />
                     </Suspense>
-                </div> */}
+                </div>
 
                 {/* <div className="xl:col-span-12 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>

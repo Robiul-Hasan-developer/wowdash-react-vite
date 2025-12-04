@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
 } from "@/components/ui/select";
 
 interface CustomSelectProps {
@@ -14,7 +14,7 @@ interface CustomSelectProps {
   value?: string
 }
 
-function CustomSelect({ placeholder = "Select", options, value } : CustomSelectProps) {
+function CustomSelect({ placeholder = "Select", options } : CustomSelectProps) {
   return (
     <Select>
       <SelectTrigger className="min-w-[88px] focus-visible:shadow-none focus-visible:ring-0 font-medium dark:bg-slate-700 text-neutral-900 dark:text-white border border-slate-300 dark:border-slate-500 data-[placeholder]:text-neutral-900">

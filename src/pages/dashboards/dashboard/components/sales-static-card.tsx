@@ -6,8 +6,8 @@ import { ArrowUp } from "lucide-react";
 
 const SalesStaticCard = () => {
   return (
-    <Card className="card py-0 border-0">
-      <CardContent className="card-body p-6">
+    <Card className="card">
+      <CardContent className="px-0">
         <div className="flex flex-wrap items-center justify-between">
           <h6 className="text-lg mb-0">Sales Statistic</h6>
           <CustomSelect
