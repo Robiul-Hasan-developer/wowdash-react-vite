@@ -10,7 +10,7 @@ const SalesStaticCard = () => {
     <Card className="card">
       <CardContent className="px-0">
         <div className="flex flex-wrap items-center justify-between">
-          <h6 className="text-lg mb-0">Sales Statistic</h6>
+          <h6 className="mb-3 font-semibold text-lg">Sales Statistic</h6>
           <CustomSelect
             placeholder="Yearly"
             options={["Yearly", "Monthly", "Weekly", "Today"]}

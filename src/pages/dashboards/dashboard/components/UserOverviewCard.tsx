@@ -1,3 +1,4 @@
+import DonutThreeSeriesChart from '@/components/charts/DonutThreeSeriesChart';
 import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -14,7 +15,11 @@ const UserOverviewCard = () => {
                 </div>
 
                 <div className="apexcharts-tooltip-z-none">
-                    {/* <UserOverviewChart /> */}
+                    <DonutThreeSeriesChart 
+                    onChartHeight={270} 
+                    chartSeries={[40, 30, 30]}
+                    chartColors={["#F59E0B", "#3B82F6", "#e4f1ff"]} 
+                    />
                 </div>
 
                 <ul className="flex flex-wrap items-center justify-between mt-4 gap-3">
