@@ -1,7 +1,8 @@
+import type { ApexOptions } from "apexcharts";
 import Chart from 'react-apexcharts';
 
 const SalesStaticChart = () => {
-  const chartOptions= {
+  const chartOptions: ApexOptions = {
     chart: {
       type: "line",
       toolbar: { show: false },
