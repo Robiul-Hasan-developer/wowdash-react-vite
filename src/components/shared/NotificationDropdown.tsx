@@ -1,14 +1,14 @@
 
+import { default as NotificationImg1, default as NotificationImg2 } from "@/assets/images/notification/profile-4.png";
 import { Button } from "@/components/ui/button";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { Bell, CircleCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-import { default as NotificationImg1, default as NotificationImg2 } from "../../assets/images/notification/profile-4.png";
 
 const NotificationDropdown = () => {
   return (

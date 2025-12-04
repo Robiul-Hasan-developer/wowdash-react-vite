@@ -1,10 +1,11 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import SalesStaticCard from "./components/sales-static-card";
-import StatCard from "./components/stat-card";
-import TotalSubscriberCard from "./components/total-subscriber-card";
-import UserOverviewCard from "./components/user-overview-card";
+import SalesStaticCard from "./components/SalesStaticCard";
+import StatCard from "./components/StatCard";
+import TotalSubscriberCard from "./components/TotalSubscriberCard";
+import UserOverviewCard from "./components/UserOverviewCard";
+import TopPerformerCard from "./components/TopPerformerCard";
 
 const AiDashboard = () => {
     return (
@@ -36,17 +37,17 @@ const AiDashboard = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="xl:col-span-12 2xl:col-span-9">
+                <div className="xl:col-span-12 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <TabsWithTableCard />
+                        {/* <TabsWithTableCard /> */}
                     </Suspense>
-                </div> */}
+                </div>
 
-                {/* <div className="xl:col-span-12 2xl:col-span-3">
+                <div className="xl:col-span-12 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TopPerformerCard />
                     </Suspense>
-                </div> */}
+                </div>
 
                 {/* <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>

@@ -1,4 +1,9 @@
 
+import NotificationImg1 from '@/assets/images/notification/profile-3.png';
+import NotificationImg2 from '@/assets/images/notification/profile-4.png';
+import NotificationImg3 from '@/assets/images/notification/profile-5.png';
+import NotificationImg4 from '@/assets/images/notification/profile-6.png';
+import NotificationImg5 from '@/assets/images/notification/profile-7.png';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,11 +13,6 @@ import {
 import { cn } from '@/lib/utils';
 import { Mail } from 'lucide-react';
 import { Link } from "react-router-dom";
-import NotificationImg1 from '../../assets/images/notification/profile-3.png';
-import NotificationImg2 from '../../assets/images/notification/profile-4.png';
-import NotificationImg3 from '../../assets/images/notification/profile-5.png';
-import NotificationImg4 from '../../assets/images/notification/profile-6.png';
-import NotificationImg5 from '../../assets/images/notification/profile-7.png';
 
 const MessageDropdown = () => {
   return (

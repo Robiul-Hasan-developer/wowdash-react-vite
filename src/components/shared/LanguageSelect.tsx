@@ -7,9 +7,9 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import LanguageImg1 from "../../assets/images/flags/flag1.png";
-import LanguageImg2 from "../../assets/images/flags/flag2.png";
-import LanguageImg3 from "../../assets/images/flags/flag3.png";
+import LanguageImg1 from "@/assets/images/flags/flag1.png";
+import LanguageImg2 from "@/assets/images/flags/flag2.png";
+import LanguageImg3 from "@/assets/images/flags/flag3.png";
 
 const LanguageSelect = () => {
   return (

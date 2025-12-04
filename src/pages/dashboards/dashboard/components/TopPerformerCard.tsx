@@ -1,21 +1,20 @@
-import CommonLink from "@/components/shared/common-link";
+import { default as PerformerImg1, default as PerformerImg6 } from "@/assets/images/users/user1.png";
+import PerformerImg2 from "@/assets/images/users/user2.png";
+import PerformerImg3 from "@/assets/images/users/user3.png";
+import PerformerImg4 from "@/assets/images/users/user4.png";
+import PerformerImg5 from "@/assets/images/users/user5.png";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import { default as PerformerImg1, default as PerformerImg6 } from "@/public/assets/images/users/user1.png";
-import PerformerImg2 from "@/public/assets/images/users/user2.png";
-import PerformerImg3 from "@/public/assets/images/users/user3.png";
-import PerformerImg4 from "@/public/assets/images/users/user4.png";
-import PerformerImg5 from "@/public/assets/images/users/user5.png";
-import Image, { StaticImageData } from "next/image";
 
 export interface TopPerformer {
   id: number;
   name: string;
-  image: StaticImageData;
+  image: string;
   agentId: string;
   earnings: number;
 }
 
-export const topPerformers: TopPerformer[] = [
+const topPerformers: TopPerformer[] = [
   {
     id: 1,
     name: "Dianne Russell",
@@ -77,7 +76,7 @@ const TopPerformerCard = () => {
                 key={index}
               >
                 <div className="flex items-center gap-3">
-                  <Image
+                  <img
                     src={topPerformer.image}
                     alt={topPerformer.name}
                     className="w-10 h-10 rounded-full shrink-0 overflow-hidden"

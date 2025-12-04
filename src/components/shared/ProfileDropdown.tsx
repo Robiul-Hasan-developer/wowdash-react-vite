@@ -1,13 +1,13 @@
 // import Logout from "@/components/auth/logout";
+import userImg from "@/assets/images/user.png";
 import { Button } from "@/components/ui/button";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { LogOutIcon, Mail, Settings, User } from "lucide-react";
-import userImg from "../../assets/images/user.png";
 // import { useSession } from "next-auth/react";
 import { Link } from "react-router-dom";
 
