@@ -34,7 +34,7 @@ const MessageDropdown = () => {
             <span className="sm:w-10 sm:h-10 w-8 h-8 bg-white dark:bg-slate-800 text-primary dark:text-primary font-bold flex justify-center items-center rounded-full">05</span>
           </div>
           <div className="scroll-sm !border-t-0">
-            <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
+            <div className="max-h-[400px] overflow-y-auto scrollbar-thin">
               <Link to="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">

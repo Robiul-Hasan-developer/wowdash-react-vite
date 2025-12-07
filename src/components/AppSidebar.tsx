@@ -40,7 +40,7 @@ export function AppSidebar() {
                     <ThemeLogo />
                 </Link>
             </SidebarHeader>
-            <SidebarContent className={cn(`scrollbar-thin scrollbar-invisible hover:scrollbar-visible`)}>
+            <SidebarContent className={cn(`scrollbar-thin`)}>
               
                 <NavMain items={data.navMain} />
 

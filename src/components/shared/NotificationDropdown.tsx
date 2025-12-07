@@ -2,9 +2,9 @@
 import { default as NotificationImg1, default as NotificationImg2 } from "@/assets/images/notification/profile-4.png";
 import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { Bell, CircleCheck } from "lucide-react";
@@ -34,7 +34,7 @@ const NotificationDropdown = () => {
             </span>
           </div>
           <div className="scroll-sm !border-t-0">
-            <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
+            <div className="max-h-[400px] overflow-y-auto scrollbar-thin">
               <Link
                 to="#"
                 className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1"

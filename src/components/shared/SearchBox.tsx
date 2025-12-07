@@ -37,7 +37,7 @@ const SearchBox = () => {
                 <DialogTitle className='hidden'>Search...</DialogTitle>
                 <Command>
                     <CommandInput placeholder="Type a command or search..." className={cn('pe-6')} />
-                    <CommandList className='scrollbar-thin scrollbar-invisible hover:scrollbar-visible max-h-[400px]'>
+                    <CommandList className='scrollbar-thin max-h-[400px]'>
                         <CommandEmpty>No results found.</CommandEmpty>
                         <CommandGroup heading="Application" className="mt-2">
                             <CommandItem className="p-0">

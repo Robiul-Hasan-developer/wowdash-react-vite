@@ -20,7 +20,7 @@ const TopCountriesCard = () => {
           </div>
 
           <div className="h-full border border-neutral-200 dark:border-neutral-600 p-4 pe-0 rounded-lg">
-            <div className="max-h-[266px] overflow-y-auto pe-2 scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
+            <div className="max-h-[266px] overflow-y-auto pe-2 scrollbar-thin">
               <CountryList />
             </div>
           </div>
