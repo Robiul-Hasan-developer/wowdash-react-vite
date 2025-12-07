@@ -1,5 +1,5 @@
-import GenerateContentChart from '@/components/charts/generate-content-chart';
-import CustomSelect from "@/components/shared/custom-select";
+import DoubleBarChart from "@/components/charts/GenerateContentChart";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const GenerateContentCard = () => {
@@ -7,7 +7,7 @@ const GenerateContentCard = () => {
         <Card className="card">
             <CardContent className="px-0">
                 <div className="flex flex-wrap items-center justify-between">
-                    <h6 className="text-lg mb-0">Generated Content</h6>
+                    <h6 className="mb-0 font-semibold text-lg">Generated Content</h6>
                     <CustomSelect
                         placeholder="Yearly"
                         options={["Yearly", "Monthly", "Weekly", "Today"]}
@@ -29,7 +29,9 @@ const GenerateContentCard = () => {
                 </ul>
 
                 <div className="mt-4">
-                    <GenerateContentChart />
+                    <div className="-m-4 -mt-0">
+                        <DoubleBarChart chartHeight={264} colorOne="487FFF" colorTwo="FF9F29" />
+                    </div>
                 </div>
             </CardContent>
         </Card>
