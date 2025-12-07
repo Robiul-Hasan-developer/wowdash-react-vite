@@ -1,5 +1,3 @@
-"use client";
-
 import SalesStaticChart from "@/components/charts/SalesStaticChart";
 import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";

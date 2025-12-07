@@ -1,5 +1,3 @@
-"use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowDown, ArrowUp, FileText, Medal, UsersRound, Wallet } from "lucide-react";
 import React from "react";
