@@ -1,9 +1,9 @@
-import WorldMap from "@/components/shared/WorldMap";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import SalesStaticCard from "./components/SalesStaticCard";
 import StatCard from "./components/StatCard";
+import TabsWithTableCard from "./components/TabsWithTableCard";
 import TopPerformerCard from "./components/TopPerformerCard";
 import TotalSubscriberCard from "./components/TotalSubscriberCard";
 import UserOverviewCard from "./components/UserOverviewCard";
@@ -40,7 +40,7 @@ const AiDashboard = () => {
 
                 <div className="xl:col-span-12 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TabsWithTableCard /> */}
+                        <TabsWithTableCard />
                     </Suspense>
                 </div>
 
@@ -50,11 +50,11 @@ const AiDashboard = () => {
                     </Suspense>
                 </div>
 
-                <div className="xl:col-span-12 2xl:col-span-9">
+                {/* <div className="xl:col-span-12 2xl:col-span-9">
                     <div className="p-6 bg-white">
                         <WorldMap />
                     </div>
-                </div>
+                </div> */}
 
 
 

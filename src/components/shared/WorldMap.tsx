@@ -1,43 +1,11 @@
-// import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-
-// const WorldMap = () => {
-//     return (
-        // <div className="h-[300px] overflow-hidden">
-        //     <ComposableMap>
-        //         <Geographies geography="../../data/countries-data.json">
-        //             {({ geographies }) =>
-        //                 geographies.map((geo) => (
-        //                     <Geography key={geo.rsmKey} geography={geo} />
-        //                 ))
-        //             }
-        //         </Geographies>
-        //     </ComposableMap>
-        // </div>
-//     );
-// };
-
-// export default WorldMap;
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import worldMapData from "@/data/countries-data.json";
 // import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
 
 // const WorldMap = () => {
 //     console.log(worldMapData);
-    
-    
+
+
 //   return (
 //     <div style={{ height: "300px", overflow: "hidden" }}>
 //       {/* <ComposableMap projection="geoMercator">
@@ -57,7 +25,7 @@
 //           }
 //         </Geographies>
 //       </ComposableMap> */}
-      
+
 //         <ComposableMap>
 //             <Geographies geography={worldMapData}>
 //                 {({ geographies }) =>
@@ -67,7 +35,7 @@
 //                 }
 //             </Geographies>
 //         </ComposableMap>
-      
+
 //     </div>
 //   );
 // };
@@ -79,18 +47,14 @@
 
 
 
-
-
-
-
-
-
-
-
 import worldMapData from "@/data/countries-data.json";
 import { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { Tooltip } from "react-tooltip";
+
+interface geographiesProps {
+  geographies: string
+}
 
 const WorldMap = () => {
   const [tooltipContent, setTooltipContent] = useState("");
@@ -101,7 +65,7 @@ const WorldMap = () => {
 
       <ComposableMap>
         <Geographies geography={worldMapData}>
-          {({ geographies }) =>
+          {({ geographies }: geographiesProps) =>
             geographies.map((geo) => {
               const countryName =
                 geo.properties.name ||
@@ -124,6 +88,8 @@ const WorldMap = () => {
                     default: {
                       fill: "#d1d5db",
                       outline: "none",
+                      stroke: "#fff",     // country border
+                      strokeWidth: 1,
                     },
                     hover: {
                       fill: "#333",
