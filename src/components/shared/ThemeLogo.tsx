@@ -11,7 +11,8 @@ function ThemeLogo() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    // setIsMounted(true);
+    Promise.resolve().then(() => setIsMounted(true))
   }, []);
 
   // Don't render until mounted to avoid hydration mismatch or wrong theme
