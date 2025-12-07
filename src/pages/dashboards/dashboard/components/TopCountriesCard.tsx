@@ -1,6 +1,5 @@
-import WorldMapChart from "@/components/charts/world-map-chart";
-import CountryList from "@/components/shared/country-list";
-import CustomSelect from "@/components/shared/custom-select";
+import CountryList from "@/components/shared/CountryList";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TopCountriesCard = () => {
@@ -8,7 +7,7 @@ const TopCountriesCard = () => {
     <Card className="card">
       <CardContent className="px-0">
         <div className="flex flex-wrap items-center justify-between">
-          <h6 className="text-lg mb-0">Top Countries</h6>
+          <h6 className="mb-0 font-semibold text-lg">Top Countries</h6>
           <CustomSelect
             placeholder="Yearly"
             options={["Yearly", "Monthly", "Weekly", "Today"]}
@@ -17,7 +16,7 @@ const TopCountriesCard = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-5">
           <div className="h-full border border-neutral-200 dark:border-neutral-600 rounded-lg">
-            <WorldMapChart mapHeight={400} />
+            {/* <WorldMap mapHeight={400} /> */}
           </div>
 
           <div className="h-full border border-neutral-200 dark:border-neutral-600 p-4 pe-0 rounded-lg">

@@ -7,6 +7,7 @@ import TabsWithTableCard from "./components/TabsWithTableCard";
 import TopPerformerCard from "./components/TopPerformerCard";
 import TotalSubscriberCard from "./components/TotalSubscriberCard";
 import UserOverviewCard from "./components/UserOverviewCard";
+import TopCountriesCard from "./components/TopCountriesCard";
 
 const AiDashboard = () => {
     return (
@@ -58,11 +59,11 @@ const AiDashboard = () => {
 
 
 
-                {/* <div className="xl:col-span-12 2xl:col-span-6">
+                <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TopCountriesCard />
                     </Suspense>
-                </div> */}
+                </div>
 
                 {/* <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>

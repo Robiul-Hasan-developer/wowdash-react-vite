@@ -64,7 +64,7 @@ const TopPerformerCard = () => {
     <Card className="card">
       <CardContent className="card-body p-0">
         <div className="flex items-center justify-between">
-          <h6 className="mb-3 font-semibold text-lg">Top Performer</h6>
+          <h6 className="mb-0 font-semibold text-lg">Top Performer</h6>
           <CommonLink />
         </div>
 

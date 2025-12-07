@@ -7,7 +7,7 @@ const UserOverviewCard = () => {
         <Card className="card">
             <CardContent className="card-body p-0">
                 <div className="flex items-center justify-between">
-                    <h6 className="mb-3 font-semibold text-lg">Users Overview</h6>
+                    <h6 className="mb-0 font-semibold text-lg">Users Overview</h6>
                     <CustomSelect
                         placeholder="Today"
                         options={["Yearly", "Monthly", "Weekly", "Today"]}
