@@ -1,4 +1,5 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
+import EarningStatisticsCard from "./components/EarningStatisticsCard";
 import RevenueGrowthCard from "./components/RevenueGrowthCard";
 import StatsCard from "./components/StatsCard";
 
@@ -20,7 +21,7 @@ const AiDashboard = () => {
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-8">
-                    {/* <EarningStatisticsCard /> */}
+                    <EarningStatisticsCard />
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">

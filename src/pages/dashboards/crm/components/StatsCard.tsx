@@ -117,7 +117,6 @@ const StatsCard = () => {
                                         </div>
                                     </div>
                                     <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
-                                        {/* <CardSmallChart chartColor={item.bgCircle} /> */}
                                         <SmallAreaChart chartColor={item.bgCircle} chartWidth={80} chartHeight={42} />
                                     </div>
                                 </div>
