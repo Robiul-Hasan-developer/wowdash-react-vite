@@ -53,7 +53,10 @@ const EarningStatisticsCard = () => {
                     </div>
                 </div>
 
-                <BarChartYear chartHeight={310} />
+                <div className="-mb-4 mt-0">
+                    <BarChartYear chartHeight={330} />
+                </div>
+                
             </CardContent>
         </Card>
     );

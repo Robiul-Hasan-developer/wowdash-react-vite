@@ -2,6 +2,8 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import EarningStatisticsCard from "./components/EarningStatisticsCard";
 import RevenueGrowthCard from "./components/RevenueGrowthCard";
 import StatsCard from "./components/StatsCard";
+import CampaignCard from "./components/CampaignCard";
+import CustomerOverviewCard from "./components/CustomerOverviewCard";
 
 const AiDashboard = () => {
     return (
@@ -27,10 +29,10 @@ const AiDashboard = () => {
                 <div className="lg:col-span-12 2xl:col-span-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            {/* <CampaignCard /> */}
+                            <CampaignCard />
                         </div>
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            {/* <CustomerOverviewCard /> */}
+                            <CustomerOverviewCard />
                         </div>
                     </div>
                 </div>
