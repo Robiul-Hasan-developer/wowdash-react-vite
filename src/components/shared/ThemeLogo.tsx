@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 
 // import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
 import LogoWhite from "@/assets/images/logo-light.png";
@@ -8,15 +7,15 @@ import { useTheme } from '@/components/theme-provider';
 function ThemeLogo() {
   const { theme } = useTheme();
 //   const isCollapsed = useSidebarCollapsed();
-  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    // setIsMounted(true);
-    Promise.resolve().then(() => setIsMounted(true))
-  }, []);
 
-  // Don't render until mounted to avoid hydration mismatch or wrong theme
-  if (!isMounted) return null;
+  // const [isMounted, setIsMounted] = useState(false);
+  // useEffect(() => {
+  //   Promise.resolve().then(() => setIsMounted(true))
+  // }, []);
+  // if (!isMounted) return null;
+
+  if (!theme) return null;
 
   return (
       <img
