@@ -1,3 +1,4 @@
+import SmallAreaChart from "@/components/charts/SmallAreaChart";
 import { Card, CardContent } from "@/components/ui/card";
 import type { LucideIcon } from 'lucide-react';
 import { BarChart3, DollarSign, LineChart, TrendingUp, UserCheck, Users } from 'lucide-react';
@@ -117,6 +118,7 @@ const StatsCard = () => {
                                     </div>
                                     <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
                                         {/* <CardSmallChart chartColor={item.bgCircle} /> */}
+                                        <SmallAreaChart chartColor={item.bgCircle} chartWidth={80} chartHeight={42} />
                                     </div>
                                 </div>
                                 <p className="text-sm mb-0 text-neutral-600 dark:text-neutral-100">

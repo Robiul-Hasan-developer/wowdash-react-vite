@@ -121,7 +121,7 @@ const SmallAreaChart = ({ chartColor, chartWidth, chartHeight }: ChartColorType)
             series={chartSeries}
             type="area"
             height={chartHeight}
-            width={chartHeight}
+            width={chartWidth}
         />
     );
 };

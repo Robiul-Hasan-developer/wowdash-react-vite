@@ -261,8 +261,33 @@
     @apply bg-white dark:bg-[#273142] p-6 h-full rounded-lg !border-0;
   }
   .apexcharts-text tspan {
-    /* stroke: #fff !important; */
     @apply dark:stroke-[#fff];
+  }
+
+  .remove-tooltip-title .apexcharts-tooltip-title {
+    @apply hidden;
+  }
+
+  .rounded-tooltip-value .apexcharts-tooltip.apexcharts-theme-light {
+    @apply flex flex-col items-center justify-center w-10 h-10;
+  }
+  .rounded-tooltip-value .apexcharts-tooltip-text-y-label {
+    @apply hidden;
+  }
+  .rounded-tooltip-value .apexcharts-tooltip-marker {
+    @apply hidden;
+  }
+  .rounded-tooltip-value .apexcharts-tooltip-text-y-value {
+    @apply ms-0;
+  }
+  .rounded-tooltip-value .apexcharts-tooltip-text {
+    @apply flex;
+  }
+  .remove-tooltip-marker .apexcharts-tooltip-marker {
+    @apply !hidden;
+  }
+  .apexcharts-tooltip.apexcharts-theme-light {
+    @apply dark:!border-slate-500 dark:!bg-slate-900;
   }
 }
 
