@@ -8,6 +8,7 @@ import EarningStatisticsCard from "./components/EarningStatisticsCard";
 import RevenueGrowthCard from "./components/RevenueGrowthCard";
 import StatsCard from "./components/StatsCard";
 import TodoListRecentCard from "./components/TodoListRecentCard";
+import LastTransactionCard from "./components/LastTransactionCard";
 
 const AiDashboard = () => {
     return (
@@ -58,7 +59,7 @@ const AiDashboard = () => {
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    {/* <LastTransactionCard /> */}
+                    <LastTransactionCard />
                 </div>
 
             </div>
