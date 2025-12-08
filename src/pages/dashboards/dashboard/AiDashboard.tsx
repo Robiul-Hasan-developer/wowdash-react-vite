@@ -1,7 +1,7 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import GenerateContentCard from "./components/DoubleBarChart";
+import GenerateContentCard from "./components/GenerateContentCard";
 import SalesStatisticCard from "./components/SalesStatisticCard";
 import StatCard from "./components/StatCard";
 import TabsWithTableCard from "./components/TabsWithTableCard";
@@ -48,7 +48,7 @@ const AiDashboard = () => {
 
                 <div className="xl:col-span-12 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <TopPerformerCard />
+                        <TopPerformerCard listClasses="space-y-6 max-h-[408px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible" />
                     </Suspense>
                 </div>
 

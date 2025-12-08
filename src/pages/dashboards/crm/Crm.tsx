@@ -1,9 +1,12 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
+import TopPerformerCard from "../dashboard/components/TopPerformerCard";
+import CampaignCard from "./components/CampaignCard";
+import ClientPaymentStatusCard from "./components/ClientPaymentStatusCard";
+import CountriesStatusCard from "./components/CountriesStatusCard";
+import CustomerOverviewCard from "./components/CustomerOverviewCard";
 import EarningStatisticsCard from "./components/EarningStatisticsCard";
 import RevenueGrowthCard from "./components/RevenueGrowthCard";
 import StatsCard from "./components/StatsCard";
-import CampaignCard from "./components/CampaignCard";
-import CustomerOverviewCard from "./components/CustomerOverviewCard";
 
 const AiDashboard = () => {
     return (
@@ -38,15 +41,15 @@ const AiDashboard = () => {
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    {/* <ClientPaymentStatusCard /> */}
+                    <ClientPaymentStatusCard />
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    {/* <CountriesStatusCard /> */}
+                    <CountriesStatusCard />
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
-                    {/* <TopPerformerCard /> */}
+                    <TopPerformerCard listClasses="space-y-6 max-h-[458px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible" />
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">

@@ -1,4 +1,4 @@
-import DoubleBarChart from "@/components/charts/GenerateContentChart";
+import DoubleBarChart from "@/components/charts/DoubleBarChart";
 import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 

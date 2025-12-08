@@ -57,18 +57,30 @@ const topPerformers: TopPerformer[] = [
     agentId: "35685",
     earnings: 56,
   },
+   {
+    id: 7,
+    name: "Albert Flores",
+    image: PerformerImg3,
+    agentId: "23265",
+    earnings: 30,
+  },
 ];
 
-const TopPerformerCard = () => {
+interface TopPerformerCardType {
+  listClasses: string
+}
+
+const TopPerformerCard = ({ listClasses }: TopPerformerCardType) => {
   return (
-    <Card className="card">
+    <Card className="card p-0">
       <CardContent className="card-body p-0">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between p-6 pb-0">
           <h6 className="mb-0 font-semibold text-lg">Top Performer</h6>
           <CommonLink />
         </div>
 
-        <div className="mt-4 space-y-6">
+      <div className="p-6 pe-0 pt-8">
+        <div className={`pe-6 ${listClasses}`}>
           {topPerformers.map((topPerformer, index) => {
             return (
               <div
@@ -97,6 +109,7 @@ const TopPerformerCard = () => {
             );
           })}
         </div>
+      </div>
       </CardContent>
     </Card>
   );
