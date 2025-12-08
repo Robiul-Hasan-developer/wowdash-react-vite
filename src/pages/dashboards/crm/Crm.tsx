@@ -7,6 +7,7 @@ import CustomerOverviewCard from "./components/CustomerOverviewCard";
 import EarningStatisticsCard from "./components/EarningStatisticsCard";
 import RevenueGrowthCard from "./components/RevenueGrowthCard";
 import StatsCard from "./components/StatsCard";
+import TodoListRecentCard from "./components/TodoListRecentCard";
 
 const AiDashboard = () => {
     return (
@@ -53,7 +54,7 @@ const AiDashboard = () => {
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    {/* <TodoListRecentCard /> */}
+                    <TodoListRecentCard />
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
