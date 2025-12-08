@@ -3,7 +3,7 @@ import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
 
-const SalesStaticCard = () => {
+const SalesStatisticCard = () => {
   return (
     <Card className="card">
       <CardContent className="px-0">
@@ -24,11 +24,11 @@ const SalesStaticCard = () => {
         </div>
 
         <div className="apexcharts-tooltip-style-1 mt-7">
-          <SalesStaticChart />
+          <SalesStaticChart chartHeight={254} />
         </div>
       </CardContent>
     </Card>
   );
 };
 
-export default SalesStaticCard;
+export default SalesStatisticCard;

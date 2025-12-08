@@ -2,11 +2,11 @@ import type { ApexOptions } from "apexcharts";
 import Chart from 'react-apexcharts';
 
 interface BarLightChartProps {
-    chartHeight: number,
-    chartBorderRadius: number
+    chartHeight?: number,
+    chartBorderRadius?: number
 }
 
-const BarLightChart = ({chartHeight, chartBorderRadius}: BarLightChartProps) => {
+const BarLightChart = ({chartHeight = 235, chartBorderRadius = 6}: BarLightChartProps) => {
     const chartSeries: ApexAxisChartSeries = [{
         name: "Sales",
         data: [{

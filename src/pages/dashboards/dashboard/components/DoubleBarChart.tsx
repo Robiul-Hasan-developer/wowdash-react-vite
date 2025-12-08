@@ -7,7 +7,7 @@ const GenerateContentCard = () => {
         <Card className="card">
             <CardContent className="px-0">
                 <div className="flex flex-wrap items-center justify-between">
-                    <h6 className="mb-0 font-semibold text-lg">Generated Content</h6>
+                    <h6 className="mb-0 font-semibold text-lg">Generated Content </h6>
                     <CustomSelect
                         placeholder="Yearly"
                         options={["Yearly", "Monthly", "Weekly", "Today"]}

@@ -2,12 +2,12 @@ import type { ApexOptions } from "apexcharts";
 import Chart from 'react-apexcharts';
 
 interface DonutThreeSeriesChartProps {
-    onChartHeight: number;
-    chartSeries: number[];
-    chartColors: string[];
+    onChartHeight?: number;
+    chartSeries?: number[];
+    chartColors?: string[];
 }
 
-const DonutThreeSeriesChart = ({ onChartHeight, chartSeries, chartColors }: DonutThreeSeriesChartProps) => {
+const DonutThreeSeriesChart = ({ onChartHeight = 270, chartSeries = [40, 30, 30], chartColors = ["#000", "#3B82F6", "#e4f1ff"] }: DonutThreeSeriesChartProps) => {
     const chartOptions: ApexOptions = {
         series: chartSeries,
         colors: chartColors,

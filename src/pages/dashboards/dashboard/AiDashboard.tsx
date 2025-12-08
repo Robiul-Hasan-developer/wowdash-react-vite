@@ -1,14 +1,14 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import SalesStaticCard from "./components/SalesStaticCard";
+import GenerateContentCard from "./components/DoubleBarChart";
+import SalesStatisticCard from "./components/SalesStatisticCard";
 import StatCard from "./components/StatCard";
 import TabsWithTableCard from "./components/TabsWithTableCard";
+import TopCountriesCard from "./components/TopCountriesCard";
 import TopPerformerCard from "./components/TopPerformerCard";
 import TotalSubscriberCard from "./components/TotalSubscriberCard";
 import UserOverviewCard from "./components/UserOverviewCard";
-import TopCountriesCard from "./components/TopCountriesCard";
-import GenerateContentCard from "./components/DoubleBarChart";
 
 const AiDashboard = () => {
     return (
@@ -24,7 +24,7 @@ const AiDashboard = () => {
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
                 <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <SalesStaticCard />
+                        <SalesStatisticCard />
                     </Suspense>
                 </div>
 

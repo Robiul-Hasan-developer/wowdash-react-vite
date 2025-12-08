@@ -2,12 +2,12 @@ import type { ApexOptions } from 'apexcharts';
 import Chart from 'react-apexcharts';
 
 interface DoubleBarChartType {
-    chartHeight: number,
-    colorOne: string,
-    colorTwo: string,
+    chartHeight?: number,
+    colorOne?: string,
+    colorTwo?: string,
 }
 
-const DoubleBarChart = ({ chartHeight, colorOne, colorTwo } : DoubleBarChartType) => {
+const DoubleBarChart = ({ chartHeight=264, colorOne="487FFF", colorTwo="FF9F29" } : DoubleBarChartType) => {
   const chartOptions: ApexOptions = {
     series: [
       {

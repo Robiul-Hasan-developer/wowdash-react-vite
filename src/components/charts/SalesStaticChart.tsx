@@ -1,7 +1,11 @@
 import type { ApexOptions } from "apexcharts";
 import Chart from 'react-apexcharts';
 
-const SalesStaticChart = () => {
+interface SalesStaticChartType {
+  chartHeight?: number;
+}
+
+const SalesStaticChart = ({ chartHeight = 254 }: SalesStaticChartType) => {
   const chartOptions: ApexOptions = {
     chart: {
       type: "line",
@@ -71,7 +75,7 @@ const SalesStaticChart = () => {
         options={chartOptions}
         series={chartSeries}
         type="line"
-        height={254}
+        height={chartHeight}
       />
     </div>
   );
