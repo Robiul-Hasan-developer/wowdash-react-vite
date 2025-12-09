@@ -1,5 +1,5 @@
-import CustomersStatisticsChart from '@/components/charts/customers-statistics-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import DonutTwoSeriesChart from '@/components/charts/DonutTwoSeriesChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const CustomersStatisticsCard = () => {
@@ -17,7 +17,7 @@ const CustomersStatisticsCard = () => {
                 <div className="relative">
                     <span className="w-[80px] h-[80px] bg-white dark:bg-slate-700 shadow-lg text-neutral-600 dark:text-neutral-200 font-semibold text-xl flex justify-center items-center rounded-full absolute end-0 top-0 z-1 me-11 mt-6">+30%</span>
                     <div className="mt-9 grow apexcharts-tooltip-z-none title-style circle-none">
-                        <CustomersStatisticsChart />
+                        <DonutTwoSeriesChart onChartHeight={270} chartSeries={[30, 30]} chartColors={["#ff9f29", "#487fff"]} />
                     </div>
                     <span className="w-[80px] h-[80px] bg-white dark:bg-slate-700 shadow-lg text-neutral-600 dark:text-neutral-200 font-semibold text-xl flex justify-center items-center rounded-full absolute start-0 bottom-0 z-1 mb-6 ms-14">+25%</span>
                 </div>
