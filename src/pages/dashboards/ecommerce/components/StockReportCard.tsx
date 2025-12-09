@@ -1,7 +1,6 @@
+import CommonLink from '@/components/shared/CommonLink';
+import StockReportTable from '@/components/tables/StockReportTable';
 import { Card, CardContent } from '@/components/ui/card';
-import React from 'react';
-import CommonLink from '@/components/shared/common-link';
-import StockReportTable from '@/components/table/stock-report-table';
 
 const StockReportCard = () => {
     return (
@@ -13,7 +12,7 @@ const StockReportCard = () => {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                    <StockReportTable/>
+                    <StockReportTable />
                 </div>
             </CardContent>
         </Card>

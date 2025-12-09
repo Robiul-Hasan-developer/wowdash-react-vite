@@ -8,6 +8,8 @@ import RevenueReportCard from "./components/RevenueReportCard";
 import TransactionsCard from "./components/TransactionsCard";
 import DistributionMapsCard from "./components/DistributionMapsCard";
 import TopCustomersCard from "./components/TopCustomersCard";
+import TopSellingProductCard from "./components/TopSellingProductCard";
+import StockReportCard from "./components/StockReportCard";
 
 const AiDashboard = () => {
     return (
@@ -60,13 +62,13 @@ const AiDashboard = () => {
 
                 <div className="md:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TopSellingProductCard /> */}
+                        <TopSellingProductCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <StockReportCard /> */}
+                        <StockReportCard />
                     </Suspense>
                 </div>
 

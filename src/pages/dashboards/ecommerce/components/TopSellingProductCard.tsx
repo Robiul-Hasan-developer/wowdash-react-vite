@@ -1,7 +1,6 @@
+import CommonLink from '@/components/shared/CommonLink';
+import TopSellingProductTable from '@/components/tables/TopSellingProductTable';
 import { Card, CardContent } from '@/components/ui/card';
-import React from 'react';
-import CommonLink from '@/components/shared/common-link';
-import TopSellingProductTable from '@/components/table/top-selling-product-table';
 
 const TopSellingProductCard = () => {
     return (
@@ -13,7 +12,7 @@ const TopSellingProductCard = () => {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                    <TopSellingProductTable/>
+                    <TopSellingProductTable />
                 </div>
             </CardContent>
         </Card>
