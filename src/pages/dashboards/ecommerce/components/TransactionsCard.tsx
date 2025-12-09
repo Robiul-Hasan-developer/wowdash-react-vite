@@ -1,7 +1,6 @@
-import React from 'react';
+import CustomSelect from '@/components/shared/CustomSelect';
+import TransactionList from '@/components/shared/TransactionList';
 import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
-import TransactionList from '@/components/shared/transaction-list';
 
 const TransactionsCard = () => {
     return (
@@ -16,7 +15,7 @@ const TransactionsCard = () => {
                 </div>
 
                 <div className="mt-6">
-                    <TransactionList/>
+                    <TransactionList />
                 </div>
         
             </CardContent>

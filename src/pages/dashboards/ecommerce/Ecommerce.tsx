@@ -3,6 +3,8 @@ import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import CustomersStatisticsCard from "./components/CustomersStatisticsCard";
 import RevenueReportCard from "./components/RevenueReportCard";
+import RecentOrdersCard from "./components/RecentOrdersCard";
+import TransactionsCard from "./components/TransactionsCard";
 
 const AiDashboard = () => {
     return (
@@ -25,13 +27,13 @@ const AiDashboard = () => {
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RecentOrdersCard /> */}
+                        <RecentOrdersCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TransactionsCard /> */}
+                        <TransactionsCard />
                     </Suspense>
                 </div>
 
