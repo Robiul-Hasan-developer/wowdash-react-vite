@@ -125,7 +125,7 @@ const StatsCard = () => {
                                     </span>
                                 </div>
 
-                                <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
+                                <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker -mt-[14px]">
                                     <SmallAreaChartTwo chartWidth={130} chartHeight={80} chartColor={crypto.chartBg} />
                                 </div>
 

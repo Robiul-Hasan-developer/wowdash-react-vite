@@ -1,10 +1,9 @@
+import CandlestickChart from '@/components/charts/CandlestickChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ArrowUp } from 'lucide-react';
-import React from 'react';
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import CoinAnalyticsChart from '@/components/charts/coin-analytics-chart';
 
 const CoinAnalyticsCard = () => {
     return (
@@ -49,7 +48,7 @@ const CoinAnalyticsCard = () => {
                     </p>
                 </div>
 
-                <CoinAnalyticsChart />
+                <CandlestickChart chartHeight={350} />
 
             </CardContent>
         </Card>

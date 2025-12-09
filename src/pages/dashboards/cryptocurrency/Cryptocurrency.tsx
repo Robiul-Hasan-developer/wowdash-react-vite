@@ -2,6 +2,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import StatsCard from "./components/StatsCard";
+import CoinAnalyticsCard from "./components/CoinAnalyticsCard";
 
 const Cryptocurrency = () => {
     return (
@@ -19,7 +20,7 @@ const Cryptocurrency = () => {
                     <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
                         <div className="col-span-12">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <CoinAnalyticsCard /> */}
+                                <CoinAnalyticsCard />
                             </Suspense>
                         </div>
 
