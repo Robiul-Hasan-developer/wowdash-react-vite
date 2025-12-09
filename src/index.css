@@ -1,11 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
   h1 {
     @apply text-3xl font-bold;
+  }
+  h5 {
+    font-size: clamp(1.25rem, 1.05rem + 1vw, 1.875rem);
+  }
+  h6 {
+    font-size: clamp(1.125rem, 1.005rem + 0.6vw, 1.5rem);
   }
 }
 
@@ -82,6 +93,8 @@
 }
 
 :root {
+  --color-neutral-500: oklch(44.611% 0.02636 256.837); 
+  
   --radius: 0.625rem;
 
   --background: oklch(1 0 0);
