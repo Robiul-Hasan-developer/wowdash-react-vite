@@ -2,9 +2,12 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import CustomersStatisticsCard from "./components/CustomersStatisticsCard";
-import RevenueReportCard from "./components/RevenueReportCard";
+import DailySalesCard from "./components/DailySalesCard";
 import RecentOrdersCard from "./components/RecentOrdersCard";
+import RevenueReportCard from "./components/RevenueReportCard";
 import TransactionsCard from "./components/TransactionsCard";
+import DistributionMapsCard from "./components/DistributionMapsCard";
+import TopCustomersCard from "./components/TopCustomersCard";
 
 const AiDashboard = () => {
     return (
@@ -39,19 +42,19 @@ const AiDashboard = () => {
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <DailySalesCard /> */}
+                        <DailySalesCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <DistributionMapsCard /> */}
+                        <DistributionMapsCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TopCustomersCard /> */}
+                        <TopCustomersCard />
                     </Suspense>
                 </div>
 

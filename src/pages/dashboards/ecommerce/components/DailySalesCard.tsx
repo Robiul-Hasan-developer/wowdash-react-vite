@@ -1,7 +1,6 @@
-import React from 'react';
+import AreaChartBigChart from '@/components/charts/AreaChartBigChart';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowUp } from 'lucide-react';
-import DailySalesChart from '@/components/charts/daily-sales-chart';
 
 const DailySalesCard = () => {
     return (
@@ -19,8 +18,8 @@ const DailySalesCard = () => {
                     </p>
                 </div>
 
-                <div className="mt-0">
-                    <DailySalesChart chartColor="#487fff" />
+                <div className="mt-7">
+                    <AreaChartBigChart chartHeight={370} chartColor="#487fff" />
                 </div>
 
             </CardContent>

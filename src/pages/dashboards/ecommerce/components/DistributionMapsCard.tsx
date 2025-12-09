@@ -1,6 +1,5 @@
-import WorldMapChart from '@/components/charts/world-map-chart';
-import CountryList from '@/components/shared/country-list';
-import CustomSelect from '@/components/shared/custom-select';
+import CountryList from '@/components/shared/CountryList';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const DistributionMapsCard = () => {
@@ -16,11 +15,11 @@ const DistributionMapsCard = () => {
             </div>
 
             <div className="bg-neutral-100 dark:bg-slate-700/50 h-[160px] overflow-hidden">
-              <WorldMapChart mapHeight={400} />
+              {/* <WorldMap /> */}
             </div> 
 
-            <div className="max-h-[266px] overflow-y-auto p-6 scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
-              <CountryList/>
+            <div className="max-h-[294px] overflow-y-auto p-6 scrollbar-thin">
+              <CountryList />
             </div>
           
         </CardContent>
