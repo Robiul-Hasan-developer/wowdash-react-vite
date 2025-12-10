@@ -8,6 +8,7 @@ import RecentTransactionCard from "./components/RecentTransactionCard";
 import StatsCard from "./components/StatsCard";
 import TotalBalanceCard from "./components/TotalBalanceCard";
 import UsersActivateCard from "./components/UsersActivateCard";
+import MasterCard from "./components/MasterCard";
 
 const Cryptocurrency = () => {
     return (
@@ -52,7 +53,7 @@ const Cryptocurrency = () => {
                 <div className="xl:col-span-12 2xl:col-span-4">
                     <div className="space-y-6">
                         <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                            {/* <MasterCard /> */}
+                            <MasterCard />
                         </Suspense>
                         <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                             <TotalBalanceCard />

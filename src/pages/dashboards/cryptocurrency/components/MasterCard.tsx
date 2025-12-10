@@ -1,9 +1,8 @@
-import React from "react";
+import MasterCardSlider from "@/components/shared/MasterCardSlider";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
-import { cn } from "@/lib/utils";
-import MasterCardSlider from "@/components/slider/master-card-slider";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { Plus } from "lucide-react";
 
 const MasterCard = () => {
   return (
