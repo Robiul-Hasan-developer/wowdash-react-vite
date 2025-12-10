@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { UsersRound, Youtube, DollarSign, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { LucideIcon } from "lucide-react";
+import { DollarSign, UsersRound, Youtube } from "lucide-react";
 
 export interface StatCardData {
   id: number;
@@ -17,7 +17,7 @@ export interface StatCardData {
   icon?: LucideIcon;
 }
 
-export const statsData: StatCardData[] = [
+const statsData: StatCardData[] = [
   {
     id: 1,
     title: "Total Students",

@@ -1,7 +1,7 @@
-import DoubleLineChart from '@/components/charts/double-line-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import DoubleLineChart from '@/components/charts/DoubleLineChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
-import StatsCard from './stats-card';
+import StatsCard from './StatsCard';
 
 const WidgetsAverageChart = () => {
     return (
@@ -43,7 +43,7 @@ const WidgetsAverageChart = () => {
                                 </ul>
                             </div>
                             <div className="mt-10 apexcharts-tooltip-style-1">
-                                <DoubleLineChart colors={["#45B369", "#487fff"]} />
+                                <DoubleLineChart chartHeight={270} colors={["#45B369", "#487fff"]} />
                             </div>
                         </div>
                     </div>
