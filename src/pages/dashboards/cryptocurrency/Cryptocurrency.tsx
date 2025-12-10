@@ -4,6 +4,8 @@ import { Suspense } from "react";
 import StatsCard from "./components/StatsCard";
 import CoinAnalyticsCard from "./components/CoinAnalyticsCard";
 import MarketInfoCard from "./components/MarketInfoCard";
+import MyOrderCard from "./components/MyOrderCard";
+import RecentTransactionCard from "./components/RecentTransactionCard";
 
 const Cryptocurrency = () => {
     return (
@@ -33,13 +35,13 @@ const Cryptocurrency = () => {
 
                         <div className="col-span-12 2xl:col-span-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <MyOrderCard /> */}
+                                <MyOrderCard />
                             </Suspense>
                         </div>
 
                         <div className="col-span-12">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <RecentTransactionCard /> */}
+                                <RecentTransactionCard />
                             </Suspense>
                         </div>
                     </div>

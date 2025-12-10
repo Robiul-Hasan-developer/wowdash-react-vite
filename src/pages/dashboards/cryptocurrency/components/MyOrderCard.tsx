@@ -1,7 +1,6 @@
+import CustomSelect from '@/components/shared/CustomSelect';
+import MyOrderTable from '@/components/tables/MyOrderTable';
 import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
-import React from 'react';
-import MyOrderTable from '@/components/table/my-order-table';
 
 const MyOrderCard = () => {
     return (
@@ -16,7 +15,7 @@ const MyOrderCard = () => {
                     />
                 </div>
 
-                <MyOrderTable/>
+                <MyOrderTable />
             
             </CardContent>
         </Card>
