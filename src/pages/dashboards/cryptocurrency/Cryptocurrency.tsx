@@ -1,11 +1,13 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import StatsCard from "./components/StatsCard";
 import CoinAnalyticsCard from "./components/CoinAnalyticsCard";
 import MarketInfoCard from "./components/MarketInfoCard";
 import MyOrderCard from "./components/MyOrderCard";
 import RecentTransactionCard from "./components/RecentTransactionCard";
+import StatsCard from "./components/StatsCard";
+import TotalBalanceCard from "./components/TotalBalanceCard";
+import UsersActivateCard from "./components/UsersActivateCard";
 
 const Cryptocurrency = () => {
     return (
@@ -53,10 +55,10 @@ const Cryptocurrency = () => {
                             {/* <MasterCard /> */}
                         </Suspense>
                         <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                            {/* <TotalBalanceCard /> */}
+                            <TotalBalanceCard />
                         </Suspense>
                         <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                            {/* <UsersActivateCard /> */}
+                            <UsersActivateCard />
                         </Suspense>
                     </div>
                 </div>
