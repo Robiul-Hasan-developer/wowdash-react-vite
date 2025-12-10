@@ -3,6 +3,7 @@ import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import StatsCard from "./components/StatsCard";
 import CoinAnalyticsCard from "./components/CoinAnalyticsCard";
+import MarketInfoCard from "./components/MarketInfoCard";
 
 const Cryptocurrency = () => {
     return (
@@ -26,7 +27,7 @@ const Cryptocurrency = () => {
 
                         <div className="col-span-12 2xl:col-span-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <MarketInfoCard /> */}
+                                <MarketInfoCard />
                             </Suspense>
                         </div>
 

@@ -1,14 +1,19 @@
-import CardSmallChart from "@/components/charts/card-small-chart";
+import SmallAreaChart from "@/components/charts/SmallAreaChart";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
+
+import CurrencyImg1 from '@/assets/images/currency/crypto-img1.png';
+import CurrencyImg2 from '@/assets/images/currency/crypto-img2.png';
+import CurrencyImg3 from '@/assets/images/currency/crypto-img3.png';
+import CurrencyImg4 from '@/assets/images/currency/crypto-img4.png';
+import CurrencyImg5 from '@/assets/images/currency/crypto-img5.png';
 
 interface MarketItem {
   id: string;
@@ -24,7 +29,7 @@ const marketData: MarketItem[] = [
   {
     id: "bitcoin",
     name: "Bitcoin",
-    image: "/assets/images/currency/crypto-img1.png",
+    image: CurrencyImg1,
     price: "$55,000.00",
     change: "+3.85%",
     changeType: "positive",
@@ -33,7 +38,7 @@ const marketData: MarketItem[] = [
   {
     id: "ethereum",
     name: "Ethereum",
-    image: "/assets/images/currency/crypto-img2.png",
+    image: CurrencyImg2,
     price: "$55,000.00",
     change: "-2.85%",
     changeType: "negative",
@@ -42,7 +47,7 @@ const marketData: MarketItem[] = [
   {
     id: "solana",
     name: "Solana",
-    image: "/assets/images/currency/crypto-img3.png",
+    image: CurrencyImg3,
     price: "$55,000.00",
     change: "+3.85%",
     changeType: "positive",
@@ -51,7 +56,7 @@ const marketData: MarketItem[] = [
   {
     id: "litecoin",
     name: "Litecoin",
-    image: "/assets/images/currency/crypto-img4.png",
+    image: CurrencyImg4,
     price: "$55,000.00",
     change: "+3.85%",
     changeType: "positive",
@@ -60,7 +65,7 @@ const marketData: MarketItem[] = [
   {
     id: "dogecoin",
     name: "Dogecoin",
-    image: "/assets/images/currency/crypto-img5.png",
+    image: CurrencyImg5,
     price: "$15,000.00",
     change: "-2.85%",
     changeType: "negative",
@@ -69,7 +74,7 @@ const marketData: MarketItem[] = [
   {
     id: "crypto",
     name: "Crypto",
-    image: "/assets/images/currency/crypto-img1.png",
+    image: CurrencyImg1,
     price: "$15,000.00",
     change: "-2.85%",
     changeType: "negative",
@@ -107,7 +112,7 @@ const MarketInfoCard = () => {
               className="flex flex-wrap items-center justify-between gap-2 bg-neutral-200/75 dark:bg-slate-700 px-3 py-2 rounded"
             >
               <div className="flex flex-wrap items-center gap-2">
-                <Image
+                <img
                   src={item.image}
                   alt={item.name}
                   width={36}
@@ -128,7 +133,8 @@ const MarketInfoCard = () => {
                 {item.change}
               </span>
               <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
-                <CardSmallChart chartColor={item.chartBg} />
+                {/* <CardSmallChart chartColor={item.chartBg} /> */}
+                <SmallAreaChart chartColor={item.chartBg} />
               </div>
             </div>
           ))}

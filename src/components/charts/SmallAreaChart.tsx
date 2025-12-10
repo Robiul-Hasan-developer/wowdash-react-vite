@@ -2,12 +2,14 @@ import type { ApexOptions } from "apexcharts";
 import Chart from 'react-apexcharts';
 
 interface ChartColorType {
-    chartColor: string;
-    chartWidth: number;
-    chartHeight: number;
+    chartColor?: string;
+    chartWidth?: number;
+    chartHeight?: number;
 }
 
-const SmallAreaChart = ({ chartColor, chartWidth, chartHeight }: ChartColorType) => {
+//  chartColor={item.bgCircle} chartWidth={80} chartHeight={42}
+
+const SmallAreaChart = ({ chartColor = "#487fff", chartWidth = 80, chartHeight = 42 }: ChartColorType) => {
 
     const currentYear = new Date().getFullYear();
 
