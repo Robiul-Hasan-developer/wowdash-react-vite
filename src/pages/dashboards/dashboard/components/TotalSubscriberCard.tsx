@@ -1,4 +1,4 @@
-import TotalSubscriberChart from '@/components/charts/BarLightChart';
+import BarLightChart from '@/components/charts/BarLightChart';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowDown } from "lucide-react";
 
@@ -15,7 +15,7 @@ const TotalSubscriberCard = () => {
                     - 20 Per Day
                 </div>
 
-                <TotalSubscriberChart chartHeight={235} chartBorderRadius={6} />
+                <BarLightChart chartHeight={235} chartWidth={360} chartBorderRadius={6} />
 
             </CardContent>
         </Card>

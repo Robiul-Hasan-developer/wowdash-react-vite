@@ -1,11 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import LatestInvestmentsCard from "./components/LatestInvestmentsCard";
 import MostLocationCard from "./components/MostLocationCard";
+import MyPortfolioCard from "./components/MyPortfolioCard";
+import NoticeBoardCard from "./components/NoticeBoardCard";
+import ProjectStatusCard from "./components/ProjectStatusCard";
 import RevenueStatisticsCard from "./components/RevenueStatisticsCard";
 import StatsCard from "./components/StatsCard";
-import MyPortfolioCard from "./components/MyPortfolioCard";
-import LatestInvestmentsCard from "./components/LatestInvestmentsCard";
+import TotalTransactionsCard from "./components/TotalTransactionsCard";
+import StaticCard from "./components/StaticCard";
 
 const Investment = () => {
     return (
@@ -26,7 +30,7 @@ const Investment = () => {
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <StaticCard /> */}
+                        <StaticCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-3">
@@ -46,17 +50,17 @@ const Investment = () => {
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <NoticeBoardCard /> */}
+                        <NoticeBoardCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TotalTransactionsCard /> */}
+                        <TotalTransactionsCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <ProjectStatusCard /> */}
+                        <ProjectStatusCard />
                     </Suspense>
                 </div>
             </div>

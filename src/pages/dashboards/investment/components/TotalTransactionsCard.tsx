@@ -1,5 +1,5 @@
-import TotalTransactionsChart from "@/components/charts/total-transactions-chart";
-import CustomSelect from "@/components/shared/custom-select";
+import LineChartOneSeries from "@/components/charts/LineChartOneSeries";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TotalTransactionsCard = () => {
@@ -28,7 +28,7 @@ const TotalTransactionsCard = () => {
         </ul>
 
         <div className="-m-4">
-          <TotalTransactionsChart />
+          <LineChartOneSeries chartHeight={290} />
         </div>
       </CardContent>
     </Card>

@@ -93,8 +93,8 @@
 }
 
 :root {
-  --color-neutral-500: oklch(44.611% 0.02636 256.837); 
-  
+  --color-neutral-500: oklch(44.611% 0.02636 256.837);
+
   --radius: 0.625rem;
 
   --background: oklch(1 0 0);
@@ -278,6 +278,10 @@
   }
   .apexcharts-legend-text {
     @apply !text-sm !text-[#0a0a0a] dark:!text-[#fff];
+  }
+
+  .x-axies-value-none .apexcharts-xaxis {
+    @apply hidden;
   }
 
   .remove-tooltip-title .apexcharts-tooltip-title {

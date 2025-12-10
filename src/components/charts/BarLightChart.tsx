@@ -3,10 +3,11 @@ import Chart from 'react-apexcharts';
 
 interface BarLightChartProps {
     chartHeight?: number,
+    chartWidth?: number,
     chartBorderRadius?: number
 }
 
-const BarLightChart = ({chartHeight = 235, chartBorderRadius = 6}: BarLightChartProps) => {
+const BarLightChart = ({chartHeight = 235, chartWidth = 300, chartBorderRadius = 6}: BarLightChartProps) => {
     const chartSeries: ApexAxisChartSeries = [{
         name: "Sales",
         data: [{
@@ -37,6 +38,7 @@ const BarLightChart = ({chartHeight = 235, chartBorderRadius = 6}: BarLightChart
         chart: {
             type: 'bar',
             height: chartHeight,
+            width: 100,
             toolbar: {
                 show: false
             },
@@ -92,6 +94,7 @@ const BarLightChart = ({chartHeight = 235, chartBorderRadius = 6}: BarLightChart
             series={chartSeries}
             type="bar"
             height={chartHeight}
+            width={chartWidth}
         />
     );
 };

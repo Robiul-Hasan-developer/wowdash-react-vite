@@ -1,7 +1,6 @@
-import CommonLink from "@/components/shared/common-link";
-import NoticeBoardList from "@/components/shared/notice-board-list";
+import CommonLink from "@/components/shared/CommonLink";
+import NoticeBoardList from "@/components/shared/NoticeBoardList";
 import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
 
 const NoticeBoardCard = () => {
   return (

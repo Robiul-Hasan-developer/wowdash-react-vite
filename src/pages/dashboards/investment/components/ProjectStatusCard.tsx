@@ -1,7 +1,6 @@
-import React from "react";
+import CustomSelect from "@/components/shared/CustomSelect";
+import ProjectStatusTable from "@/components/tables/ProjectStatusTable";
 import { Card, CardContent } from "@/components/ui/card";
-import CustomSelect from "@/components/shared/custom-select";
-import ProjectStatusTable from "@/components/table/project-status-table";
 
 const ProjectStatusCard = () => {
   return (

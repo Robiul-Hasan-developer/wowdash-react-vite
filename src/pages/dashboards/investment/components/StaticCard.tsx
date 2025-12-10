@@ -1,6 +1,7 @@
-import CardSmallChartTwo from "@/components/charts/card-small-chart-two";
-import DailyConversionsChart from "@/components/charts/daily-conversions-chart";
-import TodayIncomeChart from "@/components/charts/today-income-chart";
+
+import BarLightChart from "@/components/charts/BarLightChart";
+import RadialHalfChart from "@/components/charts/RadialHalfChart";
+import SmallAreaChartTwo from "@/components/charts/SmallAreaChartTwo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Smile } from "lucide-react";
 
@@ -18,10 +19,9 @@ const StaticCard = () => {
               </span>
               <h5 className="font-semibold mb-0">%60</h5>
             </div>
-            <div className="relative h-[100px] w-[80px] flex items-center justify-center">
-              <DailyConversionsChart />
-
-              <span className="w-9 h-9 text-primary mb-0 rounded-full bg-primary/20 flex justify-center items-center absolute start-[12%] bottom-0">
+            <div className="relative h-[110px] w-[80px] flex items-center justify-center">
+              <RadialHalfChart chartHeight={165} chartWidth={120} />
+              <span className="w-9 h-9 text-primary mb-0 rounded-full bg-primary/20 flex justify-center items-center absolute start-[12%] bottom-[40px]">
                 <Smile className="w-4 h-4" />
               </span>
             </div>
@@ -35,7 +35,9 @@ const StaticCard = () => {
               <h5 className="font-semibold mb-0">20k</h5>
             </div>
             <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
-              <CardSmallChartTwo chartColor={"#ff9f29"} />
+              <div className="-mt-[30px]">
+                <SmallAreaChartTwo chartWidth={164} chartHeight={100} chartColor={"#ff9f29"} />
+              </div>
             </div>
           </div>
 
@@ -46,7 +48,9 @@ const StaticCard = () => {
               </span>
               <h5 className="font-semibold mb-0">$5.5k</h5>
             </div>
-            <TodayIncomeChart />
+            <div className="x-axies-value-none">
+              <BarLightChart chartHeight={135} chartWidth={180} chartBorderRadius={6} />
+            </div>
           </div>
         </div>
       </CardContent>

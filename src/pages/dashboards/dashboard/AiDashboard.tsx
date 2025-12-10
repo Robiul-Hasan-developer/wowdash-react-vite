@@ -52,14 +52,6 @@ const AiDashboard = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="xl:col-span-12 2xl:col-span-9">
-                    <div className="p-6 bg-white">
-                        <WorldMap />
-                    </div>
-                </div> */}
-
-
-
                 <div className="xl:col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <TopCountriesCard />
