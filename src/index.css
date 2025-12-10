@@ -274,7 +274,10 @@
     @apply bg-white dark:bg-[#273142] p-6 h-full rounded-lg border-transparent;
   }
   .apexcharts-text tspan {
-    @apply dark:stroke-[#fff];
+    @apply text-sm fill-[#0a0a0a] dark:fill-[#fff];
+  }
+  .apexcharts-legend-text {
+    @apply !text-sm !text-[#0a0a0a] dark:!text-[#fff];
   }
 
   .remove-tooltip-title .apexcharts-tooltip-title {

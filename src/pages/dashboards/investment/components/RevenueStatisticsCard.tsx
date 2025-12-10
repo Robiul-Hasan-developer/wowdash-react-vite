@@ -1,5 +1,5 @@
-import RevenueStatisticsChartUpdown from "@/components/charts/revenue-statistics-chart-updown";
-import CustomSelect from "@/components/shared/custom-select";
+import UpdownBarChart from "@/components/charts/UpdownBarChart";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowDown, ArrowUp } from "lucide-react";
 
@@ -43,7 +43,7 @@ const RevenueStatisticsCard = () => {
           </div>
         </div>
 
-        <RevenueStatisticsChartUpdown />
+        <UpdownBarChart chartHeight={310} />
       </CardContent>
     </Card>
   );

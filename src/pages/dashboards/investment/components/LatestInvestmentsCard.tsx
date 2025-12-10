@@ -1,7 +1,6 @@
-import CommonLink from "@/components/shared/common-link";
-import LatestInvestmentsTable from "@/components/table/latest-investments-table";
+import CommonLink from "@/components/shared/CommonLink";
+import LatestInvestmentsTable from "@/components/tables/LatestInvestmentsTable";
 import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
 
 const LatestInvestmentsCard = () => {
   return (

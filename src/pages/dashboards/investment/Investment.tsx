@@ -1,7 +1,11 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import MostLocationCard from "./components/MostLocationCard";
+import RevenueStatisticsCard from "./components/RevenueStatisticsCard";
 import StatsCard from "./components/StatsCard";
+import MyPortfolioCard from "./components/MyPortfolioCard";
+import LatestInvestmentsCard from "./components/LatestInvestmentsCard";
 
 const Investment = () => {
     return (
@@ -17,7 +21,7 @@ const Investment = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
                 <div className="col-span-12 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RevenueStatisticsCard /> */}
+                        <RevenueStatisticsCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
@@ -27,17 +31,17 @@ const Investment = () => {
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <MostLocationCard /> */}
+                        <MostLocationCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-3">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <MyPortfolioCard /> */}
+                        <MyPortfolioCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <LatestInvestmentsCard /> */}
+                        <LatestInvestmentsCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-6 2xl:col-span-4">

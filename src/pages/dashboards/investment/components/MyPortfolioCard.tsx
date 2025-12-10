@@ -1,4 +1,4 @@
-import CustomersStatisticsChart from "@/components/charts/customers-statistics-chart";
+import DonutTwoSeriesChart from "@/components/charts/DonutTwoSeriesChart";
 import { Card, CardContent } from "@/components/ui/card";
 
 const MyPortfolioCard = () => {
@@ -14,14 +14,14 @@ const MyPortfolioCard = () => {
             20k
           </span>
           <div className="mt-9 grow apexcharts-tooltip-z-none title-style circle-none">
-            <CustomersStatisticsChart />
+            <DonutTwoSeriesChart />
           </div>
           <span className="w-[80px] h-[80px] bg-white dark:bg-slate-700 shadow-lg text-neutral-600 dark:text-neutral-200 font-semibold text-xl flex justify-center items-center rounded-full absolute start-0 bottom-0 z-1 mb-6 ms-14">
             50k
           </span>
         </div>
 
-        <ul className="flex flex-wrap flex-col mt-[84px] gap-3">
+        <ul className="flex flex-wrap flex-col mt-[80px] gap-3">
           <li className="flex items-center gap-2">
             <span className="w-4 h-4 rounded-xs bg-blue-500"></span>
             <span className="text-neutral-500 dark:text-neutral-300 text-lg font-normal">
