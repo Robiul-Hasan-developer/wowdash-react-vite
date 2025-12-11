@@ -1,7 +1,6 @@
-import React from "react";
+import CommonLink from "@/components/shared/CommonLink";
+import CoursesTable from "@/components/tables/CoursesTable";
 import { Card, CardContent } from "@/components/ui/card";
-import CommonLink from "@/components/shared/common-link";
-import CoursesTable from "@/components/table/courses-table";
 
 const CoursesCard = () => {
     return (

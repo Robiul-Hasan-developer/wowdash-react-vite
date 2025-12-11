@@ -1,7 +1,13 @@
-import React from "react";
-import Image from "next/image";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import CommonLink from "@/components/shared/common-link";
+import React from "react";
+
+import StudentImage1 from "@/assets/images/home-six/student-img1.png";
+import StudentImage2 from "@/assets/images/home-six/student-img2.png";
+import StudentImage3 from "@/assets/images/home-six/student-img3.png";
+import StudentImage4 from "@/assets/images/home-six/student-img4.png";
+import StudentImage5 from "@/assets/images/home-six/student-img5.png";
+import StudentImage6 from "@/assets/images/home-six/student-img6.png";
 
 type Student = {
     id: number;
@@ -12,12 +18,12 @@ type Student = {
 };
 
 const students: Student[] = [
-    { id: 1, name: "Theresa Webb", course: "UI/UX Design Course", image: "/assets/images/home-six/student-img1.png", progress: 33 },
-    { id: 2, name: "Robert Fox", course: "Graphic Design Course", image: "/assets/images/home-six/student-img2.png", progress: 70 },
-    { id: 3, name: "Guy Hawkins", course: "Web Developer Course", image: "/assets/images/home-six/student-img3.png", progress: 80 },
-    { id: 4, name: "Cody Fisher", course: "UI/UX Design Course", image: "/assets/images/home-six/student-img4.png", progress: 20 },
-    { id: 5, name: "Jacob Jones", course: "UI/UX Design Course", image: "/assets/images/home-six/student-img5.png", progress: 40 },
-    { id: 6, name: "Darlene Robertson", course: "UI/UX Design Course", image: "/assets/images/home-six/student-img6.png", progress: 24 },
+    { id: 1, name: "Theresa Webb", course: "UI/UX Design Course", image: StudentImage1, progress: 33 },
+    { id: 2, name: "Robert Fox", course: "Graphic Design Course", image: StudentImage2, progress: 70 },
+    { id: 3, name: "Guy Hawkins", course: "Web Developer Course", image: StudentImage3, progress: 80 },
+    { id: 4, name: "Cody Fisher", course: "UI/UX Design Course", image: StudentImage4, progress: 20 },
+    { id: 5, name: "Jacob Jones", course: "UI/UX Design Course", image: StudentImage5, progress: 40 },
+    { id: 6, name: "Darlene Robertson", course: "UI/UX Design Course", image: StudentImage6, progress: 24 },
 ];
 
 const CIRCUMFERENCE = 2 * Math.PI * 35; // 2πr for r=35
@@ -42,7 +48,7 @@ const StudentProgressCard: React.FC = () => {
                                     className="flex items-center justify-between gap-3 mb-6 last:mb-0"
                                 >
                                     <div className="flex items-center">
-                                        <Image
+                                        <img
                                             src={student.image}
                                             alt={student.name}
                                             width={40}

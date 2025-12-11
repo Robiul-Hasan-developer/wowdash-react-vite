@@ -5,6 +5,8 @@ import TopCategoriesCard from "./components/TopCategoriesCard";
 import TrafficSourceCard from "./components/TrafficSourceCard";
 import WidgetsAverageChart from "./components/WidgetsAverageChart";
 import TopInstructorsCard from "./components/top-instructors-card";
+import StudentProgressCard from "./components/StudentProgressCard";
+import CoursesCard from "./components/CoursesCard";
 
 const Lms = () => {
     return (
@@ -27,10 +29,10 @@ const Lms = () => {
                     <TopInstructorsCard />
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <StudentProgressCard /> */}
+                    <StudentProgressCard />
                 </div>
                 <div className="col-span-12 2xl:col-span-8">
-                    {/* <CoursesCard /> */}
+                    <CoursesCard />
                 </div>
                 <div className="col-span-12 2xl:col-span-4">
                     {/* <CourseActivityCard /> */}
