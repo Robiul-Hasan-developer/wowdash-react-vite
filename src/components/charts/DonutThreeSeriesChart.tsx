@@ -7,7 +7,7 @@ interface DonutThreeSeriesChartPropsType {
     chartColors?: string[];
 }
 
-const DonutThreeSeriesChart = ({ onChartHeight = 270, chartSeries = [40, 30, 30], chartColors = ["#ddd", "#3B82F6", "#e4f1ff"] }: DonutThreeSeriesChartPropsType) => {
+const DonutThreeSeriesChart = ({ onChartHeight = 270, chartSeries = [40, 30, 30], chartColors = ["#F59E0B", "#3B82F6", "#e4f1ff"] }: DonutThreeSeriesChartPropsType) => {
     const chartOptions: ApexOptions = {
         series: chartSeries,
         colors: chartColors,

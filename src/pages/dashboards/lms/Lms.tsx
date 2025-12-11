@@ -2,6 +2,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import WidgetsAverageChart from "./components/WidgetsAverageChart";
+import TrafficSourceCard from "./components/TrafficSourceCard";
 
 const Lms = () => {
     return (
@@ -15,7 +16,7 @@ const Lms = () => {
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <TrafficSourceCard /> */}
+                    <TrafficSourceCard />
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     {/* <TopCategoriesCard /> */}
