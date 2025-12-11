@@ -1,5 +1,3 @@
-"use client";
-
 import BoardImage1 from "@/assets/images/notice/board-img1.png";
 import BoardImage2 from "@/assets/images/notice/board-img2.png";
 import BoardImage3 from "@/assets/images/notice/board-img3.png";

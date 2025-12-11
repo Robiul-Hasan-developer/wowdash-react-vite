@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import TopCategoriesCard from "./components/TopCategoriesCard";
 import TrafficSourceCard from "./components/TrafficSourceCard";
 import WidgetsAverageChart from "./components/WidgetsAverageChart";
-import TopInstructorsCard from "./components/top-instructors-card";
+import TopInstructorsCard from "./components/TopInstructorsCard";
 import StudentProgressCard from "./components/StudentProgressCard";
 import CoursesCard from "./components/CoursesCard";
 import CourseActivityCard from "./components/CourseActivityCard";
