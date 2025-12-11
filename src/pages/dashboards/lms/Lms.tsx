@@ -1,8 +1,10 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import WidgetsAverageChart from "./components/WidgetsAverageChart";
+import TopCategoriesCard from "./components/TopCategoriesCard";
 import TrafficSourceCard from "./components/TrafficSourceCard";
+import WidgetsAverageChart from "./components/WidgetsAverageChart";
+import TopInstructorsCard from "./components/top-instructors-card";
 
 const Lms = () => {
     return (
@@ -19,10 +21,10 @@ const Lms = () => {
                     <TrafficSourceCard />
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <TopCategoriesCard /> */}
+                    <TopCategoriesCard />
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <TopInstructorsCard /> */}
+                    <TopInstructorsCard />
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     {/* <StudentProgressCard /> */}

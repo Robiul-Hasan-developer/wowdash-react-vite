@@ -1,7 +1,11 @@
-import CommonLink from "@/components/shared/common-link";
+import UserImage1 from "@/assets/images/users/user1.png";
+import UserImage2 from "@/assets/images/users/user2.png";
+import UserImage3 from "@/assets/images/users/user3.png";
+import UserImage4 from "@/assets/images/users/user4.png";
+import UserImage5 from "@/assets/images/users/user5.png";
+import CommonLink from '@/components/shared/CommonLink';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 
 interface Instructor {
@@ -18,7 +22,7 @@ const instructors: Instructor[] = [
         id: 1,
         name: "Dianne Russell",
         agentId: "36254",
-        image: "/assets/images/users/user1.png",
+        image: UserImage1,
         reviews: 25,
         rating: 5,
     },
@@ -26,7 +30,7 @@ const instructors: Instructor[] = [
         id: 2,
         name: "Wade Warren",
         agentId: "36254",
-        image: "/assets/images/users/user2.png",
+        image: UserImage2,
         reviews: 25,
         rating: 5,
     },
@@ -34,7 +38,7 @@ const instructors: Instructor[] = [
         id: 3,
         name: "Albert Flores",
         agentId: "36254",
-        image: "/assets/images/users/user3.png",
+        image: UserImage3,
         reviews: 25,
         rating: 5,
     },
@@ -42,7 +46,7 @@ const instructors: Instructor[] = [
         id: 4,
         name: "Bessie Cooper",
         agentId: "36254",
-        image: "/assets/images/users/user4.png",
+        image: UserImage4,
         reviews: 25,
         rating: 5,
     },
@@ -50,7 +54,7 @@ const instructors: Instructor[] = [
         id: 5,
         name: "Arlene McCoy",
         agentId: "36254",
-        image: "/assets/images/users/user5.png",
+        image: UserImage5,
         reviews: 25,
         rating: 5,
     },
@@ -58,7 +62,7 @@ const instructors: Instructor[] = [
         id: 6,
         name: "Arlene McCoy",
         agentId: "36254",
-        image: "/assets/images/users/user1.png",
+        image: UserImage1,
         reviews: 25,
         rating: 5,
     },
@@ -86,7 +90,7 @@ const TopInstructorsCard: React.FC = () => {
                             >
                                 {/* Instructor Info */}
                                 <div className="flex items-center">
-                                    <Image
+                                    <img
                                         src={instructor.image}
                                         alt={instructor.name}
                                         width={40}

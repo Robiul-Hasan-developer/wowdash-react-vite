@@ -1,9 +1,15 @@
-import CommonLink from "@/components/shared/common-link";
+import CommonLink from '@/components/shared/CommonLink';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import { Link } from 'react-router-dom';
+
+import CategoryIcon1 from "@/assets/images/home-six/category-icon1.png";
+import CategoryIcon2 from "@/assets/images/home-six/category-icon2.png";
+import CategoryIcon3 from "@/assets/images/home-six/category-icon3.png";
+import CategoryIcon4 from "@/assets/images/home-six/category-icon4.png";
+import CategoryIcon5 from "@/assets/images/home-six/category-icon5.png";
+import CategoryIcon6 from "@/assets/images/home-six/category-icon6.png";
 
 interface Category {
     id: number;
@@ -18,42 +24,42 @@ const categories: Category[] = [
         id: 1,
         title: "Web Development",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon1.png",
+        icon: CategoryIcon1,
         bgColor: "bg-cyan-50 dark:bg-cyan-600/20",
     },
     {
         id: 2,
         title: "Graphic Design",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon2.png",
+        icon: CategoryIcon2,
         bgColor: "bg-green-50 dark:bg-green-600/20",
     },
     {
         id: 3,
         title: "UI/UX Design",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon3.png",
+        icon: CategoryIcon3,
         bgColor: "bg-violet-50 dark:bg-violet-600/20",
     },
     {
         id: 4,
         title: "Digital Marketing",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon4.png",
+        icon: CategoryIcon4,
         bgColor: "bg-yellow-50 dark:bg-yellow-600/20",
     },
     {
         id: 5,
         title: "3D Illustration & Art Design",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon5.png",
+        icon: CategoryIcon5,
         bgColor: "bg-red-50 dark:bg-red-600/20",
     },
     {
         id: 6,
         title: "Logo Design",
         courses: "40+ Courses",
-        icon: "/assets/images/home-six/category-icon6.png",
+        icon: CategoryIcon6,
         bgColor: "bg-primary/10",
     },
 ];
@@ -80,7 +86,7 @@ const TopCategoriesCard: React.FC = () => {
                                     <div
                                         className={`w-10 h-10 rounded-lg flex-shrink-0 ${category.bgColor} flex justify-center items-center`}
                                     >
-                                        <Image
+                                        <img
                                             src={category.icon}
                                             alt={category.title}
                                             width={24}
@@ -95,7 +101,7 @@ const TopCategoriesCard: React.FC = () => {
                                     </div>
                                 </div>
                                 <Link
-                                    href="#"
+                                    to="#"
                                     className="w-6 h-6 bg-primary/10 text-primary dark:text-primary flex justify-center items-center text-lg hover:bg-primary/20 rounded"
                                 >
                                     <ChevronRight className="w-4" />
