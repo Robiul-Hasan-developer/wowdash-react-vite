@@ -1,7 +1,6 @@
-import React from 'react';
+import CustomSelect from '@/components/shared/CustomSelect';
+import RecentBidTable from '@/components/tables/RecentBidTable';
 import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
-import RecentBidTable from '@/components/table/recent-bid-table';
 
 const RecentBidCard = () => {
     return (

@@ -1,7 +1,6 @@
-import React from "react";
+import AreaSharpChart from "@/components/charts/AreaSharpChart";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
-import CustomSelect from '@/components/shared/custom-select';
-import UpDownSharpChart from "@/components/charts/up-down-sharp-chart";
 
 const EthPriceCard = () => {
     return (
@@ -19,7 +18,7 @@ const EthPriceCard = () => {
                     </div>
                     <div className="card-body py-4 px-6">
                         <div className="apexcharts-tooltip-style-1 yaxies-more label--20-px">
-                            <UpDownSharpChart />
+                            <AreaSharpChart chartHeight={240} chartCurve={`straight`} />
                         </div>
                     </div>
                 </div>

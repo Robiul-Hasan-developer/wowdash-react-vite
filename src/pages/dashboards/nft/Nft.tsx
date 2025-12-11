@@ -2,8 +2,10 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import NftPromoBanner from "./components/NftPromoBanner";
+import RecentBidCard from "./components/RecentBidCard";
 import TrendingBidWidgets from "./components/TrendingBidWidgets";
 import TrendingNftCard from "./components/TrendingNftCard";
+import EthPriceCard from "./components/EthPriceCard";
 
 const Nft = () => {
     return (
@@ -28,7 +30,7 @@ const Nft = () => {
                         </div>
 
                         <div className="col-span-12">
-                            {/* <RecentBidCard /> */}
+                            <RecentBidCard />
                         </div>
                     </div>
                 </div>
@@ -36,7 +38,7 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-4">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            {/* <EthPriceCard /> */}
+                            <EthPriceCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
                             {/* <StatisticsCard /> */}
