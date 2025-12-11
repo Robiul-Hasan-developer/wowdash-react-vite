@@ -7,6 +7,7 @@ import WidgetsAverageChart from "./components/WidgetsAverageChart";
 import TopInstructorsCard from "./components/top-instructors-card";
 import StudentProgressCard from "./components/StudentProgressCard";
 import CoursesCard from "./components/CoursesCard";
+import CourseActivityCard from "./components/CourseActivityCard";
 
 const Lms = () => {
     return (
@@ -35,7 +36,7 @@ const Lms = () => {
                     <CoursesCard />
                 </div>
                 <div className="col-span-12 2xl:col-span-4">
-                    {/* <CourseActivityCard /> */}
+                    <CourseActivityCard />
                 </div>
             </div>
 

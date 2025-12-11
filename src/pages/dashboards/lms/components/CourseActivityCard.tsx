@@ -1,7 +1,6 @@
-import React from "react";
+import DoubleBarChart from "@/components/charts/DoubleBarChart";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import CommonLink from "@/components/shared/common-link";
-import CoursesActivityChart from "@/components/charts/courses-activity-chart";
 
 const CourseActivityCard = () => {
     return (
@@ -32,7 +31,7 @@ const CourseActivityCard = () => {
                             </li>
                         </ul>
                         <div className="margin-16-minus y-value-left">
-                            <CoursesActivityChart height={380} />
+                            <DoubleBarChart chartHeight={356} colorOne="45b369" colorTwo="FF9F29" />
                         </div>
                     </div>
                 </div>
