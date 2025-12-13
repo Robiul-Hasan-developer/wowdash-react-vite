@@ -1,12 +1,11 @@
-import CommonLink from "@/components/shared/common-link";
+import DoctorImage1 from '@/assets/images/home-eight/doctor-img1.png';
+import DoctorImage2 from '@/assets/images/home-eight/doctor-img2.png';
+import DoctorImage3 from '@/assets/images/home-eight/doctor-img3.png';
+import DoctorImage4 from '@/assets/images/home-eight/doctor-img4.png';
+import DoctorImage5 from '@/assets/images/home-eight/doctor-img5.png';
+import DoctorImage6 from '@/assets/images/home-eight/doctor-img6.png';
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import DoctorImage1 from '@/public/assets/images/home-eight/doctor-img1.png';
-import DoctorImage2 from '@/public/assets/images/home-eight/doctor-img2.png';
-import DoctorImage3 from '@/public/assets/images/home-eight/doctor-img3.png';
-import DoctorImage4 from '@/public/assets/images/home-eight/doctor-img4.png';
-import DoctorImage5 from '@/public/assets/images/home-eight/doctor-img5.png';
-import DoctorImage6 from '@/public/assets/images/home-eight/doctor-img6.png';
-import Image from 'next/image';
 
 const DoctorListCard = () => {
     return (
@@ -23,7 +22,7 @@ const DoctorListCard = () => {
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage1} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage1} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Davis</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
@@ -33,7 +32,7 @@ const DoctorListCard = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage2} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage2} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Riead</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Orthopedics</span>
@@ -43,7 +42,7 @@ const DoctorListCard = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage3} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage3} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Albert Flores</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Ophthalmology</span>
@@ -53,7 +52,7 @@ const DoctorListCard = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage4} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage4} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Smith</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
@@ -63,7 +62,7 @@ const DoctorListCard = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage6} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage6} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Johnson</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
@@ -73,7 +72,7 @@ const DoctorListCard = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center">
-                                    <Image src={DoctorImage5} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
+                                    <img src={DoctorImage5} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Martinez</h6>
                                         <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>

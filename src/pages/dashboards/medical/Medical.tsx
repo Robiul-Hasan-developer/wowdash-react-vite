@@ -1,10 +1,12 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import DoctorListCard from "./components/DoctorListCard";
 import EarningStatisticCard from "./components/EarningStatisticCard";
 import PatientVisitedDepartment from "./components/PatientVisitedDepartment";
-import StatCards from "./components/StatCards";
 import PatientVisitedGender from "./components/PatientVisitedGender";
+import StatCards from "./components/StatCards";
+import LatestAppointmentsCard from "./components/LatestAppointmentsCard";
 
 const Medical = () => {
     return (
@@ -37,12 +39,12 @@ const Medical = () => {
                         </div>
                         <div className="col-span-12 2xl:col-span-4">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <DoctorListCard /> */}
+                                <DoctorListCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 2xl:col-span-8">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <LatestAppointmentsCard /> */}
+                                <LatestAppointmentsCard />
                             </Suspense>
                         </div>
                     </div>
