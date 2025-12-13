@@ -3,11 +3,13 @@ import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import AverageDailySalesCard from "./components/AverageDailySalesCard";
 import RevenueStatisticCard from "./components/RevenueStatisticCard";
+import SalesByCountriesCard from "./components/SalesByCountriesCard";
+import SourceVisitorsCard from "./components/SourceVisitorsCard";
 import SupportTrackerCard from "./components/SupportTrackerCard";
 import TransactionsCard from "./components/TransactionsCard";
 import UpgradePlanCard from "./components/UpgradePlanCard";
-import SalesByCountriesCard from "./components/SalesByCountriesCard";
-import SourceVisitorsCard from "./components/SourceVisitorsCard";
+import MonthlyCampaignStateCard from "./components/MonthlyCampaignStateCard";
+import RecentActivityCard from "./components/RecentActivityCard";
 
 const Analytics = () => {
     return (
@@ -60,13 +62,13 @@ const Analytics = () => {
 
                 <div className="col-span-12 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <MonthlyCampaignStateCard /> */}
+                        <MonthlyCampaignStateCard />
                     </Suspense>
                 </div>
 
                 <div className="col-span-12 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RecentActivityCard /> */}
+                        <RecentActivityCard />
                     </Suspense>
                 </div>
 

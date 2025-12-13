@@ -1,7 +1,5 @@
-"use client";
-
-import CommonLink from "@/components/shared/common-link";
-import RecentActivityTable from "@/components/table/recent-activity-table";
+import CommonLink from "@/components/shared/CommonLink";
+import RecentActivityTable from "@/components/tables/RecentActivityTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const RecentActivityCard = () => {

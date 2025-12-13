@@ -12,6 +12,7 @@ import MainLayout from "../layouts/MainLayout";
 import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
+import Inventory from "@/pages/dashboards/inventory/Inventory";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "analytics", element: <Analytics />
+      },
+      {
+        path: "inventory", element: <Inventory />
       },
     ],
   },

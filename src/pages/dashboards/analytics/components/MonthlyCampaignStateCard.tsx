@@ -1,10 +1,9 @@
+import SocialIcon1 from "@/assets/images/home-nine/socials1.png";
+import SocialIcon2 from "@/assets/images/home-nine/socials2.png";
+import SocialIcon3 from "@/assets/images/home-nine/socials3.png";
+import SocialIcon4 from "@/assets/images/home-nine/socials4.png";
+import SocialIcon5 from "@/assets/images/home-nine/socials5.png";
 import { Card, CardContent } from "@/components/ui/card";
-import SocialIcon1 from "@/public/assets/images/home-nine/socials1.png";
-import SocialIcon2 from "@/public/assets/images/home-nine/socials2.png";
-import SocialIcon3 from "@/public/assets/images/home-nine/socials3.png";
-import SocialIcon4 from "@/public/assets/images/home-nine/socials4.png";
-import SocialIcon5 from "@/public/assets/images/home-nine/socials5.png";
-import Image from "next/image";
 
 const MonthlyCampaignStateCard = () => {
     return (
@@ -19,7 +18,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-purple-100 dark:bg-purple-600/20 shrink-0">
-                                <Image src={SocialIcon1} alt="Icon" className="" />
+                                <img src={SocialIcon1} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Email</h6>
@@ -33,7 +32,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-yellow-100 dark:bg-yellow-600/20 shrink-0">
-                                <Image src={SocialIcon2} alt="Icon" className="" />
+                                <img src={SocialIcon2} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Clicked</h6>
@@ -47,7 +46,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-primary/20 shrink-0">
-                                <Image src={SocialIcon3} alt="Icon" className="" />
+                                <img src={SocialIcon3} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Subscribe</h6>
@@ -61,7 +60,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-green-100 dark:bg-green-500/20 shrink-0">
-                                <Image src={SocialIcon4} alt="Icon" className="" />
+                                <img src={SocialIcon4} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Complaints </h6>
@@ -75,7 +74,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-danger-100 dark:bg-red-600/20 shrink-0">
-                                <Image src={SocialIcon5} alt="Icon" className="" />
+                                <img src={SocialIcon5} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Unsubscribe</h6>
@@ -89,7 +88,7 @@ const MonthlyCampaignStateCard = () => {
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-primary/20 shrink-0">
-                                <Image src={SocialIcon3} alt="Icon" className="" />
+                                <img src={SocialIcon3} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-semibold">Subscribe</h6>
