@@ -1,6 +1,6 @@
-import CardSmallChartTwo from "@/components/charts/card-small-chart-two";
-import TodayIncomeChart from "@/components/charts/today-income-chart";
-import CommonLink from "@/components/shared/common-link";
+import BarLightChart from "@/components/charts/BarLightChart";
+import SmallAreaChartTwo from "@/components/charts/SmallAreaChartTwo";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
 
 const StatisticsCard = () => {
@@ -20,7 +20,9 @@ const StatisticsCard = () => {
                                 <h5 className="font-semibold mb-3">145</h5>
                                 <span className="text-neutral-500 dark:text-neutral-300 font-normal text-xl">Total Art Sold</span>
                             </div>
-                            <TodayIncomeChart />
+                            <div className="x-axies-value-none h-[110px]">
+                                <BarLightChart chartHeight={135} chartWidth={180} chartBorderRadius={6} />
+                            </div>
                         </div>
                         <div className="flex items-center gap-1 justify-between">
                             <div>
@@ -28,7 +30,7 @@ const StatisticsCard = () => {
                                 <span className="text-neutral-500 dark:text-neutral-300 font-normal text-xl">Total Earnings</span>
                             </div>
                             <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
-                                <CardSmallChartTwo chartColor={"#ff9f29"} />
+                                <SmallAreaChartTwo chartWidth={164} chartHeight={100} chartColor={"#ff9f29"} />
                             </div>
                         </div>
                     </div>

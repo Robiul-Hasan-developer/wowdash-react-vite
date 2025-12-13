@@ -1,13 +1,10 @@
-"use client"
-
-import CommonLink from "@/components/shared/common-link";
+import BitcoinIcon from '@/assets/images/nft/bitcoin.png';
+import FeaturedCreatorImage1 from '@/assets/images/nft/featured-creator1.png';
+import FeaturedCreatorImage2 from '@/assets/images/nft/featured-creator2.png';
+import NftImagesImage1 from '@/assets/images/nft/nft-items-img1.png';
+import CommonLink from '@/components/shared/CommonLink';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from "@/components/ui/card";
-import BitcoinIcon from '@/public/assets/images/nft/bitcoin.png';
-import FeaturedCreatorImage1 from '@/public/assets/images/nft/featured-creator1.png';
-import FeaturedCreatorImage2 from '@/public/assets/images/nft/featured-creator2.png';
-import NftImagesImage1 from '@/public/assets/images/nft/nft-items-img1.png';
-import Image from 'next/image';
 import { useState } from 'react';
 
 const FeaturedCreatorsCard = () => {
@@ -27,7 +24,7 @@ const FeaturedCreatorsCard = () => {
                     <div className="card-body px-6 py-5">
                         <div className="flex items-center justify-between gap-2 flex-wrap">
                             <div className="flex items-center">
-                                <Image src={NftImagesImage1} alt="Image"
+                                <img src={NftImagesImage1} alt="Image"
                                     className="flex-shrink-0 w-10 h-10 rounded-full me-3" />
                                 <div className="flex-grow-1">
                                     <h6 className="text-base mb-0 font-semibold">Theresa Webb</h6>
@@ -42,13 +39,13 @@ const FeaturedCreatorsCard = () => {
                                 <div
                                     className="nft-card bg-white dark:bg-slate-700 rounded overflow-hidden shadow-4">
                                     <div className="rounded overflow-hidden">
-                                        <Image src={FeaturedCreatorImage1} alt="Image"
+                                        <img src={FeaturedCreatorImage1} alt="Image"
                                             className="w-full h-full object-fit-cover" />
                                     </div>
                                     <div className="p-3">
                                         <h6 className="text-base font-bold text-[#0a0a0a] dark:text-white mb-3">New Figures</h6>
                                         <div className="flex items-center gap-2">
-                                            <Image src={BitcoinIcon}
+                                            <img src={BitcoinIcon}
                                                 className="w-28-px h-28-px rounded-full object-fit-cover" alt="Image" />
                                             <span className="text-sm text-neutral-500 dark:text-neutral-300 font-medium">0.10
                                                 BTC</span>
@@ -58,14 +55,14 @@ const FeaturedCreatorsCard = () => {
                                 <div
                                     className="nft-card bg-white dark:bg-slate-700 rounded overflow-hidden shadow-4">
                                     <div className="rounded overflow-hidden">
-                                        <Image src={FeaturedCreatorImage2} alt="Image"
+                                        <img src={FeaturedCreatorImage2} alt="Image"
                                             className="w-full h-full object-fit-cover" />
                                     </div>
                                     <div className="p-3">
                                         <h6 className="text-base font-bold text-[#0a0a0a] dark:text-white mb-3">Abstrac Girl
                                         </h6>
                                         <div className="flex items-center gap-2">
-                                            <Image src={BitcoinIcon}
+                                            <img src={BitcoinIcon}
                                                 className="w-28-px h-28-px rounded-full object-fit-cover" alt="Image" />
                                             <span className="text-sm text-neutral-500 dark:text-neutral-300 font-medium">0.10
                                                 BTC</span>

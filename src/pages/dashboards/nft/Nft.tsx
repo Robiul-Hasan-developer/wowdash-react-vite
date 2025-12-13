@@ -6,6 +6,8 @@ import RecentBidCard from "./components/RecentBidCard";
 import TrendingBidWidgets from "./components/TrendingBidWidgets";
 import TrendingNftCard from "./components/TrendingNftCard";
 import EthPriceCard from "./components/EthPriceCard";
+import StatisticsCard from "./components/StatisticsCard";
+import FeaturedCreatorsCard from "./components/FeaturedCreatorsCard";
 
 const Nft = () => {
     return (
@@ -41,10 +43,10 @@ const Nft = () => {
                             <EthPriceCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            {/* <StatisticsCard /> */}
+                            <StatisticsCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            {/* <FeaturedCreatorsCard /> */}
+                            <FeaturedCreatorsCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
                             {/* <TopCreatorsCard /> */}
