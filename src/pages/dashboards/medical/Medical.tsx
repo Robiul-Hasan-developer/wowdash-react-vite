@@ -1,15 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import AvailableTreatmentsCard from "./components/AvailableTreatmentsCard";
 import DoctorListCard from "./components/DoctorListCard";
 import EarningStatisticCard from "./components/EarningStatisticCard";
+import HealthReportsDocumentCard from "./components/HealthReportsDocumentCard";
 import LatestAppointmentsCard from "./components/LatestAppointmentsCard";
 import PatientVisitedDepartment from "./components/PatientVisitedDepartment";
 import PatientVisitedGender from "./components/PatientVisitedGender";
 import StatCards from "./components/StatCards";
 import TotalIncomeCard from "./components/TotalIncomeCard";
-import AvailableTreatmentsCard from "./components/AvailableTreatmentsCard";
-import HealthReportsDocumentCard from "./components/HealthReportsDocumentCard";
 
 const Medical = () => {
     return (
@@ -72,7 +72,6 @@ const Medical = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </>

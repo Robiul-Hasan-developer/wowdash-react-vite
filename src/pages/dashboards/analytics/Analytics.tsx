@@ -73,8 +73,6 @@ const Analytics = () => {
                 </div>
 
             </div>
-
-
         </>
     );
 };

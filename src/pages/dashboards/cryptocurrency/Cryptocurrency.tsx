@@ -64,7 +64,6 @@ const Cryptocurrency = () => {
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

@@ -1,14 +1,14 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import EthPriceCard from "./components/EthPriceCard";
+import FeaturedCreatorsCard from "./components/FeaturedCreatorsCard";
 import NftPromoBanner from "./components/NftPromoBanner";
 import RecentBidCard from "./components/RecentBidCard";
+import StatisticsCard from "./components/StatisticsCard";
+import TopCreatorsCard from "./components/TopCreatorsCard";
 import TrendingBidWidgets from "./components/TrendingBidWidgets";
 import TrendingNftCard from "./components/TrendingNftCard";
-import EthPriceCard from "./components/EthPriceCard";
-import StatisticsCard from "./components/StatisticsCard";
-import FeaturedCreatorsCard from "./components/FeaturedCreatorsCard";
-import TopCreatorsCard from "./components/TopCreatorsCard";
 
 const Nft = () => {
     return (
@@ -25,15 +25,21 @@ const Nft = () => {
                         </div>
 
                         <div className="col-span-12">
-                            <TrendingBidWidgets />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <TrendingBidWidgets />
+                            </Suspense>
                         </div>
 
                         <div className="col-span-12">
-                            <TrendingNftCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <TrendingNftCard />
+                            </Suspense>
                         </div>
 
                         <div className="col-span-12">
-                            <RecentBidCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <RecentBidCard />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
@@ -41,16 +47,24 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-4">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <EthPriceCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <EthPriceCard />
+                            </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <StatisticsCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <StatisticsCard />
+                            </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <FeaturedCreatorsCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <FeaturedCreatorsCard />
+                            </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <TopCreatorsCard />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <TopCreatorsCard />
+                            </Suspense>
                         </div>
                     </div>
                 </div>

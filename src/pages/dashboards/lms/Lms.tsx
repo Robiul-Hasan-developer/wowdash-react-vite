@@ -14,29 +14,41 @@ const Lms = () => {
         <>
             <Breadcrumb title="LMS" text="LMS" />
 
-             <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
+            <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
                 <div className="col-span-12 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <WidgetsAverageChart />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <TrafficSourceCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <TrafficSourceCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <TopCategoriesCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <TopCategoriesCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <TopInstructorsCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <TopInstructorsCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <StudentProgressCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <StudentProgressCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 2xl:col-span-8">
-                    <CoursesCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <CoursesCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 2xl:col-span-4">
-                    <CourseActivityCard />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <CourseActivityCard />
+                    </Suspense>
                 </div>
             </div>
 

@@ -2,13 +2,13 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import IncomeExpenseCard from "./components/IncomeExpenseCard";
-import StateCards from "./components/StateCards";
-import TopSuppliersCard from "./components/top-suppliers-card";
-import UsersCard from "./components/users-card";
-import TopCustomerCard from "./components/top-customer-card";
 import OverallReportCard from "./components/OverallReportCard";
 import PurchaseSalesCard from "./components/PurchaseSalesCard";
 import RecentTransactionsCard from "./components/RecentTransactionsCard";
+import StateCards from "./components/StateCards";
+import TopCustomerCard from "./components/TopCustomerCard";
+import TopSuppliersCard from "./components/TopSuppliersCard";
+import UsersCard from "./components/users-card";
 
 const Inventory = () => {
     return (
@@ -22,8 +22,6 @@ const Inventory = () => {
                         <StateCards />
                     </Suspense>
                 </div>
-
-
                 <div className="col-span-12 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <IncomeExpenseCard />

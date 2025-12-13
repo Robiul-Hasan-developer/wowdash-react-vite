@@ -19,7 +19,7 @@ const OverallReportCard = () => {
                     </div>
 
                     <div className="mx-auto apexcharts-tooltip-z-none mt-8">
-                        <DonutFourSeriesChart chartHeight={300} dataLabels={true} />
+                        <DonutFourSeriesChart chartHeight={346} dataLabels={true} />
                     </div>
 
                     <div className="flex flex-wrap gap-5 justify-center mt-12">

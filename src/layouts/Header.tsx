@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/ModeToggle";
 import LanguageSelect from "@/components/shared/LanguageSelect";
 import MessageDropdown from "@/components/shared/MessageDropdown";
 import NotificationDropdown from "@/components/shared/NotificationDropdown";

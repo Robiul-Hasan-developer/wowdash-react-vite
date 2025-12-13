@@ -9,7 +9,6 @@ import {
 import { cn } from "@/lib/utils";
 import { House } from 'lucide-react';
 
-
 interface BreadcrumbData {
     title: string,
     text: string,
