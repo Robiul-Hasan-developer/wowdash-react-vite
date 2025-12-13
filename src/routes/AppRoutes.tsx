@@ -10,6 +10,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Lms from "@/pages/dashboards/lms/Lms";
+import Medical from "@/pages/dashboards/medical/Medical";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "nft", element: <Nft />
+      },
+      {
+        path: "medical", element: <Medical />
       },
     ],
   },
