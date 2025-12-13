@@ -1,21 +1,20 @@
 "use client"
 
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import CommonLink from "@/components/shared/common-link";
-import Image, { StaticImageData } from "next/image";
-import { Download, Trash } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Download, Trash } from "lucide-react";
+import React, { useState } from "react";
 
-import IconPdf from "@/public/assets/images/home-eight/icon-pdf.png";
-import IconText from "@/public/assets/images/home-eight/icon-text.png";
-import toast from "react-hot-toast";
+import IconPdf from "@/assets/images/home-eight/icon-pdf.png";
+import IconText from "@/assets/images/home-eight/icon-text.png";
+import CommonLink from "@/components/shared/CommonLink";
+import { toast } from "sonner";
 
 interface DocumentItem {
     id: number;
     name: string;
     size: string;
-    icon: StaticImageData;
+    icon: string;
 }
 
 const initialDocuments: DocumentItem[] = [
@@ -64,7 +63,7 @@ const HealthReportsDocumentCard: React.FC = () => {
     const handleRemoveItem = (id: number) => {
         const filteredItems = items.filter((item) => id !== item.id)
         setItems(filteredItems);
-        toast.success('Deleted Successfully!')
+        toast('Deleted Successfully!')
     }
 
     return (
@@ -82,14 +81,14 @@ const HealthReportsDocumentCard: React.FC = () => {
                     {/* Body */}
                     <div className="card-body py-4 px-6">
                         <div className="flex flex-col gap-4">
-                            {items.map((doc, index) => (
+                            {items.map((doc) => (
                                 <div
                                     key={doc.id}
                                     className="flex items-center justify-between gap-3"
                                 >
                                     <div className="flex items-center gap-3">
                                         <div className="flex-shrink-0">
-                                            <Image src={doc.icon} alt={doc.name} />
+                                            <img src={doc.icon} alt={doc.name} />
                                         </div>
                                         <div className="flex-grow-1">
                                             <h6 className="text-base mb-0 font-normal">{doc.name}</h6>

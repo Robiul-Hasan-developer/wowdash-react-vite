@@ -3,10 +3,13 @@ import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import DoctorListCard from "./components/DoctorListCard";
 import EarningStatisticCard from "./components/EarningStatisticCard";
+import LatestAppointmentsCard from "./components/LatestAppointmentsCard";
 import PatientVisitedDepartment from "./components/PatientVisitedDepartment";
 import PatientVisitedGender from "./components/PatientVisitedGender";
 import StatCards from "./components/StatCards";
-import LatestAppointmentsCard from "./components/LatestAppointmentsCard";
+import TotalIncomeCard from "./components/TotalIncomeCard";
+import AvailableTreatmentsCard from "./components/AvailableTreatmentsCard";
+import HealthReportsDocumentCard from "./components/HealthReportsDocumentCard";
 
 const Medical = () => {
     return (
@@ -54,17 +57,17 @@ const Medical = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <TotalIncomeCard /> */}
+                                <TotalIncomeCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <AvailableTreatmentsCard /> */}
+                                <AvailableTreatmentsCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <HealthReportsDocumentCard /> */}
+                                <HealthReportsDocumentCard />
                             </Suspense>
                         </div>
                     </div>

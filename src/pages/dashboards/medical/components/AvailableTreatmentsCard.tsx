@@ -1,17 +1,14 @@
-import CommonLink from "@/components/shared/common-link";
+import TreatmentIcon1 from "@/assets/images/home-eight/treatment-icon1.png";
+import TreatmentIcon2 from "@/assets/images/home-eight/treatment-icon2.png";
+import TreatmentIcon3 from "@/assets/images/home-eight/treatment-icon3.png";
+import TreatmentIcon4 from "@/assets/images/home-eight/treatment-icon4.png";
+import TreatmentIcon5 from "@/assets/images/home-eight/treatment-icon5.png";
+import TreatmentIcon6 from "@/assets/images/home-eight/treatment-icon6.png";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import Image, { StaticImageData } from "next/image";
-
-// Images
-import TreatmentIcon1 from "@/public/assets/images/home-eight/treatment-icon1.png";
-import TreatmentIcon2 from "@/public/assets/images/home-eight/treatment-icon2.png";
-import TreatmentIcon3 from "@/public/assets/images/home-eight/treatment-icon3.png";
-import TreatmentIcon4 from "@/public/assets/images/home-eight/treatment-icon4.png";
-import TreatmentIcon5 from "@/public/assets/images/home-eight/treatment-icon5.png";
-import TreatmentIcon6 from "@/public/assets/images/home-eight/treatment-icon6.png";
 
 interface TreatmentItem {
-    icon: StaticImageData;
+    icon: string;
     bgColor: string;
     title: string;
     doctors: string;
@@ -90,7 +87,7 @@ const AvailableTreatmentsCard = () => {
                                         <div
                                             className={`w-10 h-10 rounded-full flex-shrink-0 ${item.bgColor} flex justify-center items-center`}
                                         >
-                                            <Image src={item.icon} alt={item.title} />
+                                            <img src={item.icon} alt={item.title} />
                                         </div>
                                         <div className="flex-grow-1">
                                             <h6 className="text-base mb-0 font-normal">
