@@ -1,6 +1,5 @@
-import WorldMapChart from "@/components/charts/world-map-chart";
-import CountryList from "@/components/shared/country-list";
-import CustomSelect from "@/components/shared/custom-select";
+import CountryList from "@/components/shared/CountryList";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const SalesByCountriesCard = () => {
@@ -19,11 +18,11 @@ const SalesByCountriesCard = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     <div className="col-span-12 lg:col-span-6">
                         <div className="border border-neutral-300 dark:border-neutral-300/20 rounded-lg bg-neutral-50 dark:bg-neutral-600/20 h-full">
-                            <WorldMapChart mapHeight={800} />
+                            {/* <WorldMap mapHeight={800} /> */}
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-6">
-                        <div className="border border-neutral-300 dark:border-neutral-300/20 rounded-lg bg-neutral-50 dark:bg-neutral-600/20 h-full max-h-[266px] overflow-y-auto p-6 scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
+                        <div className="border border-neutral-300 dark:border-neutral-300/20 rounded-lg bg-neutral-50 dark:bg-neutral-600/20 h-full max-h-[266px] overflow-y-auto p-6 scrollbar-thin">
                             <CountryList />
                         </div>
                     </div>

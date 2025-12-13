@@ -1,5 +1,5 @@
-import AverageDailySalesChart from "@/components/charts/average-daily-sales-chart";
-import CustomSelect from "@/components/shared/custom-select";
+import BarLightChart from "@/components/charts/BarLightChart";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AverageDailySalesCard = () => {
@@ -15,8 +15,7 @@ const AverageDailySalesCard = () => {
                 </div>
 
                 <h6 className="text-center my-4">$27,500.00</h6>
-
-                <AverageDailySalesChart />
+                <BarLightChart chartHeight={235} chartWidth={500} chartBorderRadius={6} /> 
 
             </CardContent>
         </Card>

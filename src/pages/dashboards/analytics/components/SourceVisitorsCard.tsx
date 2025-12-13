@@ -1,21 +1,18 @@
-"use client";
-
-import CustomSelect from "@/components/shared/custom-select";
 import { Card, CardContent } from "@/components/ui/card";
-import Image, { StaticImageData } from "next/image";
 
-import SourceImage1 from "@/public/assets/images/home-nine/source-icon1.png";
-import SourceImage2 from "@/public/assets/images/home-nine/source-icon2.png";
-import SourceImage3 from "@/public/assets/images/home-nine/source-icon3.png";
-import SourceImage4 from "@/public/assets/images/home-nine/source-icon4.png";
+import SourceImage1 from "@/assets/images/home-nine/source-icon1.png";
+import SourceImage2 from "@/assets/images/home-nine/source-icon2.png";
+import SourceImage3 from "@/assets/images/home-nine/source-icon3.png";
+import SourceImage4 from "@/assets/images/home-nine/source-icon4.png";
+import CustomSelect from "@/components/shared/CustomSelect";
 
 interface SourceVisitor {
     id: number;
     title: string;
     percentage: number;
-    icon: StaticImageData;
-    bgColor: string; // Tailwind classes for gradient background
-    iconBg: string; // Tailwind classes for circle bg
+    icon: string;
+    bgColor: string;
+    iconBg: string;
 }
 
 const sources: SourceVisitor[] = [
@@ -87,7 +84,7 @@ const SourceVisitorsCard = () => {
                                     <span
                                         className={`w-[40px] h-[40px] flex shrink-0 justify-center items-center ${src.iconBg} rounded-full mb-3`}
                                     >
-                                        <Image src={src.icon} alt={src.title} />
+                                        <img src={src.icon} alt={src.title} />
                                     </span>
                                     <span className="text-neutral-600 dark:text-neutral-200">
                                         {src.title}
