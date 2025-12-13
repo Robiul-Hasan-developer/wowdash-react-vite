@@ -1,4 +1,4 @@
-import RadialMultipleBar from '@/components/charts/radial-multiple-bar';
+import RadialBarChart from "@/components/charts/RadialBarChart";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PatientVisitedDepartment = () => {
@@ -12,8 +12,8 @@ const PatientVisitedDepartment = () => {
                         </div>
                     </div>
                     <div className="card-body py-4 px-6 flex items-center gap-4">
-                        <div className="">
-                            <RadialMultipleBar />
+                        <div className="-m-4">
+                            <RadialBarChart chartHeight={300} />
                         </div>
                         <ul className="flex flex-col gap-3">
                             <li>

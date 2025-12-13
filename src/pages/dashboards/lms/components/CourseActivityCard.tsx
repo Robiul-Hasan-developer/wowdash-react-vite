@@ -1,4 +1,4 @@
-import DoubleBarChart from "@/components/charts/DoubleBarChart";
+import DoubleBarChartSevenSeries from "@/components/charts/DoubleBarChartSevenSeries";
 import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -30,8 +30,8 @@ const CourseActivityCard = () => {
                                 </span>
                             </li>
                         </ul>
-                        <div className="margin-16-minus y-value-left">
-                            <DoubleBarChart chartHeight={356} colorOne="45b369" colorTwo="FF9F29" />
+                        <div className="-m-4 y-value-left">
+                            <DoubleBarChartSevenSeries chartHeight={390} colorOne="45b369" colorTwo="FF9F29" />
                         </div>
                     </div>
                 </div>

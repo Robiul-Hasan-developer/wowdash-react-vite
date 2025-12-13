@@ -1,13 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import StatCards from "./components/StatCards";
 import EarningStatisticCard from "./components/EarningStatisticCard";
+import PatientVisitedDepartment from "./components/PatientVisitedDepartment";
+import StatCards from "./components/StatCards";
+import PatientVisitedGender from "./components/PatientVisitedGender";
 
 const Medical = () => {
     return (
         <>
-            <Breadcrumb title="NFT" text="NFT" />
+            <Breadcrumb title="Medical" text="Medical" />
 
             <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
 
@@ -25,12 +27,12 @@ const Medical = () => {
                         </div>
                         <div className="col-span-12 lg:col-span-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <PatientVisitedDepartment /> */}
+                                <PatientVisitedDepartment />
                             </Suspense>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <PatientVisitedGender /> */}
+                                <PatientVisitedGender />
                             </Suspense>
                         </div>
                         <div className="col-span-12 2xl:col-span-4">
