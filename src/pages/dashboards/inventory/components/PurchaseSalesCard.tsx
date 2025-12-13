@@ -1,5 +1,5 @@
-import CoursesActivityChart from "@/components/charts/courses-activity-chart";
-import CustomSelect from "@/components/shared/custom-select";
+import DoubleBarChartSevenSeries from "@/components/charts/DoubleBarChartSevenSeries";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PurchaseSalesCard = () => {
@@ -37,7 +37,7 @@ const PurchaseSalesCard = () => {
                         </ul>
 
                         <div className="-m-4">
-                            <CoursesActivityChart height={250} />
+                            <DoubleBarChartSevenSeries chartHeight={300} colorOne={'45b369'} colorTwo={'FF9F29'} />
                         </div>
                     </div>
 

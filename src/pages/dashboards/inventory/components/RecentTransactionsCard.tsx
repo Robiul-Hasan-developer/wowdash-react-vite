@@ -1,5 +1,5 @@
-import CommonLink from "@/components/shared/common-link";
-import InventoryRecentTransactionsTable from "@/components/table/inventory-recent-transactions-table";
+import CommonLink from "@/components/shared/CommonLink";
+import InventoryRecentTransactionsTable from "@/components/tables/InventoryRecentTransactionsTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const RecentTransactionsCard = () => {

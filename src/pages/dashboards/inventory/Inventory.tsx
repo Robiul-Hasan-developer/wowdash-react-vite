@@ -1,10 +1,14 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import StateCards from "./components/StateCards";
 import IncomeExpenseCard from "./components/IncomeExpenseCard";
-import UsersCard from "./components/users-card";
+import StateCards from "./components/StateCards";
 import TopSuppliersCard from "./components/top-suppliers-card";
+import UsersCard from "./components/users-card";
+import TopCustomerCard from "./components/top-customer-card";
+import OverallReportCard from "./components/OverallReportCard";
+import PurchaseSalesCard from "./components/PurchaseSalesCard";
+import RecentTransactionsCard from "./components/RecentTransactionsCard";
 
 const Inventory = () => {
     return (
@@ -37,22 +41,22 @@ const Inventory = () => {
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <TopCustomerCard /> */}
+                        <TopCustomerCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <OverallReportCard /> */}
+                        <OverallReportCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <PurchaseSalesCard /> */}
+                        <PurchaseSalesCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RecentTransactionsCard /> */}
+                        <RecentTransactionsCard />
                     </Suspense>
                 </div>
 

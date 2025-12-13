@@ -1,5 +1,5 @@
-import OverallReportChart from "@/components/charts/overall-report-chart";
-import CustomSelect from "@/components/shared/custom-select";
+import DonutFourSeriesChart from "@/components/charts/DonutFourSeriesChart";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 const OverallReportCard = () => {
@@ -19,7 +19,7 @@ const OverallReportCard = () => {
                     </div>
 
                     <div className="mx-auto apexcharts-tooltip-z-none mt-8">
-                        <OverallReportChart />
+                        <DonutFourSeriesChart chartHeight={300} dataLabels={true} />
                     </div>
 
                     <div className="flex flex-wrap gap-5 justify-center mt-12">
