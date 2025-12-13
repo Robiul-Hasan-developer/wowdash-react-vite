@@ -8,6 +8,7 @@ import TrendingNftCard from "./components/TrendingNftCard";
 import EthPriceCard from "./components/EthPriceCard";
 import StatisticsCard from "./components/StatisticsCard";
 import FeaturedCreatorsCard from "./components/FeaturedCreatorsCard";
+import TopCreatorsCard from "./components/TopCreatorsCard";
 
 const Nft = () => {
     return (
@@ -49,7 +50,7 @@ const Nft = () => {
                             <FeaturedCreatorsCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            {/* <TopCreatorsCard /> */}
+                            <TopCreatorsCard />
                         </div>
                     </div>
                 </div>

@@ -1,20 +1,19 @@
-import CommonLink from "@/components/shared/common-link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 
-import Image1 from "@/public/assets/images/nft/creator-img1.png";
-import Image2 from "@/public/assets/images/nft/creator-img2.png";
-import Image3 from "@/public/assets/images/nft/creator-img3.png";
-import Image4 from "@/public/assets/images/nft/creator-img4.png";
-import Image5 from "@/public/assets/images/nft/creator-img5.png";
+import Image1 from "@/assets/images/nft/creator-img1.png";
+import Image2 from "@/assets/images/nft/creator-img2.png";
+import Image3 from "@/assets/images/nft/creator-img3.png";
+import Image4 from "@/assets/images/nft/creator-img4.png";
+import Image5 from "@/assets/images/nft/creator-img5.png";
+import CommonLink from "@/components/shared/CommonLink";
 
 interface Creator {
     id: number;
     name: string;
     username: string;
-    avatar: StaticImageData;
+    avatar: string;
 }
 
 const creatorsData: Creator[] = [
@@ -57,7 +56,7 @@ const TopCreatorsCard: React.FC = () => {
                                     }`}
                             >
                                 <div className="flex items-center">
-                                    <Image
+                                    <img
                                         src={creator.avatar}
                                         alt={creator.name}
                                         className="flex-shrink-0 w-10 h-10 rounded-full me-3"
