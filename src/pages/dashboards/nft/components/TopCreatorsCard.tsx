@@ -14,26 +14,67 @@ interface Creator {
     name: string;
     username: string;
     avatar: string;
+    isFollowing: boolean;
 }
 
 const creatorsData: Creator[] = [
-    { id: 1, name: "Theresa Webb", username: "@wishon", avatar: Image1 },
-    { id: 2, name: "Arlene McCoy", username: "@nemccoy", avatar: Image2 },
-    { id: 3, name: "Kathryn Murphy", username: "@kathrynmur", avatar: Image3 },
-    { id: 4, name: "Marvin McKinney", username: "@marvinckin", avatar: Image4 },
-    { id: 5, name: "Theresa Webb", username: "@wishon", avatar: Image1 },
-    { id: 6, name: "Dianne Russell", username: "@dinne_r", avatar: Image5 },
+    {
+        id: 1,
+        name: "Theresa Webb",
+        username: "@wishon",
+        avatar: Image1,
+        isFollowing: false,
+    },
+    {
+        id: 2,
+        name: "Arlene McCoy",
+        username: "@nemccoy",
+        avatar: Image2,
+        isFollowing: false,
+    },
+    {
+        id: 3,
+        name: "Kathryn Murphy",
+        username: "@kathrynmur",
+        avatar: Image3,
+        isFollowing: false,
+    },
+    {
+        id: 4,
+        name: "Marvin McKinney",
+        username: "@marvinckin",
+        avatar: Image4,
+        isFollowing: false,
+    },
+    {
+        id: 5,
+        name: "Theresa Webb",
+        username: "@wishon",
+        avatar: Image1,
+        isFollowing: false,
+    },
+    {
+        id: 6,
+        name: "Dianne Russell",
+        username: "@dinne_r",
+        avatar: Image5,
+        isFollowing: false,
+    },
 ];
 
 const TopCreatorsCard: React.FC = () => {
-    const [followState, setFollowState] = useState<Record<number, boolean>>({});
 
-    const toggleFollow = (id: number) => {
-        setFollowState((prev) => ({
-            ...prev,
-            [id]: !prev[id],
-        }));
-    };
+    const [followState, setFollowState] = useState(creatorsData);
+
+    const toggleFollow = (itemId:number) => {
+        setFollowState((prevState) => 
+            prevState.map((creator) => {
+                return creator.id === itemId 
+                ? { ...creator, isFollowing: !creator.isFollowing } 
+                : creator
+            })
+        )
+    }
 
     return (
         <Card className="card h-full rounded-lg border-0 !p-0">
@@ -49,7 +90,7 @@ const TopCreatorsCard: React.FC = () => {
 
                     {/* List */}
                     <div className="card-body px-6 py-5">
-                        {creatorsData.map((creator, index) => (
+                        {followState.map((creator, index) => (
                             <div
                                 key={creator.id}
                                 className={`flex items-center justify-between gap-2 flex-wrap ${index !== creatorsData.length - 1 ? "mb-[32px]" : "mb-0"
@@ -75,7 +116,7 @@ const TopCreatorsCard: React.FC = () => {
                                     className="text-white px-6 rounded-full follow-btn transition-2"
                                     onClick={() => toggleFollow(creator.id)}
                                 >
-                                    {followState[creator.id] ? "Following" : "Follow"}
+                                    {creator.isFollowing ? "Following" : "Follow"}
                                 </Button>
                             </div>
                         ))}
