@@ -4,6 +4,8 @@ import { Suspense } from "react";
 import EmailHeader from "../components/EmailHeader";
 import EmailList from "../components/EmailList";
 import EmailSidebar from "../components/EmailSidebar";
+import EmailSidebarOverlay from "../components/EmailSidebarOverlay";
+import EmailSidebarToggleButton from "../components/EmailSidebarToggleButton";
 
 const Email = () => {
     return (
@@ -11,7 +13,7 @@ const Email = () => {
             <Breadcrumb title="Email" text="Email" />
 
             <div className="grid grid-cols-1 xl:grid-cols-12 xl:gap-6 relative">
-                {/* <EmailSidebarOverlay /> */}
+                <EmailSidebarOverlay />
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
@@ -22,7 +24,7 @@ const Email = () => {
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <EmailSidebarToggleButton /> */}
+                        <EmailSidebarToggleButton />
                     </Suspense>
 
                     <div className="card h-full !p-0 border-0 email-card">
