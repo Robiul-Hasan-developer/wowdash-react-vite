@@ -7,7 +7,7 @@ const EmailSidebar = () => {
     // const { isSidebarOpen } = useEmailSidebar();
 
     return (
-        <div className={cn("email-sidebar card h-full p-0 border-0 absolute left-0 top-0 z-[10] xl:static w-[280px] xl:w-auto block")}>
+        <div className={cn("email-sidebar card h-full border-0 absolute left-0 top-0 z-[10] xl:static w-[280px] xl:w-auto block shadow-sm")}>
         {/* <div className={cn(
             "email-sidebar card h-full p-0 border-0 absolute left-0 top-0 z-[10] xl:static w-[280px] xl:w-auto",
             isSidebarOpen ? "block" : "hidden xl:block"

@@ -1,6 +1,8 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
+import EmailHeader from "../components/EmailHeader";
+import EmailList from "../components/EmailList";
 import EmailSidebar from "../components/EmailSidebar";
 
 const Email = () => {
@@ -26,12 +28,12 @@ const Email = () => {
                     <div className="card h-full !p-0 border-0 email-card">
                         <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <EmailHeader /> */}
+                                <EmailHeader />
                             </Suspense>
                         </div>
                         <div className="card-body p-0">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                {/* <EmailList /> */}
+                                <EmailList />
                             </Suspense>
                         </div>
                     </div>
