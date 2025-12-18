@@ -7,6 +7,7 @@ import Investment from "@/pages/dashboards/investment/Investment";
 import Lms from "@/pages/dashboards/lms/Lms";
 import Medical from "@/pages/dashboards/medical/Medical";
 import Nft from "@/pages/dashboards/nft/Nft";
+import EmailDetails from "@/pages/emails/email-details/EmailDetails";
 import Email from "@/pages/emails/email/Email";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
@@ -53,6 +54,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "email", element: <Email />
+      },
+      {
+        path: "email-details", element: <EmailDetails />
       },
     ],
   },

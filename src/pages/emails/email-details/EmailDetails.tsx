@@ -1,11 +1,20 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
-import EmailHeader from "../components/EmailHeader";
-import EmailList from "../components/EmailList";
 import EmailSidebar from "../components/EmailSidebar";
 import EmailSidebarOverlay from "../components/EmailSidebarOverlay";
 import EmailSidebarToggleButton from "../components/EmailSidebarToggleButton";
+
+
+
+import UserList1 from "@/assets/images/user-list/user-list1.png";
+import UserList2 from "@/assets/images/user-list/user-list2.png";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Images, LinkIcon, MoveLeft, Printer, Send, Star, Trash2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EmailDetails = () => {
     return (
@@ -27,18 +36,7 @@ const EmailDetails = () => {
                         <EmailSidebarToggleButton />
                     </Suspense>
 
-                    <div className="card h-full !p-0 border-0 email-card">
-                        <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                <EmailHeader />
-                            </Suspense>
-                        </div>
-                        <div className="card-body p-0">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                                <EmailList />
-                            </Suspense>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
 
