@@ -71,36 +71,6 @@ export const data = {
           url: "/inventory",
           circleColor: "bg-yellow-500",
         },
-        {
-          title: "Finance & Banking",
-          url: "/finance",
-          circleColor: "bg-green-500",
-        },
-        {
-          title: "Booking System",
-          url: "/booking",
-          circleColor: "bg-red-500",
-        },
-        {
-          title: "Help Desk",
-          url: "/help",
-          circleColor: "bg-blue-500",
-        },
-        {
-          title: "Podcast",
-          url: "/podcast",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "Project Management",
-          url: "/project-management",
-          circleColor: "bg-blue-500",
-        },
-        {
-          title: "Call Center",
-          url: "/call-center",
-          circleColor: "bg-red-500",
-        },
       ],
     },
     {
