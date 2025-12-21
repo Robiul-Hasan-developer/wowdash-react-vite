@@ -354,7 +354,7 @@ const ChatBox = () => {
 
                 <Command>
                     <div className="border-t border-neutral-200">
-                        <CommandInput placeholder="Search user..." className='' />
+                        <CommandInput placeholder="Search user..." />
                     </div>
                     <CommandList className='max-h-[580px]'>
                         <CommandEmpty>No user name found.</CommandEmpty>

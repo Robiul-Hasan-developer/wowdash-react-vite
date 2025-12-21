@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
@@ -61,6 +62,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "chat", element: <Chat />
+      },
+      {
+        path: "calendar", element: <Calendar />
       },
     ],
   },
