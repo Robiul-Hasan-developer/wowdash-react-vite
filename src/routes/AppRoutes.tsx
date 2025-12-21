@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import Chat from "@/pages/chat/Chat";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
 import Inventory from "@/pages/dashboards/inventory/Inventory";
@@ -57,6 +58,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "email-details", element: <EmailDetails />
+      },
+      {
+        path: "chat", element: <Chat />
       },
     ],
   },
