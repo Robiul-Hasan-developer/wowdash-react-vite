@@ -11,9 +11,7 @@ import {
 import { EllipsisVertical, Trash } from "lucide-react";
 import { toast } from "sonner";
 import AddEvent from "./AddEvent";
-// import AddEvent from "./AddEvent";
-// import EditEvent from "./EditEvent";
-// import ViewEvent from "./ViewEvent";
+import ViewEvent from "./ViewEvent";
 
 export interface CalendarEvent {
     id: number;
@@ -93,7 +91,7 @@ const CalendarSidebar: React.FC = () => {
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent>
                                         <DropdownMenuItem asChild>
-                                            {/* <ViewEvent addOnViewEvent={event} /> */}
+                                            <ViewEvent addOnViewEvent={event} />
                                         </DropdownMenuItem>
 
                                         <DropdownMenuItem asChild>
