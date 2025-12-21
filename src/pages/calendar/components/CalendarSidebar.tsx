@@ -11,8 +11,8 @@ import {
 import { EllipsisVertical, Trash } from "lucide-react";
 import { toast } from "sonner";
 import AddEvent from "./AddEvent";
-import ViewEvent from "./ViewEvent";
 import EditEvent from "./EditEvent";
+import ViewEvent from "./ViewEvent";
 
 export interface CalendarEvent {
     id: number;

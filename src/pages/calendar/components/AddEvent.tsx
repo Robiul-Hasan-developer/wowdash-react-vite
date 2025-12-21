@@ -42,10 +42,20 @@ function isValidDate(date: Date | undefined) {
     return !isNaN(date.getTime())
 }
 
-interface AddEventProps {
-    onAddEvent: (event: string) => void;
+
+export interface CalendarEvent {
+    id: number;
+    title: string;
+    label: string;
+    color: string;
+    startTime: string;
+    endTime: string;
+    description: string;
 }
 
+interface AddEventProps {
+    onAddEvent: (event: CalendarEvent) => void;
+}
 
 const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     const [open, setOpen] = React.useState(false)
