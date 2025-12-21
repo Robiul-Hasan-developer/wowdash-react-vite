@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from '@/components/ui/button'
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from '@/components/ui/calendar'
 import {
     Dialog,
     DialogClose,
@@ -22,7 +22,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from '@/components/ui/textarea'
 import { CalendarIcon, Loader2, SquarePlus } from "lucide-react"
 import * as React from "react"
-import toast from "react-hot-toast"
+import { toast } from 'sonner'
 
 function formatDate(date: Date | undefined) {
     if (!date) return ""
@@ -38,9 +38,19 @@ function isValidDate(date: Date | undefined) {
     return !isNaN(date.getTime())
 }
 
+export interface CalendarEvent {
+    id: number;
+    title: string;
+    color: string;
+    label: string;
+    startTime: string;
+    endTime: string;
+    description: string;
+}
+
 interface EditEventProps {
-    onEditEvent: (event: any) => void;
-    event: any;
+    onEditEvent: (event: CalendarEvent) => void;
+    event: CalendarEvent;
 }
 
 const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
@@ -81,7 +91,7 @@ const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
     const handleModalFormSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         if (!label) {
-            toast.error("Please select an event type!")
+            toast("Please select an event type!")
             return
         }
         setSubmitForm(true)
@@ -154,7 +164,7 @@ const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
                                     <div className="relative flex gap-2">
                                         <Input
                                             id="date"
-                                            value={value}
+                                            // value={value}
                                             placeholder="June 01, 2025"
                                             className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
                                             required
@@ -210,7 +220,6 @@ const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
                                     <div className="relative flex gap-2">
                                         <Input
                                             id="dateEnd"
-                                            value={endValue}
                                             placeholder="June 01, 2025"
                                             className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
                                             required
