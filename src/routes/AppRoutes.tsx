@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
+import Alert from "@/pages/components-pages/alert/Alert";
 import Buttons from "@/pages/components-pages/buttons/Buttons";
 import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
@@ -81,6 +82,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "dropdown", element: <Dropdown />
+      },
+      {
+        path: "alert", element: <Alert />
       },
     ],
   },
