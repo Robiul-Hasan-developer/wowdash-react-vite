@@ -265,16 +265,16 @@ const TabAccordion = () => {
                             <Tabs defaultValue="IconButtonHome" className="gap-3 flex flex-row">
                                 <div className="shrink-0">
                                     <TabsList className='bg-transparent dark:bg-transparent rounded-none flex items-center justify-start flex-col p-0'>
-                                        <TabsTrigger value="IconButtonHome" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
+                                        <TabsTrigger value="IconButtonHome" className='h-10 px-4 py-2.5 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                                             Home
                                         </TabsTrigger>
-                                        <TabsTrigger value="IconButtonDetails" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
+                                        <TabsTrigger value="IconButtonDetails" className='h-10 px-4 py-2.5 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                                             Details
                                         </TabsTrigger>
-                                        <TabsTrigger value="IconButtonProfile" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
+                                        <TabsTrigger value="IconButtonProfile" className='h-10 px-4 py-2.5 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                                             Profile
                                         </TabsTrigger>
-                                        <TabsTrigger value="IconButtonSettings" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
+                                        <TabsTrigger value="IconButtonSettings" className='h-10 px-4 py-2.5 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                                             Settings
                                         </TabsTrigger>
                                     </TabsList>

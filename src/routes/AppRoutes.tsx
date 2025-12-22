@@ -8,6 +8,7 @@ import Buttons from "@/pages/components-pages/buttons/Buttons";
 import CardPage from "@/pages/components-pages/card/CardPage";
 import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
+import Pagination from "@/pages/components-pages/pagination/Pagination";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
@@ -101,6 +102,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "tab-accordion", element: <TabAccordion />
+      },
+      {
+        path: "pagination", element: <Pagination />
+      },
+      {
+        path: "pagination", element: <Pagination />
       },
     ],
   },
