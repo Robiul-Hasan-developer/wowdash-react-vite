@@ -2,6 +2,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import CalendarSidebar from "./components/CalendarSidebar";
+import BasicFullCalendar from "./components/BasicFullCalendar";
 
 const Calendar = () => {
     return (
@@ -16,7 +17,7 @@ const Calendar = () => {
                     </div>
 
                     <div className="col-span-12 lg:col-span-8 2xl:col-span-9">
-                        {/* <BasicFullCalendar /> */}
+                        <BasicFullCalendar />
                     </div>
 
                 </div>
