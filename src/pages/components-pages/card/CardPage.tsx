@@ -15,10 +15,10 @@ import { BriefcaseBusiness, ChevronRight, Code, Medal, Monitor, UserPlus, X } fr
 import { Suspense } from "react";
 import { Link } from "react-router-dom";
 
-const Card = () => {
+const CardPage = () => {
     return (
         <>
-            <Breadcrumb title="Card" text="Card" />
+            <Breadcrumb title="CardPage" text="CardPage" />
 
             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                 <div className="">
@@ -378,4 +378,4 @@ const Card = () => {
     );
 };
 
-export default Card;
+export default CardPage;

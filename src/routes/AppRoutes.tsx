@@ -3,7 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
 import Alert from "@/pages/components-pages/alert/Alert";
+import Avatar from "@/pages/components-pages/avatar/Avatart";
 import Buttons from "@/pages/components-pages/buttons/Buttons";
+import CardPage from "@/pages/components-pages/card/CardPage";
 import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
@@ -85,6 +87,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "alert", element: <Alert />
+      },
+      {
+        path: "card", element: <CardPage />
+      },
+      {
+        path: "avatar", element: <Avatar />
       },
     ],
   },
