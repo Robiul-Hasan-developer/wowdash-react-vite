@@ -4,6 +4,7 @@ import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
 import Buttons from "@/pages/components-pages/buttons/Buttons";
 import Colors from "@/pages/components-pages/colors/Colors";
+import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
 import Inventory from "@/pages/dashboards/inventory/Inventory";
@@ -77,6 +78,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "buttons", element: <Buttons />
+      },
+      {
+        path: "dropdown", element: <Dropdown />
       },
     ],
   },
