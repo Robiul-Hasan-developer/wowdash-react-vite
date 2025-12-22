@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
+import Buttons from "@/pages/components-pages/buttons/Buttons";
+import Colors from "@/pages/components-pages/colors/Colors";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
 import Inventory from "@/pages/dashboards/inventory/Inventory";
@@ -69,6 +71,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "typography", element: <Typography />
+      },
+      {
+        path: "colors", element: <Colors />
+      },
+      {
+        path: "buttons", element: <Buttons />
       },
     ],
   },

@@ -2,10 +2,10 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 
-const Chat = () => {
+const Buttons = () => {
     return (
         <>
-            <Breadcrumb title="Chat" text="Chat" />
+            <Breadcrumb title="Buttons" text="Buttons" />
 
             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
 
@@ -15,4 +15,4 @@ const Chat = () => {
     );
 };
 
-export default Chat;
+export default Buttons;
