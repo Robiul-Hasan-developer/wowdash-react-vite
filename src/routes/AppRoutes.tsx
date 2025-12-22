@@ -17,6 +17,7 @@ import MainLayout from "../layouts/MainLayout";
 import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
+import Typography from './../pages/components-pages/typography/Typography';
 
 export const router = createBrowserRouter([
   {
@@ -65,6 +66,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "calendar", element: <Calendar />
+      },
+      {
+        path: "typography", element: <Typography />
       },
     ],
   },
