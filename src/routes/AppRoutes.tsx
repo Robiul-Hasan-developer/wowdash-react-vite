@@ -9,6 +9,7 @@ import CardPage from "@/pages/components-pages/card/CardPage";
 import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
+import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
 import Inventory from "@/pages/dashboards/inventory/Inventory";
@@ -97,6 +98,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "progress-bar", element: <ProgressBar />
+      },
+      {
+        path: "tab-accordion", element: <TabAccordion />
       },
     ],
   },

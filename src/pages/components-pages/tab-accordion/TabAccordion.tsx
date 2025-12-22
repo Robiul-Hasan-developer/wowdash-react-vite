@@ -1,10 +1,10 @@
+import TabsImage1 from "@/assets/images/tabs/tabs-image1.png";
+import TabsImage2 from "@/assets/images/tabs/tabs-image2.png";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
-import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
 import { TabsList } from "@radix-ui/react-tabs";
 import { FileText, Home, Settings, User } from 'lucide-react';
 import { Suspense } from "react";
@@ -16,7 +16,6 @@ const TabAccordion = () => {
 
             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-
                     <div className="col-span-12 xl:col-span-6">
                         <DefaultCardComponent title="Default Tabs">
                             <Tabs defaultValue="DefaultHome" className="gap-0">
@@ -185,9 +184,9 @@ const TabAccordion = () => {
 
                     <div className="col-span-12 xl:col-span-6">
                         <DefaultCardComponent title="Icon Button Tabs">
-                            <Tabs defaultValue="VerticalNavHome" className="gap-0">
+                            <Tabs defaultValue="VerticalNavHome" className="gap-0 dfl">
                                 <div className="flex items-center justify-between">
-                                    <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
+                                    <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0 flex items-center gap-0'>
                                         <TabsTrigger value="VerticalNavHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white flex items-center gap-2'>
                                             <Home className="w-4 h-4" />
                                             Home
@@ -356,7 +355,6 @@ const TabAccordion = () => {
 
                 </div>
             </Suspense>
-
         </>
     );
 };
