@@ -14,6 +14,7 @@ import Pagination from "@/pages/components-pages/pagination/Pagination";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
 import Radio from "@/pages/components-pages/radio/Radio";
 import StarRatings from "@/pages/components-pages/star-ratings/StarRatings";
+import SwitchPage from "@/pages/components-pages/switch/SwitchPage";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
 import Tags from "@/pages/components-pages/tags/Tags";
 import TooltipPopover from "@/pages/components-pages/tooltip-popover/TooltipPopover";
@@ -132,6 +133,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "radio", element: <Radio />
+      },
+      {
+        path: "switch", element: <SwitchPage />
       },
     ],
   },
