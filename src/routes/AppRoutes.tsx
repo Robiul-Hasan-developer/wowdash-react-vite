@@ -27,6 +27,8 @@ import Medical from "@/pages/dashboards/medical/Medical";
 import Nft from "@/pages/dashboards/nft/Nft";
 import EmailDetails from "@/pages/emails/email-details/EmailDetails";
 import Email from "@/pages/emails/email/Email";
+import InputForms from "@/pages/forms/input-forms/InputForms";
+import InputLayout from "@/pages/forms/input-layout/InputLayout";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
 import MainLayout from "../layouts/MainLayout";
@@ -136,6 +138,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "switch", element: <SwitchPage />
+      },
+      {
+        path: "input-forms", element: <InputForms />
+      },
+      {
+        path: "input-layout", element: <InputLayout />
       },
     ],
   },
