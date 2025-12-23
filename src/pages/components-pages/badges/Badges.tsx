@@ -1,7 +1,7 @@
+import FlagImage from "@/assets/images/lang-flag.png";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import FlagImage from "@/public/assets/images/lang-flag.png";
 import { BellRing, Mail } from "lucide-react";
 import { Suspense } from "react";
 

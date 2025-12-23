@@ -4,6 +4,7 @@ import Calendar from "@/pages/calendar/Calendar";
 import Chat from "@/pages/chat/Chat";
 import Alert from "@/pages/components-pages/alert/Alert";
 import Avatar from "@/pages/components-pages/avatar/Avatart";
+import Badges from "@/pages/components-pages/badges/Badges";
 import Buttons from "@/pages/components-pages/buttons/Buttons";
 import CardPage from "@/pages/components-pages/card/CardPage";
 import Colors from "@/pages/components-pages/colors/Colors";
@@ -11,6 +12,7 @@ import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
 import Pagination from "@/pages/components-pages/pagination/Pagination";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
+import TooltipPopover from "@/pages/components-pages/tooltip-popover/TooltipPopover";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
 import Inventory from "@/pages/dashboards/inventory/Inventory";
@@ -108,6 +110,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "pagination", element: <Pagination />
+      },
+      {
+        path: "badges", element: <Badges />
+      },
+      {
+        path: "tooltip", element: <TooltipPopover />
       },
     ],
   },

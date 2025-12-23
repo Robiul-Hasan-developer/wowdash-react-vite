@@ -152,7 +152,7 @@ export const data = {
         },
         {
           title: "Badges",
-          url: "/badge",
+          url: "/badges",
           circleColor: "bg-primary",
         },
         {
