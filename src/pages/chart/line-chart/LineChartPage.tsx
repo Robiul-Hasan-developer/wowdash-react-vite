@@ -1,6 +1,7 @@
 import LineChart from "@/components/charts/LineChart";
 import LineChartAnimation from "@/components/charts/LineChartAnimation";
 import LineChartLabel from "@/components/charts/LineChartLabel";
+import SteplineChart from "@/components/charts/SteplineChart";
 import ZoomableChart from "@/components/charts/ZoomableChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
@@ -35,7 +36,7 @@ const LineChartPage = () => {
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Stepline Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <SteplineChart /> */}
+                        <SteplineChart />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Gradient Charts">
