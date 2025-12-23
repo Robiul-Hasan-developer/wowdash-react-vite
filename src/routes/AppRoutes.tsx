@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Calendar from "@/pages/calendar/Calendar";
+import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
 import LineChartPage from "@/pages/chart/line-chart/LineChartPage";
 import Chat from "@/pages/chat/Chat";
 import Alert from "@/pages/components-pages/alert/Alert";
@@ -152,6 +153,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "line-chart", element: <LineChartPage />
+      },
+      {
+        path: "column-chart", element: <ColumnChartPage />
       },
     ],
   },
