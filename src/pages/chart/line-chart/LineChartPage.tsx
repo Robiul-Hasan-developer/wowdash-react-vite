@@ -1,4 +1,5 @@
 import LineChart from "@/components/charts/LineChart";
+import LineChartLabel from "@/components/charts/LineChartLabel";
 import ZoomableChart from "@/components/charts/ZoomableChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
@@ -23,7 +24,7 @@ const LineChartPage = () => {
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart with Data Labels">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <LineChartLabel /> */}
+                        <LineChartLabel />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart Animation">
