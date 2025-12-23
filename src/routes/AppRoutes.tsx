@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Calendar from "@/pages/calendar/Calendar";
+import LineChartPage from "@/pages/chart/line-chart/LineChartPage";
 import Chat from "@/pages/chat/Chat";
 import Alert from "@/pages/components-pages/alert/Alert";
 import Avatar from "@/pages/components-pages/avatar/Avatart";
@@ -27,6 +28,7 @@ import Medical from "@/pages/dashboards/medical/Medical";
 import Nft from "@/pages/dashboards/nft/Nft";
 import EmailDetails from "@/pages/emails/email-details/EmailDetails";
 import Email from "@/pages/emails/email/Email";
+import FormValidation from "@/pages/forms/form-validation/FormValidation";
 import InputForms from "@/pages/forms/input-forms/InputForms";
 import InputLayout from "@/pages/forms/input-layout/InputLayout";
 import NotFound from '../error/404';
@@ -36,7 +38,6 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import FormValidation from "@/pages/forms/form-validation/FormValidation";
 
 export const router = createBrowserRouter([
   {
@@ -148,6 +149,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "form-validation", element: <FormValidation />
+      },
+      {
+        path: "line-chart", element: <LineChartPage />
       },
     ],
   },
