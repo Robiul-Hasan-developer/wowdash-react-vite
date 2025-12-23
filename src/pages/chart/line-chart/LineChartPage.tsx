@@ -1,3 +1,4 @@
+import GradientChart from "@/components/charts/GradientChart";
 import LineChart from "@/components/charts/LineChart";
 import LineChartAnimation from "@/components/charts/LineChartAnimation";
 import LineChartLabel from "@/components/charts/LineChartLabel";
@@ -41,7 +42,7 @@ const LineChartPage = () => {
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Gradient Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <GradientChart /> */}
+                        <GradientChart />
                     </Suspense>
                 </DefaultCardComponent>
             </div>
