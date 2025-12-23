@@ -36,6 +36,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
+import FormValidation from "@/pages/forms/form-validation/FormValidation";
 
 export const router = createBrowserRouter([
   {
@@ -144,6 +145,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "input-layout", element: <InputLayout />
+      },
+      {
+        path: "form-validation", element: <FormValidation />
       },
     ],
   },

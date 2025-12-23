@@ -19,7 +19,7 @@ import { Suspense } from "react";
 const InputForms = () => {
     return (
         <>
-            <Breadcrumb title="InputForms" text="InputForms" />
+            <Breadcrumb title="Input Forms" text="Input Forms" />
 
             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                 <div className="grid grid-cols-12 gap-5">

@@ -18,7 +18,7 @@ import { Suspense } from "react";
 const InputLayout = () => {
     return (
         <>
-            <Breadcrumb title="InputLayout" text="InputLayout" />
+            <Breadcrumb title="Input Layout" text="Input Layout" />
 
             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                 <div className="grid grid-cols-12 gap-5">
