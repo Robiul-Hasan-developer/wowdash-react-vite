@@ -9,10 +9,13 @@ import Buttons from "@/pages/components-pages/buttons/Buttons";
 import CardPage from "@/pages/components-pages/card/CardPage";
 import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
+import List from "@/pages/components-pages/list/List";
 import Pagination from "@/pages/components-pages/pagination/Pagination";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
+import Radio from "@/pages/components-pages/radio/Radio";
 import StarRatings from "@/pages/components-pages/star-ratings/StarRatings";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
+import Tags from "@/pages/components-pages/tags/Tags";
 import TooltipPopover from "@/pages/components-pages/tooltip-popover/TooltipPopover";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
 import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
@@ -30,7 +33,6 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import Tags from "@/pages/components-pages/tags/Tags";
 
 export const router = createBrowserRouter([
   {
@@ -124,6 +126,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "tags", element: <Tags />
+      },
+      {
+        path: "list", element: <List />
+      },
+      {
+        path: "radio", element: <Radio />
       },
     ],
   },
