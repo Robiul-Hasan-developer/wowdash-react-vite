@@ -1,3 +1,4 @@
+import GenerateContentChart from "@/components/charts/GenerateContentChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
@@ -11,7 +12,7 @@ const ColumnChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Column Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <GenerateContentChart /> */}
+                        <GenerateContentChart />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Column Charts">
