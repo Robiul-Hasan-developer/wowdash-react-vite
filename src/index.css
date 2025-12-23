@@ -31,7 +31,12 @@
   h6 {
     font-size: clamp(1.125rem, 1.005rem + 0.6vw, 1.5rem);
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold;
   }
 }
@@ -324,6 +329,22 @@
   }
   .apexcharts-tooltip.apexcharts-theme-light {
     @apply dark:!border-slate-500 dark:!bg-slate-900;
+  }
+
+  [data-slot="tooltip-content"].bg-white .fill-foreground {
+    @apply !fill-[#fff];
+  }
+
+  [data-slot="tooltip-content"].bg-white .bg-foreground {
+    @apply !bg-white;
+  }
+
+  [data-slot="tooltip-content"].bg-primary .fill-foreground {
+    @apply !fill-primary;
+  }
+
+  [data-slot="tooltip-content"].bg-primary .bg-foreground {
+    @apply !bg-primary;
   }
 }
 

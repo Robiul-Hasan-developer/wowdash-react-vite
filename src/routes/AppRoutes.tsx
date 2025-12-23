@@ -11,6 +11,7 @@ import Colors from "@/pages/components-pages/colors/Colors";
 import Dropdown from "@/pages/components-pages/dropdown/Dropdown";
 import Pagination from "@/pages/components-pages/pagination/Pagination";
 import ProgressBar from "@/pages/components-pages/progress-bar/ProgressBar";
+import StarRatings from "@/pages/components-pages/star-ratings/StarRatings";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
 import TooltipPopover from "@/pages/components-pages/tooltip-popover/TooltipPopover";
 import Analytics from "@/pages/dashboards/analytics/Analytics";
@@ -29,6 +30,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
+import Tags from "@/pages/components-pages/tags/Tags";
 
 export const router = createBrowserRouter([
   {
@@ -116,6 +118,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "tooltip", element: <TooltipPopover />
+      },
+      {
+        path: "star-rating", element: <StarRatings />
+      },
+      {
+        path: "tags", element: <Tags />
       },
     ],
   },
