@@ -393,19 +393,7 @@ const ChatBox = () => {
                         </CommandGroup>
                     </CommandList>
                 </Command>
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
 
             <div className=" col-span-12 md:col-span-8 xl:col-span-9">
                 <div className="card border-0 overflow-hidden !p-0 flex flex-col">
