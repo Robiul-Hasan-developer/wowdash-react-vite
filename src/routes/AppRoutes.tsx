@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import UsersListTable from "@/components/tables/UsersListTable";
 import BasicTable from "@/pages/basic-table/BasicTable";
 import Calendar from "@/pages/calendar/Calendar";
 import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
@@ -35,6 +34,7 @@ import Email from "@/pages/emails/email/Email";
 import FormValidation from "@/pages/forms/form-validation/FormValidation";
 import InputForms from "@/pages/forms/input-forms/InputForms";
 import InputLayout from "@/pages/forms/input-layout/InputLayout";
+import UsersList from "@/pages/users/UsersList";
 import Widgets from "@/pages/widgets/Widgets";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
@@ -43,7 +43,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import UsersList from "@/pages/users/UsersList";
+import UsersGrid from "@/pages/users/UsersGrid";
 
 export const router = createBrowserRouter([
   {
@@ -173,6 +173,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "users-list", element: <UsersList />
+      },
+      {
+        path: "users-grid", element: <UsersGrid />
       },
     ],
   },
