@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Calendar from "@/pages/calendar/Calendar";
 import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
 import LineChartPage from "@/pages/chart/line-chart/LineChartPage";
+import PieChartPage from "@/pages/chart/PieChartPage";
 import Chat from "@/pages/chat/Chat";
 import Alert from "@/pages/components-pages/alert/Alert";
 import Avatar from "@/pages/components-pages/avatar/Avatart";
@@ -156,6 +157,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "column-chart", element: <ColumnChartPage />
+      },
+      {
+        path: "pie-chart", element: <PieChartPage />
       },
     ],
   },
