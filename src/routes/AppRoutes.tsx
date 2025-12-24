@@ -33,6 +33,7 @@ import Email from "@/pages/emails/email/Email";
 import FormValidation from "@/pages/forms/form-validation/FormValidation";
 import InputForms from "@/pages/forms/input-forms/InputForms";
 import InputLayout from "@/pages/forms/input-layout/InputLayout";
+import Widgets from "@/pages/widgets/Widgets";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
 import MainLayout from "../layouts/MainLayout";
@@ -160,6 +161,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "pie-chart", element: <PieChartPage />
+      },
+      {
+        path: "widgets", element: <Widgets />
       },
     ],
   },
