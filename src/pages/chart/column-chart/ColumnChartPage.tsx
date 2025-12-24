@@ -1,4 +1,5 @@
-import GenerateContentChart from "@/components/charts/GenerateContentChart";
+import DoubleBarChart from "@/components/charts/DoubleBarChart";
+import SingleBarChart from "@/components/charts/SingleBarChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
@@ -12,12 +13,16 @@ const ColumnChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Column Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <GenerateContentChart />
+                        <div className="-m-2">
+                            <DoubleBarChart />
+                        </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Column Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <ColumnGroupBarChart /> */}
+                        <div className="-m-4">
+                            <SingleBarChart chartColor={"487FFF"} chartHeight={264} chartBorderRadius={4} chartColumnWidth={10} />
+                        </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Group Columns">
