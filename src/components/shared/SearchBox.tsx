@@ -55,11 +55,6 @@ const SearchBox = () => {
                                     Calendar
                                 </Link>
                             </CommandItem>
-                            <CommandItem className="p-0">
-                                <Link to="/kanban" className='py-2 px-3 w-full'> 
-                                    Kanban
-                                </Link>
-                            </CommandItem>
                         </CommandGroup>
                         <CommandSeparator className="my-2" />
                         <CommandGroup heading="UI Elements">
@@ -74,7 +69,7 @@ const SearchBox = () => {
                                 </Link>
                             </CommandItem>
                             <CommandItem className="p-0">
-                                <Link to="/button" className='py-2 px-3 w-full'> 
+                                <Link to="/buttons" className='py-2 px-3 w-full'> 
                                     Button
                                 </Link>
                             </CommandItem>
@@ -86,29 +81,6 @@ const SearchBox = () => {
                             <CommandItem className="p-0">
                                 <Link to="/alert" className='py-2 px-3 w-full'> 
                                     Alert
-                                </Link>
-                            </CommandItem>
-                            <CommandItem className="p-0">
-                                <Link to="/tab" className='py-2 px-3 w-full'> 
-                                    Tab
-                                </Link>
-                            </CommandItem>
-                        </CommandGroup>
-                        <CommandSeparator className="my-2" />
-                        <CommandGroup heading="Setting">
-                            <CommandItem className="p-0">
-                                <Link to="/gallery" className='py-2 px-3 w-full'> 
-                                    Gallery
-                                </Link>
-                            </CommandItem>
-                            <CommandItem className="p-0">
-                                <Link to="/pricing" className='py-2 px-3 w-full'> 
-                                    Pricing
-                                </Link>
-                            </CommandItem>
-                            <CommandItem className="p-0">
-                                <Link to="/faq" className='py-2 px-3 w-full'> 
-                                    FAQ
                                 </Link>
                             </CommandItem>
                         </CommandGroup>

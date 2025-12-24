@@ -164,7 +164,7 @@ const CardPage = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-6 xl:grid-cols-3 gap-6">
                             <div className="card h-full rounded-xl border-0 overflow-hidden relative !p-0 overflow-hidden">
                                 <div className="card-body p-0 before:block before:absolute before:inset-0 before:z-[1] before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] bottom-0 start-0 relative w-full h-[468px]">
-                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover" />
+                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover w-full h-full" />
                                     <div className="absolute start-0 bottom-0 p-6 z-1">
                                         <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                                         <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
@@ -177,7 +177,7 @@ const CardPage = () => {
                             </div>
                             <div className="card h-full rounded-xl border-0 overflow-hidden relative !p-0 overflow-hidden">
                                 <div className="card-body p-0 before:block before:absolute before:inset-0 before:z-[1] before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] top-0 start-0 relative w-full h-[468px]">
-                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover" />
+                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover w-full h-full" />
                                     <div className="absolute start-0 top-0 p-6 z-1 text-center">
                                         <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                                         <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
@@ -190,7 +190,7 @@ const CardPage = () => {
                             </div>
                             <div className="card h-full rounded-xl border-0 overflow-hidden relative !p-0 overflow-hidden">
                                 <div className="card-body p-0 before:block before:absolute before:inset-0 before:z-[1] before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] bottom-0 start-0 relative w-full h-[468px]">
-                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover" />
+                                    <img src={CardOverlayImg1} alt="Thumbnail" className="object-cover w-full h-full" />
                                     <div className="absolute start-0 bottom-0 p-6 z-1 text-end">
                                         <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                                         <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
