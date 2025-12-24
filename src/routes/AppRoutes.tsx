@@ -34,7 +34,9 @@ import Email from "@/pages/emails/email/Email";
 import FormValidation from "@/pages/forms/form-validation/FormValidation";
 import InputForms from "@/pages/forms/input-forms/InputForms";
 import InputLayout from "@/pages/forms/input-layout/InputLayout";
+import UsersGrid from "@/pages/users/users-grid/UsersGrid";
 import UsersList from "@/pages/users/UsersList";
+import ViewProfile from "@/pages/users/view-profile/ViewProfile";
 import Widgets from "@/pages/widgets/Widgets";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
@@ -43,7 +45,6 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import UsersGrid from "@/pages/users/UsersGrid";
 
 export const router = createBrowserRouter([
   {
@@ -176,6 +177,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "users-grid", element: <UsersGrid />
+      },
+      {
+        path: "view-profile", element: <ViewProfile />
       },
     ],
   },
