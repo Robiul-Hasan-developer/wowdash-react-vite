@@ -1,5 +1,7 @@
 import DoubleBarChart from "@/components/charts/DoubleBarChart";
+import FourColorBarChart from "@/components/charts/FourColorBarChart";
 import SingleBarChart from "@/components/charts/SingleBarChart";
+import UpdownBarChart from "@/components/charts/UpdownBarChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
@@ -21,18 +23,22 @@ const ColumnChartPage = () => {
                 <DefaultCardComponent title="Column Charts">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <div className="-m-4">
-                            <SingleBarChart chartColor={"487FFF"} chartHeight={264} chartBorderRadius={4} chartColumnWidth={10} />
+                            <SingleBarChart chartColor={"487FFF"} chartHeight={264} chartBorderRadius={8} chartColumnWidth={16} />
                         </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Group Columns">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <GroupColumnChart /> */}
+                        <div className="-m-4">
+                            <FourColorBarChart chartHeight={300} />
+                        </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Simple Column">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RevenueStatisticsChartUpdown /> */}
+                        <div className="-m-4">
+                            <UpdownBarChart />
+                        </div>
                     </Suspense>
                 </DefaultCardComponent>
             </div>
