@@ -1,5 +1,7 @@
 import DonutSixSeriesChart from "@/components/charts/DonutSixSeriesChart";
+import MultipleSeriesChart from "@/components/charts/MultipleSeriesChart";
 import PieChart from "@/components/charts/PieChart";
+import RadarChart from "@/components/charts/RadarChart";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
@@ -88,13 +90,13 @@ const PieChartPage = () => {
 
                 <DefaultCardComponent title="Radar Chart">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <RadarChart /> */}
+                        <RadarChart />
                     </Suspense>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Multiple series">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        {/* <MultipleSeriesChart /> */}
+                        <MultipleSeriesChart />
                     </Suspense>
                 </DefaultCardComponent>
 
