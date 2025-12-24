@@ -20,7 +20,7 @@ const AvatarUpload = () => {
     };
 
     return (
-        <div className="avatar-upload">
+        <div className="avatar-upload relative inline-block">
             <div className="avatar-edit absolute bottom-0 end-0 me-6 mt-4 z-[1] cursor-pointer">
                 <Input
                     type="file"

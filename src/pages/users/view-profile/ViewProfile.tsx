@@ -3,6 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import EditProfileTabContent from "./components/EditProfileTabContent";
 import ViewProfileSidebar from "./components/ViewProfileSidebar";
+import ChangePasswordTabContent from "./components/ChangePasswordTabContent";
+import NotificationPasswordTabContent from "./components/NotificationPasswordTabContent";
 
 const ViewProfile = () => {
     return (
@@ -34,10 +36,10 @@ const ViewProfile = () => {
                                     <EditProfileTabContent />
                                 </TabsContent>
                                 <TabsContent value="changePassword">
-                                    {/* <ChangePasswordTabContent /> */}
+                                    <ChangePasswordTabContent />
                                 </TabsContent>
                                 <TabsContent value="NotificationPassword">
-                                    {/* <NotificationPasswordTabContent /> */}
+                                    <NotificationPasswordTabContent />
                                 </TabsContent>
                             </Tabs>
                         </CardContent>
