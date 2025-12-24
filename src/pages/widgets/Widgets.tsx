@@ -19,8 +19,6 @@ const Widgets = () => {
         <>
             <Breadcrumb title="Widgets" text="Widgets" />
 
-
-
             <div className="">
                 <DefaultCardComponent title="Metrics">
                     <div className="flex flex-col gap-6">

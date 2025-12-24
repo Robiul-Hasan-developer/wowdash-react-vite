@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import BasicTable from "@/pages/basic-table/BasicTable";
 import Calendar from "@/pages/calendar/Calendar";
 import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
 import LineChartPage from "@/pages/chart/line-chart/LineChartPage";
@@ -164,6 +165,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "widgets", element: <Widgets />
+      },
+      {
+        path: "basic-table", element: <BasicTable />
       },
     ],
   },
