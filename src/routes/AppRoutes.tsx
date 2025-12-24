@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
+import UsersListTable from "@/components/tables/UsersListTable";
 import BasicTable from "@/pages/basic-table/BasicTable";
 import Calendar from "@/pages/calendar/Calendar";
 import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
@@ -42,6 +43,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
+import UsersList from "@/pages/users/UsersList";
 
 export const router = createBrowserRouter([
   {
@@ -168,6 +170,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "basic-table", element: <BasicTable />
+      },
+      {
+        path: "users-list", element: <UsersList />
       },
     ],
   },
