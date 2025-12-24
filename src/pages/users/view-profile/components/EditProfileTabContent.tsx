@@ -1,17 +1,16 @@
-'use client';
-
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from '@/components/ui/textarea';
 import { handleProfileUpdate } from './actions/handleProfileUpdate';
+import AvatarUpload from './AvatarUpload';
 
 const EditProfileTabContent = () => {
     return (
         <div>
             <h6 className="text-base text-neutral-600 dark:text-neutral-200 mb-4">Profile Image</h6>
             <div className="mb-6 mt-4">
-                {/* <AvatarUpload /> */}
+                <AvatarUpload />
             </div>
 
             <form action={handleProfileUpdate}>

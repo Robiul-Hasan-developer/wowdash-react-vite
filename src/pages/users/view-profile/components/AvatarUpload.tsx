@@ -1,6 +1,6 @@
+import DefaultUploadedImage from "@/assets/images/user-grid/user-grid-img13.png";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import DefaultUploadedImage from "@/public/assets/images/user-grid/user-grid-img13.png";
 import { Camera } from "lucide-react";
 import React, { useRef, useState } from "react";
 
@@ -43,7 +43,7 @@ const AvatarUpload = () => {
                     id="imagePreview"
                     className="h-full w-full rounded-full bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `url(${typeof imagePreview === "string" ? imagePreview : imagePreview.src})`,
+                        backgroundImage: `url(${imagePreview})`,
                     }}
                 />
             </div>

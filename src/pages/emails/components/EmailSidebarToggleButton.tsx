@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from '@/components/ui/button';
 import { useEmailSidebar } from '@/context/EmailSidebarContext';
 import { Menu } from 'lucide-react';
