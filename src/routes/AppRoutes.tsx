@@ -34,7 +34,7 @@ import Email from "@/pages/emails/email/Email";
 import FormValidation from "@/pages/forms/form-validation/FormValidation";
 import InputForms from "@/pages/forms/input-forms/InputForms";
 import InputLayout from "@/pages/forms/input-layout/InputLayout";
-import Company from "@/pages/setting/Company";
+import Company from "@/pages/setting/company/Company";
 import UsersGrid from "@/pages/users/users-grid/UsersGrid";
 import UsersList from "@/pages/users/UsersList";
 import ViewProfile from "@/pages/users/view-profile/ViewProfile";
@@ -46,6 +46,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
+import SettingsNotification from "@/pages/setting/settings-notification/SettingsNotification";
 
 export const router = createBrowserRouter([
   {
@@ -184,6 +185,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "company", element: <Company />
+      },
+      {
+        path: "settings-notification", element: <SettingsNotification />
       },
     ],
   },
