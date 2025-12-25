@@ -21,20 +21,20 @@ const AiDashboard = () => {
 
                 <div className="lg:col-span-12 2xl:col-span-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <StatsCard />
                         </Suspense>
                     </div>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <RevenueGrowthCard />
                     </Suspense>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <EarningStatisticsCard />
                     </Suspense>
                 </div>
@@ -42,12 +42,12 @@ const AiDashboard = () => {
                 <div className="lg:col-span-12 2xl:col-span-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <CampaignCard />
                             </Suspense>
                         </div>
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <CustomerOverviewCard />
                             </Suspense>
                         </div>
@@ -55,31 +55,31 @@ const AiDashboard = () => {
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <ClientPaymentStatusCard />
                     </Suspense>
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <CountriesStatusCard />
                     </Suspense>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <TopPerformerCard listClasses="space-y-6 max-h-[458px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible" />
                     </Suspense>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <TodoListRecentCard />
                     </Suspense>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <LastTransactionCard />
                     </Suspense>
                 </div>

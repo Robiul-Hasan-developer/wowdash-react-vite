@@ -17,24 +17,24 @@ const Email = () => {
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <EmailSidebar />
                     </Suspense>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <EmailSidebarToggleButton />
                     </Suspense>
 
                     <div className="card h-full !p-0 border-0 email-card">
                         <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <EmailHeader />
                             </Suspense>
                         </div>
                         <div className="card-body p-0">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <EmailList />
                             </Suspense>
                         </div>

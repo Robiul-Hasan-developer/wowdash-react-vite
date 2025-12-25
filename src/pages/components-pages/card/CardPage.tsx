@@ -20,7 +20,7 @@ const CardPage = () => {
         <>
             <Breadcrumb title="CardPage" text="CardPage" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="">
 
                     <div className="mb-10">

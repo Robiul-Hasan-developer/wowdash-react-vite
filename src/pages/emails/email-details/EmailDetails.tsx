@@ -23,13 +23,13 @@ const EmailDetails = () => {
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <EmailSidebar />
                     </Suspense>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <EmailSidebarToggleButton />
                     </Suspense>
 

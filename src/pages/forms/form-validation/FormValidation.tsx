@@ -8,7 +8,7 @@ const FormValidation = () => {
         <>
             <Breadcrumb title="FormValidation" text="FormValidation" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <ValidateForm />
             </Suspense>
 

@@ -16,7 +16,7 @@ const UsersList = () => {
         <>
             <Breadcrumb title="Users List" text="Users List" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <Card className="card h-full !p-0 !block border-0 overflow-hidden mb-6">
                     <CardHeader className="border-b border-neutral-200 dark:border-slate-600 !py-4 px-6 flex items-center flex-wrap gap-3 justify-between">
                         <div className="flex items-center flex-wrap gap-3">

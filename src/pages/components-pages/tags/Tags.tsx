@@ -10,7 +10,7 @@ const Tags = () => {
         <>
             <Breadcrumb title="Tags" text="Tags" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <DefaultCardComponent title="Default Tags">
                         <ul className="flex flex-wrap items-center gap-4 md:gap-8">

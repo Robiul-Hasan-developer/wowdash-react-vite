@@ -10,7 +10,7 @@ const Pagination = () => {
         <>
             <Breadcrumb title="Pagination" text="Pagination" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Solid">

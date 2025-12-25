@@ -20,7 +20,7 @@ const InputLayout = () => {
         <>
             <Breadcrumb title="Input Layout" text="Input Layout" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-12 gap-5">
                     <div className="md:col-span-6 col-span-12">
                         <DefaultCardComponent title="Vertical Input Form">

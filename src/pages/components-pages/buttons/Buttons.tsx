@@ -11,7 +11,7 @@ const Buttons = () => {
         <>
             <Breadcrumb title="Buttons" text="Buttons" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                     <DefaultCardComponent title="Default Buttons">
                         <div className="flex flex-wrap items-center gap-3">

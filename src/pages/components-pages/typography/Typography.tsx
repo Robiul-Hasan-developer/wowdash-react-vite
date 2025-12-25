@@ -8,7 +8,7 @@ const Typography = () => {
         <>
             <Breadcrumb title="Typography" text="Typography" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div className="col-span-12 md:col-span-6">
                         <Card className="card h-full !p-0 !block border-0 overflow-hidden">

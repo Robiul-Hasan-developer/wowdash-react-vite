@@ -15,7 +15,7 @@ const PieChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <DefaultCardComponent title="Basic Pie Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <div className="-m-4">
                             <PieChart />
                         </div>
@@ -25,7 +25,7 @@ const PieChartPage = () => {
                 <DefaultCardComponent title="Donut Chart">
                     <div className="text-center flex flex-wrap items-start gap-5 justify-center">
                         <div className="relative">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <div className="-m-4">
                                     <DonutSixSeriesChart />
                                 </div>
@@ -89,13 +89,13 @@ const PieChartPage = () => {
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Radar Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <RadarChart />
                     </Suspense>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Multiple series">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <MultipleSeriesChart />
                     </Suspense>
                 </DefaultCardComponent>

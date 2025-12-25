@@ -3,13 +3,13 @@ import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense } from "react";
 import CustomersStatisticsCard from "./components/CustomersStatisticsCard";
 import DailySalesCard from "./components/DailySalesCard";
+import DistributionMapsCard from "./components/DistributionMapsCard";
 import RecentOrdersCard from "./components/RecentOrdersCard";
 import RevenueReportCard from "./components/RevenueReportCard";
-import TransactionsCard from "./components/TransactionsCard";
-import DistributionMapsCard from "./components/DistributionMapsCard";
+import StockReportCard from "./components/StockReportCard";
 import TopCustomersCard from "./components/TopCustomersCard";
 import TopSellingProductCard from "./components/TopSellingProductCard";
-import StockReportCard from "./components/StockReportCard";
+import TransactionsCard from "./components/TransactionsCard";
 
 const AiDashboard = () => {
     return (
@@ -19,55 +19,55 @@ const AiDashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
                 <div className="md:col-span-12 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <RevenueReportCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <CustomersStatisticsCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <RecentOrdersCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <TransactionsCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <DailySalesCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <DistributionMapsCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <TopCustomersCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <TopSellingProductCard />
                     </Suspense>
                 </div>
 
                 <div className="md:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <StockReportCard />
                     </Suspense>
                 </div>

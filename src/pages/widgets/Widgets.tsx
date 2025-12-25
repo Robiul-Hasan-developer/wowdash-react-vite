@@ -23,22 +23,22 @@ const Widgets = () => {
                 <DefaultCardComponent title="Metrics">
                     <div className="flex flex-col gap-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <StatCard />
                             </Suspense>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <StatsCard />
                             </Suspense>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-neutral-200 dark:border-neutral-600">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <StatsCardEcommerce />
                             </Suspense>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-6">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <StatsCardCryptocurrency />
                             </Suspense>
                         </div>
@@ -48,7 +48,7 @@ const Widgets = () => {
 
                 <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
                     <div className="col-span-12 xl:col-span-12 2xl:col-span-6">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <SalesStatisticCard />
                         </Suspense>
                     </div>
@@ -56,27 +56,27 @@ const Widgets = () => {
                         <TopCountriesCard />
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <ClientPaymentStatusCard />
                         </Suspense>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-8">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <EarningStatisticsCard />
                         </Suspense>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <UserOverviewCard />
                         </Suspense>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <DailySalesCard />
                         </Suspense>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <Suspense fallback={<LoadingSkeleton />}>
                             <StaticCard />
                         </Suspense>
                     </div>

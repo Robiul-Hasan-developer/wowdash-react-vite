@@ -9,7 +9,7 @@ const Alert = () => {
         <>
             <Breadcrumb title="Alert" text="Alert" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
                     <div className="col-span-1 lg:col-span-6">

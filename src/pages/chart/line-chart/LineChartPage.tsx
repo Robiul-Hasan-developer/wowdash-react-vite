@@ -16,32 +16,32 @@ const LineChartPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Default Line Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <LineChart />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Zoomable Chart">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <ZoomableChart />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart with Data Labels">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <LineChartLabel />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart Animation">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <LineChartAnimation />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Stepline Charts">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <SteplineChart />
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Gradient Charts">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <GradientChart />
                     </Suspense>
                 </DefaultCardComponent>

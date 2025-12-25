@@ -8,7 +8,7 @@ const Chat = () => {
         <>
             <Breadcrumb title="Chat" text="Chat" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <ChatBox />
             </Suspense>
 

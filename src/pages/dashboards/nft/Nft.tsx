@@ -19,25 +19,25 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-8">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <NftPromoBanner />
                             </Suspense>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <TrendingBidWidgets />
                             </Suspense>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <TrendingNftCard />
                             </Suspense>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <RecentBidCard />
                             </Suspense>
                         </div>
@@ -47,22 +47,22 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-4">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <EthPriceCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <StatisticsCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <FeaturedCreatorsCard />
                             </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <Suspense fallback={<LoadingSkeleton />}>
                                 <TopCreatorsCard />
                             </Suspense>
                         </div>

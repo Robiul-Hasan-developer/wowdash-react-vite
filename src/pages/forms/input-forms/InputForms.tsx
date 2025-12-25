@@ -21,7 +21,7 @@ const InputForms = () => {
         <>
             <Breadcrumb title="Input Forms" text="Input Forms" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid grid-cols-12 gap-5">
                     <div className="md:col-span-6 col-span-12 space-y-6">
                         <div className="h-auto">

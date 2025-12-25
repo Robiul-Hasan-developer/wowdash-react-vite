@@ -8,7 +8,7 @@ const ProgressBar = () => {
         <>
             <Breadcrumb title="Progress Bar" text="Progress Bar" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="grid sm:grid-cols-12 gap-6">
 
                     <div className="col-span-12 sm:col-span-6">

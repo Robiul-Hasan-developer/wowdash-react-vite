@@ -14,28 +14,28 @@ const ColumnChartPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Column Charts">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <div className="-m-2">
                             <DoubleBarChart />
                         </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Column Charts">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <div className="-m-4">
                             <SingleBarChart chartColor={"487FFF"} chartHeight={264} chartBorderRadius={8} chartColumnWidth={16} />
                         </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Group Columns">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <div className="-m-4">
                             <FourColorBarChart chartHeight={300} />
                         </div>
                     </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Simple Column">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
                         <div className="-m-4">
                             <UpdownBarChart />
                         </div>

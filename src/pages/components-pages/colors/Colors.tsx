@@ -34,7 +34,7 @@ const Colors = () => {
         <>
             <Breadcrumb title="Colors" text="Colors" />
 
-            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <Suspense fallback={<LoadingSkeleton />}>
                 <div className="row gy-4">
                     <div className="col-12">
                         <Card className="card border-0">
