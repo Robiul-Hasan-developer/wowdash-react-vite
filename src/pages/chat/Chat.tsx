@@ -1,7 +1,7 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import ChatBox from "./components/ChatBox";
+import { lazy, Suspense } from "react";
+const ChatBox = lazy(() => import("./components/ChatBox"));
 
 const Chat = () => {
     return (
