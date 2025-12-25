@@ -47,6 +47,7 @@ import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
 import SettingsNotification from "@/pages/setting/settings-notification/SettingsNotification";
+import NotificationAlert from "@/pages/setting/notification-alert/NotificationAlert";
 
 export const router = createBrowserRouter([
   {
@@ -188,6 +189,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "settings-notification", element: <SettingsNotification />
+      },
+      {
+        path: "notification-alert", element: <NotificationAlert />
       },
     ],
   },
