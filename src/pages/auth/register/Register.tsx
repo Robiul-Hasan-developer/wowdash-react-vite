@@ -25,8 +25,8 @@ const Register = () => {
                         <Link to="/" className="mb-2.5 max-w-[290px] inline-block">
                             <ThemeLogo />
                         </Link>
-                        <h4 className="mb-3">Sign Up to your Account</h4>
-                        <p className="mb-8 text-secondary-light text-lg">Welcome back! please enter your details</p>
+                        <h4 className="mb-3">Sign up to your Account</h4>
+                        <p className="mb-8 text-neutral-600 dark:text-neutral-200 text-lg">Welcome back! Please enter your details</p>
                     </div>
                     <form action="#">
                         <div className="icon-field mb-4 relative">
