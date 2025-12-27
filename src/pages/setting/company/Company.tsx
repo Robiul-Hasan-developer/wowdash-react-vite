@@ -87,7 +87,7 @@ const Company = () => {
                                         <Input type="text" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0" id="zip" name="zip" placeholder="Zip Code" />
                                     </div>
                                     <div className="mb-5 col-span-2">
-                                        <Label htmlFor="address" className="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white"> Address* <span className="text-red-600">*</span></Label>
+                                        <Label htmlFor="address" className="text-sm font-semibold mb-2 block text-neutral-900 dark:text-white"> Address <span className="text-red-600">*</span></Label>
                                         <Input type="text" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0" id="address" name="address" placeholder="Enter Your Address" />
                                     </div>
                                     <div className="col-span-2 flex items-center justify-center gap-3 mt-6">
