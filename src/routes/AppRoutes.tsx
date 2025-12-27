@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Login from "@/pages/auth/Login";
-import Register from "@/pages/auth/Register";
+import Login from "@/pages/auth/login/Login";
+import Register from "@/pages/auth/register/Register";
 import BasicTable from "@/pages/basic-table/BasicTable";
 import Calendar from "@/pages/calendar/Calendar";
 import ColumnChartPage from "@/pages/chart/column-chart/ColumnChartPage";
