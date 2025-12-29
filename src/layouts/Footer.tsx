@@ -10,11 +10,10 @@ const Footer = () => {
           &copy; {currentYear} WowDash. All Rights Reserved.
         </p>
         <p className="mb-0 dark:text-white">
-          Made by
+          Made by {" "}
           <span
             className="font-medium text-primary dark:text-primary"
           >
-            {" "}
             wowtheme7
           </span>
         </p>
