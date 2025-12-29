@@ -104,7 +104,6 @@ const Company = () => {
                     </div>
                 </div>
             </Suspense>
-
         </>
     );
 };
