@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from 'react-toastify';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,13 +20,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 getAnalytics(app);
 
 
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
+// Register user
 export const registerWithEmailAndPassword = async (email, password) => {
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -37,12 +37,15 @@ export const registerWithEmailAndPassword = async (email, password) => {
         toast.success(`${error}`);
     }
 }
-// export { registerWithEmailAndPassword }
 
-// createUserWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed up 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .
+
+// Login user
+export const loginWithEmailAndPassword = async (email, password) => {
+    try {
+        const response = await signInWithEmailAndPassword(auth, email, password);
+        return response;
+        
+    } catch(error) {
+        toast.success(`${error}`);
+    }
+}

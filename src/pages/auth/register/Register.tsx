@@ -11,18 +11,17 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import SocialLogin from "../components/SocialLogin";
 
-
 const Register = () => {
     const navigate = useNavigate();
     const { isSubmitting, setIsSubmitting } = useIsSubmitting();
 
     const [showPassword, setShowPassword] = useState(false);
-    const [user, setUser] = useState("User");
-    const [email, setEmail] = useState("email@gmail.com");
-    const [password, setPassword] = useState("123456");
+    const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsSubmitting(true);
 
@@ -56,7 +55,7 @@ const Register = () => {
                         <h4 className="mb-3">Sign up to your Account</h4>
                         <p className="mb-8 text-neutral-600 dark:text-neutral-200 text-lg">Welcome back! Please enter your details</p>
                     </div>
-                    <form action="#" onSubmit={handleSubmit}>
+                    <form action="#" onSubmit={handleRegister}>
                         <div className="icon-field mb-4 relative">
                             <UserRound className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
                             <Input
@@ -138,19 +137,6 @@ const Register = () => {
                             className="w-full rounded-lg h-[52px] text-sm mt-8"
                             disabled={isSubmitting}
                         >
-                            {/* {
-                                isSubmitting ? (
-                                    <>
-                                        <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
-                                        Signing in...
-                                    </>
-                                ) : (
-                                    <>
-                                        Sign Up
-                                    </>
-                                )
-                            } */}
-
                             {isSubmitting && <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />}
                             {isSubmitting ? "Signing in..." : "Sign Up"}
                         </Button>

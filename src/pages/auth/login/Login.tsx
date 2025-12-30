@@ -3,14 +3,42 @@ import ThemeLogo from "@/components/shared/ThemeLogo";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Eye, EyeOff, Lock, Mail } from 'lucide-react';
+import { useIsSubmitting } from "@/context/isSubmittingContext";
+import { loginWithEmailAndPassword } from "@/firebase";
+import { Eye, EyeOff, Loader2, Lock, Mail } from 'lucide-react';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import SocialLogin from "../components/SocialLogin";
 
 const Login = () => {
+    const navigate = useNavigate();
+    const { isSubmitting, setIsSubmitting } = useIsSubmitting();
 
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            await loginWithEmailAndPassword(email, password);
+
+            toast.success(`User logged in successfully.`);
+            setTimeout(() => {
+                toast.success(`You are redirecting to home page`);
+            }, 500);
+            navigate("/");
+        } catch (error) {
+            toast.error(`${error}`);
+        } finally {
+            setIsSubmitting(false);
+            setEmail("");
+            setPassword("");
+        }
+    }
 
     return (
         <section className="bg-white dark:bg-slate-900 lg:flex flex-wrap min-h-[100vh]">
@@ -28,11 +56,14 @@ const Login = () => {
                         <h4 className="mb-3">Sign In to your Account</h4>
                         <p className="mb-8 text-secondary-light text-lg">Welcome back! please enter your detail</p>
                     </div>
-                    <form action="#">
+                    <form action="#" onSubmit={handleLogin}>
                         <div className="icon-field mb-4 relative">
                             <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
                             <Input
                                 type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                disabled={isSubmitting}
                                 placeholder="Email"
                                 name="email"
                                 className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
@@ -43,6 +74,9 @@ const Login = () => {
                                 <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
                                 <Input
                                     type={showPassword ? 'text' : 'password'}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    disabled={isSubmitting}
                                     placeholder="Password"
                                     name="password"
                                     className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
@@ -74,7 +108,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <Link
-                                to="/auth/forgot-password"
+                                to="#"
                                 className="text-primary font-medium hover:underline text-sm"
                             >
                                 Forgot Password?
@@ -84,12 +118,10 @@ const Login = () => {
                         <Button
                             type="submit"
                             className="w-full rounded-lg h-[52px] text-sm mt-8"
+                            disabled={isSubmitting}
                         >
-                            <>
-                                {/* <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
-                                Signing in... */}
-                                Sign In
-                            </>
+                            {isSubmitting && <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />}
+                            {isSubmitting ? "Signing in..." : "Sign In"}
                         </Button>
 
                         <div className="mt-8 center-border-horizontal text-center relative before:absolute before:w-full before:h-[1px] before:top-1/2 before:-translate-y-1/2 before:bg-neutral-300 before:start-0">

@@ -16,7 +16,7 @@ const SocialLogin = () => {
             <Button
                 className="font-semibold text-neutral-600 hover:text-neutral-600 dark:text-neutral-200 py-6 px-2 w-1/2 border border-neutral-600/50 rounded-xl text-sm flex items-center justify-center gap-3 line-height-1 hover:border-blue-400 hover:bg-primary/10 disabled:opacity-80"
                 variant="outline"
-                type="submit"
+                type="button"
                 name="action"
                 value="google"
                 disabled={isSubmitting}
@@ -31,7 +31,7 @@ const SocialLogin = () => {
             <Button
                 className="font-semibold text-neutral-600 hover:text-neutral-600 dark:text-neutral-200 py-6 px-2 w-1/2 border border-neutral-600/50 rounded-xl text-sm flex items-center justify-center gap-3 line-height-1 hover:border-slate-400 hover:bg-slate-600/10 disabled:opacity-80"
                 variant="outline"
-                type="submit"
+                type="button"
                 name="action"
                 value="github"
                 disabled={isSubmitting}
