@@ -2,18 +2,48 @@
 import userImg from "@/assets/images/user.png";
 import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { auth } from "@/firebase";
 import { cn } from "@/lib/utils";
+import { signOut } from "firebase/auth";
 import { LogOutIcon, Mail, Settings, User } from "lucide-react";
-// import { useSession } from "next-auth/react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from "react-router-dom";
+
 
 const ProfileDropdown = () => {
-//   const { data: session } = useSession();
-//   console.log("session", session?.user?.image);
+
+  const [loggingOut, setLoggingOut] = useState(false);
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setLoggingOut(true);
+    signOut(auth).then(() => {
+      navigate('/auth/login');
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  if (loading) {
+    return (
+      <div>
+        <p>Initialising User...</p>
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error}</p>
+      </div>
+    );
+  }
 
   return (
     <DropdownMenu>
@@ -26,12 +56,12 @@ const ProfileDropdown = () => {
           )}
         >
           <img
-              src={userImg}
-              className="rounded-full"
-              width={40}
-              height={40}
-              alt={"User profile"}
-            />
+            src={userImg}
+            className="rounded-full"
+            width={40}
+            height={40}
+            alt={"User profile"}
+          />
         </Button>
       </DropdownMenuTrigger>
 
@@ -43,7 +73,7 @@ const ProfileDropdown = () => {
         <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primar flex items-center justify-between">
           <div>
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
-             Robiul Hasan
+              Robiul Hasan
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">
               Admin
@@ -78,8 +108,12 @@ const ProfileDropdown = () => {
               </Link>
             </li>
             <li className="flex">
-              <Button variant="ghost" className="!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer text-black dark:text-neutral-200 hover:text-primary flex items-center gap-3 text-[16px]">
-                <LogOutIcon className="size-5" /> Logout
+              <Button
+                variant="ghost"
+                className="!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer text-black dark:text-neutral-200 hover:text-primary flex items-center gap-3 text-[16px]"
+                onClick={handleLogout}>
+                <LogOutIcon className="size-5" />
+                {loggingOut ? 'Logging out...' : "Logout"}
               </Button>
             </li>
           </ul>
