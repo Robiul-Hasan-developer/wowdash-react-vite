@@ -9,7 +9,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { EllipsisVertical, Trash } from "lucide-react";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 import AddEvent from "./AddEvent";
 import EditEvent from "./EditEvent";
 import ViewEvent from "./ViewEvent";
@@ -44,7 +44,7 @@ const CalendarSidebar: React.FC = () => {
     // Remove event
     const handleRemoveEvent = (id: number) => {
         setEvents((prev) => prev.filter((e) => e.id !== id));
-        toast("Event deleted successfully!");
+        toast.success("Event deleted successfully!");
     };
 
     // Update event

@@ -13,7 +13,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
 
     return (
-        <section className="bg-white dark:bg-slate-900 flex flex-wrap min-h-[100vh]">
+        <section className="bg-white dark:bg-slate-900 lg:flex flex-wrap min-h-[100vh]">
             <div className="lg:w-1/2 lg:block hidden">
                 <div className="flex items-center flex-col h-full justify-center">
                     <img src={AuthImage} alt="Image" />

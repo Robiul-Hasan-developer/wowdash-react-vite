@@ -112,7 +112,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
         setTimeout(() => {
             setDialogOpen(false);
             setSubmitForm(false);
-            toast(
+            toast.success(
                 <span>
                     <strong>{name}</strong> <br /> Event added successfully!
                 </span>

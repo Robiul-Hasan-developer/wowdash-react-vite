@@ -1,15 +1,15 @@
 import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 import { Button } from "../ui/button";
 
 interface MyOrdersType {
@@ -69,7 +69,7 @@ const MyOrderTable = () => {
   const [orders, setOrders] = useState(initialOrdersData);
  
   const handleRemoveItem = (orderId:number) => {
-        toast(`${orderId} No Item Deleted.`);
+        toast.success(`${orderId} No Item Deleted.`);
         const filteredData = orders.filter((item) => item.id !== orderId);
         setOrders(filteredData);
   }

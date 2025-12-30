@@ -7,7 +7,7 @@ import { formSchema, type FormSchemaType } from "@/lib/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 import { formAction } from './actions';
 
 const ValidateForm = () => {
@@ -23,7 +23,7 @@ const ValidateForm = () => {
 
     const onSubmit = (data: FormSchemaType, event?: React.BaseSyntheticEvent) => {
         event?.preventDefault();
-        toast("Form submitted successfully!");
+        toast.success("Form submitted successfully!");
         reset();
     };
 

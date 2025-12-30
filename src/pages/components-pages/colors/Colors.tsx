@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Suspense, useState } from "react";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 
 const Colors = () => {
 
@@ -25,7 +25,7 @@ const Colors = () => {
             const textToCopy = target.getAttribute("data-clipboard-text");
             if (textToCopy) {
                 handleCopy(textToCopy);
-                toast(`${textToCopy} Class copied`);
+                toast.success(`${textToCopy} Class copied`);
             }
         }
     };

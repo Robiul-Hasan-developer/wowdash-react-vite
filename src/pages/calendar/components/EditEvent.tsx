@@ -89,7 +89,7 @@ const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
     const handleModalFormSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         if (!label) {
-            toast("Please select an event type!")
+            toast.success("Please select an event type!")
             return
         }
         setSubmitForm(true)

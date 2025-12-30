@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import IconPdf from "@/assets/images/home-eight/icon-pdf.png";
 import IconText from "@/assets/images/home-eight/icon-text.png";
 import CommonLink from "@/components/shared/CommonLink";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 
 interface DocumentItem {
     id: number;
@@ -61,7 +61,7 @@ const HealthReportsDocumentCard: React.FC = () => {
     const handleRemoveItem = (id: number) => {
         const filteredItems = items.filter((item) => id !== item.id)
         setItems(filteredItems);
-        toast('Deleted Successfully!')
+        toast.success('Deleted Successfully!')
     }
 
     return (

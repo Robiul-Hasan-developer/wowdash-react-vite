@@ -2,10 +2,14 @@
 import GithubIcon from "@/assets/images/icons/github-icon.png";
 import GoogleIcon from "@/assets/images/icons/google-icon.png";
 import { Button } from "@/components/ui/button";
+import { useIsSubmitting } from "@/context/isSubmittingContext";
 
 const SocialLogin = () => {
+
+    const { isSubmitting } = useIsSubmitting();
+
     return (
-        <form
+        <div
             className="mt-8 flex items-center gap-3"
         >
             {/* Google Button */}
@@ -15,6 +19,7 @@ const SocialLogin = () => {
                 type="submit"
                 name="action"
                 value="google"
+                disabled={isSubmitting}
             >
                 <>
                     <img src={GoogleIcon} alt="google" width={18} height={18} />
@@ -29,13 +34,14 @@ const SocialLogin = () => {
                 type="submit"
                 name="action"
                 value="github"
+                disabled={isSubmitting}
             >
                 <>
                     <img src={GithubIcon} alt="github" width={18} height={18} />
                     Github
                 </>
             </Button>
-        </form>
+        </div>
     );
 };
 

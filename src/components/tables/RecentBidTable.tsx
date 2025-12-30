@@ -15,7 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import { SquarePen, Trash } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner";
+import { toast } from 'react-toastify';
 import { Button } from "../ui/button";
 
 import NftOfferImage1 from "@/assets/images/nft/nft-offer-img1.png";
@@ -115,7 +115,7 @@ const RecentBidTable = () => {
 
     const handleRemove = (index: number) => {
         setBids((prev) => prev.filter((_, i) => i !== index));
-        toast(`Table item deleted successfully!`);
+        toast.success(`Table item deleted successfully!`);
     }
 
     return (

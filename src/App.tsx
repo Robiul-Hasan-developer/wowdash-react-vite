@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { useEffect, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
+import { IsSubmittingContextProvider } from './context/isSubmittingContext';
 import { LoadingProvider } from './context/LoadingContext';
 import { PageLoader } from './loading/PageLoader';
 import { router } from './routes/AppRoutes';
@@ -18,7 +19,9 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <LoadingProvider>
+        <IsSubmittingContextProvider>
         <RouterProvider router={router} />
+        </IsSubmittingContextProvider>
       </LoadingProvider>
     </ThemeProvider>
   )
