@@ -33,7 +33,7 @@ const ProfileDropdown = () => {
   if (loading) {
     return (
       <div>
-        <p>Initialising User...</p>
+        <p>Loading...</p>
       </div>
     );
   }
@@ -73,7 +73,8 @@ const ProfileDropdown = () => {
         <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primar flex items-center justify-between">
           <div>
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
-              Robiul Hasan
+              {/* Robiul Hasan */}
+              {user.email}
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">
               Admin
