@@ -3,7 +3,7 @@ import GithubIcon from "@/assets/images/icons/github-icon.png";
 import GoogleIcon from "@/assets/images/icons/google-icon.png";
 import { Button } from "@/components/ui/button";
 import { useIsSubmitting } from "@/context/isSubmittingContext";
-import { signInWithGoogle } from "@/firebase";
+import { signInWithGithub, signInWithGoogle } from "@/firebase";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,20 +13,39 @@ const SocialLogin = () => {
 
     const { isSubmitting, setIsSubmitting } = useIsSubmitting();
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoadingTwo, setIsLoadingTwo] = useState(false);
     const navigate = useNavigate();
 
     const handleGoogleLogin = async () => {
         try {
             setIsSubmitting(true);
-            setIsLoading (true);
+            setIsLoading(true);
             const user = await signInWithGoogle();
             console.log(user);
-            toast.success('You logged in successfully.');
+            toast.success('Google login successful.');
         } catch (error) {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
-            setIsLoading (false);
+            setIsLoading(false);
+        }
+
+        navigate('/');
+    }
+
+    // Handle Github login
+    const handleGithubLogin = async () => {
+        try {
+            setIsSubmitting(true);
+            setIsLoadingTwo(true);
+            const user = await signInWithGithub();
+            console.log(user);
+            toast.success('Github login successful.');
+        } catch (error) {
+            toast.error(`${error}`);
+        } finally {
+            setIsSubmitting(false);
+            setIsLoadingTwo(false);
         }
 
         navigate('/');
@@ -49,7 +68,7 @@ const SocialLogin = () => {
                 {
                     isLoading ? (
                         <>
-                            <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
+                            <Loader2 className="animate-spin h-6 w-6" />
                             Google
                         </>
                     ) : (
@@ -70,11 +89,21 @@ const SocialLogin = () => {
                 name="action"
                 value="github"
                 disabled={isSubmitting}
+                onClick={handleGithubLogin}
             >
-                <>
-                    <img src={GithubIcon} alt="github" width={18} height={18} />
-                    Github
-                </>
+                {
+                    isLoadingTwo ? (
+                        <>
+                            <Loader2 className="animate-spin h-6 w-6" />
+                            Github
+                        </>
+                    ) : (
+                        <>
+                            <img src={GithubIcon} alt="github" width={18} height={18} />
+                            Github
+                        </>
+                    )
+                }
             </Button>
         </div>
     );
