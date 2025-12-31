@@ -21,16 +21,15 @@ const SocialLogin = () => {
             setIsSubmitting(true);
             setIsLoading(true);
             const user = await signInWithGoogle();
-            console.log(user);
+            if (!user) return;
             toast.success('Google login successful.');
+            navigate('/');
         } catch (error) {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
             setIsLoading(false);
         }
-
-        navigate('/');
     }
 
     // Handle Github login
@@ -39,16 +38,15 @@ const SocialLogin = () => {
             setIsSubmitting(true);
             setIsLoadingTwo(true);
             const user = await signInWithGithub();
-            console.log(user);
+            if (!user) return;
             toast.success('Github login successful.');
+            navigate('/');
         } catch (error) {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
             setIsLoadingTwo(false);
         }
-
-        navigate('/');
     }
 
     return (
