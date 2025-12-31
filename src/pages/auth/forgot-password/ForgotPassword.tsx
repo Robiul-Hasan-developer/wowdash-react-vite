@@ -6,10 +6,11 @@ import { useIsSubmitting } from "@/context/isSubmittingContext";
 import { sendPasswordReset } from "@/firebase";
 import { Loader2, Mail } from 'lucide-react';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 const ForgotPassword = () => {
+    const navigate = useNavigate();
     const { isSubmitting, setIsSubmitting } = useIsSubmitting();
     const [email, setEmail] = useState("");
  
@@ -21,7 +22,8 @@ const ForgotPassword = () => {
         const result = await sendPasswordReset(email);
 
         if (result.success) {
-            toast.success("Password reset email sent!");
+            toast.success("Email sent! Please check your email inbox or spam.");
+            navigate('/auth/login')
         } else {
             toast.error(result.message);
         }

@@ -18,10 +18,12 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsSubmitting(true);
+        setIsLoading(true);
 
         try {
             await loginWithEmailAndPassword(email, password);
@@ -35,6 +37,7 @@ const Login = () => {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
+            setIsLoading(false);
             setEmail("");
             setPassword("");
         }
@@ -120,8 +123,8 @@ const Login = () => {
                             className="w-full rounded-lg h-[52px] text-sm mt-8"
                             disabled={isSubmitting}
                         >
-                            {isSubmitting && <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />}
-                            {isSubmitting ? "Signing in..." : "Sign In"}
+                            {isLoading && <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />}
+                            {isLoading ? "Signing in..." : "Sign In"}
                         </Button>
 
                         <div className="mt-8 center-border-horizontal text-center relative before:absolute before:w-full before:h-[1px] before:top-1/2 before:-translate-y-1/2 before:bg-neutral-300 before:start-0">
