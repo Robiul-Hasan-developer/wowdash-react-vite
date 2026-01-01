@@ -50,7 +50,7 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import PrivateRoutes from "./PrivateRoutes";
+import AuthRoutes from "./AuthRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
   },
 
   {
-    element: <PrivateRoutes />,
+    element: <AuthRoutes />,
     children: [
       {
         path: "/",

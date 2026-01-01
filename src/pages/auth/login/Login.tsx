@@ -16,10 +16,10 @@ import {
     FieldError,
     FieldGroup
 } from "@/components/ui/field";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
-import { cn } from "@/lib/utils";
 
 
 const formSchema = z.object({
@@ -55,7 +55,7 @@ const Login = () => {
             const user = await loginWithEmailAndPassword(data.email, data.password);
 
             if (!user) return;
-            toast.success(`You logged in successfully.`);
+            toast.success(`Login in successful.`);
             if (user) {
                 navigate("/");
             };
@@ -84,6 +84,7 @@ const Login = () => {
                         <h4 className="mb-3">Sign In to your Account</h4>
                         <p className="mb-8 text-secondary-light text-lg">Welcome back! please enter your detail</p>
                     </div>
+
                     <form action="#" onSubmit={form.handleSubmit(handleLogin)}>
                         <FieldGroup className="mb-4">
                             <Controller
@@ -181,6 +182,22 @@ const Login = () => {
                             <span className="bg-white dark:bg-slate-900 z-[2] relative px-4">Or sign in with</span>
                         </div>
                         <SocialLogin />
+
+                        <Button
+                            className="font-semibold text-neutral-600 hover:text-neutral-600 dark:text-neutral-200 py-6 px-2 w-1/2 border border-neutral-600/50 rounded-xl text-sm flex items-center justify-center gap-3 line-height-1 hover:border-blue-400 hover:bg-primary/10 disabled:opacity-60 mt-4 w-full"
+                            variant="outline"
+                            type="button"
+                            name="action"
+                            value="google"
+                              onClick={() => {
+                                form.setValue("email", "wowdash@gmail.com");
+                                form.setValue("password", "123456");
+                            }}
+                        >
+                            Use Demo Credentials
+                        </Button>
+
+
                         <div className="mt-8 text-center text-sm">
                             <p className="mb-0">Don't have an account? <Link to="/auth/register" className="text-primary font-semibold hover:underline">Sign Up</Link></p>
                         </div>

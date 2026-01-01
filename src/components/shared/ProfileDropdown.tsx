@@ -75,7 +75,7 @@ const ProfileDropdown = () => {
             <img src={user.photoURL} className="rounded-full" />
           ) : (
             <>
-              {user?.email?.[0]?.toUpperCase() || "U"}
+              {profile?.username?.[0]?.toUpperCase() || user?.email?.[0]?.toUpperCase() || "U"}
             </>
           )}
         </Button>

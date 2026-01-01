@@ -20,14 +20,14 @@ const SocialLogin = () => {
         try {
             setIsSubmitting(true);
             setIsLoading(true);
+
             const user = await signInWithGoogle();
             if (!user) return;
-            if (user) {
-                toast.success('You logged in with Google successfully.');
-                navigate('/');
-            }
-        } catch (error) {
-            toast.error(`${error}`);
+
+            toast.success("Welcome back! Google login successful 🎉");
+            navigate("/");
+        } catch {
+            toast.error("GitHub sign-in failed. Please try again.");
         } finally {
             setIsSubmitting(false);
             setIsLoading(false);
@@ -39,14 +39,14 @@ const SocialLogin = () => {
         try {
             setIsSubmitting(true);
             setIsLoadingTwo(true);
+
             const user = await signInWithGithub();
             if (!user) return;
-            if (user) {
-                toast.success('You logged in with Github successfully.');
-                navigate('/');
-            }
-        } catch (error) {
-            toast.error(`${error}`);
+
+            toast.success("Welcome back! Github login successful 🎉");
+            navigate("/");
+        } catch {
+            toast.error("GitHub sign-in failed. Please try again.");
         } finally {
             setIsSubmitting(false);
             setIsLoadingTwo(false);
@@ -67,20 +67,12 @@ const SocialLogin = () => {
                 disabled={isSubmitting}
                 onClick={handleGoogleLogin}
             >
-                {
-                    isLoading ? (
-                        <>
-                            <Loader2 className="animate-spin h-6 w-6" />
-                            Google
-                        </>
-                    ) : (
-                        <>
-                            <img src={GoogleIcon} alt="google" width={18} height={18} />
-                            Google
-                        </>
-                    )
-                }
-
+                {isLoading ? (
+                    <Loader2 className="animate-spin h-6 w-6" />
+                ) : (
+                    <img src={GoogleIcon} alt="google" width={18} height={18} />
+                )}
+                <span>Google</span>
             </Button>
 
             {/* GitHub Button */}
@@ -93,19 +85,12 @@ const SocialLogin = () => {
                 disabled={isSubmitting}
                 onClick={handleGithubLogin}
             >
-                {
-                    isLoadingTwo ? (
-                        <>
-                            <Loader2 className="animate-spin h-6 w-6" />
-                            Github
-                        </>
-                    ) : (
-                        <>
-                            <img src={GithubIcon} alt="github" width={18} height={18} />
-                            Github
-                        </>
-                    )
-                }
+                {isLoadingTwo ? (
+                    <Loader2 className="animate-spin h-6 w-6" />
+                ) : (
+                    <img src={GithubIcon} alt="google" width={18} height={18} />
+                )}
+                <span>Github</span>
             </Button>
         </div>
     );
