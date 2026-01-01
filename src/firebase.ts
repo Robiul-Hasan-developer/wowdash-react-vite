@@ -102,8 +102,7 @@ export const signInWithGithub = async () => {
   }
 };
 
-
- // Get user profile from Fire store
+// Get user profile from Fire store
 export const getUserProfile = async (uid: string) => {
   const userRef = doc(db, "users", uid);
   const snap = await getDoc(userRef);
