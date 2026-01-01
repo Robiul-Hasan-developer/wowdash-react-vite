@@ -23,7 +23,7 @@ const SocialLogin = () => {
             const user = await signInWithGoogle();
             if (!user) return;
             if (user) {
-                toast.success('Google login successful.');
+                toast.success('You logged in with Google successfully.');
                 navigate('/');
             }
         } catch (error) {
@@ -42,7 +42,7 @@ const SocialLogin = () => {
             const user = await signInWithGithub();
             if (!user) return;
             if (user) {
-                toast.success('Github login successful.');
+                toast.success('You logged in with Github successfully.');
                 navigate('/');
             }
         } catch (error) {

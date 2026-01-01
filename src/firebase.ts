@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
-  signInWithPopup
+  signInWithPopup,
 } from "firebase/auth";
 import { toast } from "react-toastify";
 const firebaseConfig = {
@@ -21,7 +21,6 @@ const firebaseConfig = {
   measurementId: "G-LE1CWEN369",
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 getAnalytics(app);
@@ -31,25 +30,29 @@ const googleAuthProvider = new GoogleAuthProvider();
 const githubAuthProvider = new GithubAuthProvider();
 
 // Register user
-export const registerWithEmailAndPassword = async (email, password) => {
+export const registerWithEmailAndPassword = async (
+  email: string,
+  password: string
+) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
     return user;
-  } catch (error) {
-    console.log(error);
-    toast.error(`${error}`);
+  } catch {
+    toast.error("Registration failed!");
   }
 };
 
 // Login user
-export const loginWithEmailAndPassword = async (email, password) => {
+export const loginWithEmailAndPassword = async (
+  email: string,
+  password: string
+) => {
   try {
     const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
-  } catch (error) {
-    console.log(error);
-    toast.error(`Invalid Credentials. Credentials does not match!`);
+  } catch {
+    toast.error("Invalid Credentials! Invalid email or password.");
   }
 };
 
@@ -58,10 +61,10 @@ export const sendPasswordReset = async (email: string) => {
   try {
     await sendPasswordResetEmail(auth, email);
     return { success: true };
-  } catch (error: any) {
+  } catch {
     return {
       success: false,
-      message: error?.message || "Failed to send reset email",
+      message: "Failed to send reset email",
     };
   }
 };
