@@ -11,15 +11,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import SocialLogin from "../components/SocialLogin";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller, useForm } from "react-hook-form";
-import * as z from "zod";
-
 import {
     Field,
     FieldError,
     FieldGroup
 } from "@/components/ui/field";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
+import * as z from "zod";
 
 
 const formSchema = z.object({
@@ -28,7 +27,8 @@ const formSchema = z.object({
         .string()
         .min(6, "Password must be at least 6 characters.")
         .max(20, "Password must be at most 10 characters."),
-})
+});
+
 
 const Login = () => {
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ const Login = () => {
             email: "",
             password: "",
         },
-    })
+    });
 
     const handleLogin = async (data: z.infer<typeof formSchema>) => {
         console.log(data);
