@@ -36,7 +36,6 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -47,21 +46,18 @@ const Login = () => {
 
     const handleLogin = async (data: z.infer<typeof formSchema>) => {
         console.log(data);
-        
+
         setIsSubmitting(true);
         setIsLoading(true);
 
         try {
             const user = await loginWithEmailAndPassword(data.email, data.password);
 
-            if(!user) return;
-            toast.success(`User logged in successfully.`);
-             if(user) {
-                 setTimeout(() => {
-                     toast.success(`You are redirecting to home page`);
-                 }, 500);
-                 navigate("/");
-             };
+            if (!user) return;
+            toast.success(`You logged in successfully.`);
+            if (user) {
+                navigate("/");
+            };
         } catch (error) {
             toast.error(`${error}`);
         } finally {

@@ -47,7 +47,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
     const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
-    toast.error(`${error}`);
+    toast.error(`Invalid Credentials. Credentials does not match!`);
   }
 };
 
