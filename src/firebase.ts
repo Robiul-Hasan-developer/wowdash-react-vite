@@ -2,13 +2,13 @@
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    GithubAuthProvider,
-    GoogleAuthProvider,
-    sendPasswordResetEmail,
-    signInWithEmailAndPassword,
-    signInWithPopup
+  createUserWithEmailAndPassword,
+  getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup
 } from "firebase/auth";
 import { toast } from "react-toastify";
 const firebaseConfig = {
@@ -47,7 +47,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
     const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
-    toast.success(`${error}`);
+    toast.error(`${error}`);
   }
 };
 

@@ -11,35 +11,63 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import SocialLogin from "../components/SocialLogin";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
+import * as z from "zod";
+
+import {
+    Field,
+    FieldError,
+    FieldGroup
+} from "@/components/ui/field";
+
+
+const formSchema = z.object({
+    email: z.string().email("Enter a valid email address."),
+    password: z
+        .string()
+        .min(6, "Password must be at least 6 characters.")
+        .max(20, "Password must be at most 10 characters."),
+})
+
 const Login = () => {
     const navigate = useNavigate();
     const { isSubmitting, setIsSubmitting } = useIsSubmitting();
-
     const [showPassword, setShowPassword] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    })
+
+    const handleLogin = async (data: z.infer<typeof formSchema>) => {
+        console.log(data);
+        
         setIsSubmitting(true);
         setIsLoading(true);
 
         try {
-            await loginWithEmailAndPassword(email, password);
+            const user = await loginWithEmailAndPassword(data.email, data.password);
 
+            if(!user) return;
             toast.success(`User logged in successfully.`);
-            setTimeout(() => {
-                toast.success(`You are redirecting to home page`);
-            }, 500);
-            navigate("/");
+             if(user) {
+                 setTimeout(() => {
+                     toast.success(`You are redirecting to home page`);
+                 }, 500);
+                 navigate("/");
+             };
         } catch (error) {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
             setIsLoading(false);
-            setEmail("");
-            setPassword("");
+            form.reset();
         }
     }
 
@@ -59,45 +87,70 @@ const Login = () => {
                         <h4 className="mb-3">Sign In to your Account</h4>
                         <p className="mb-8 text-secondary-light text-lg">Welcome back! please enter your detail</p>
                     </div>
-                    <form action="#" onSubmit={handleLogin}>
-                        <div className="icon-field mb-4 relative">
-                            <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
-                            <Input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                disabled={isSubmitting}
-                                placeholder="Email"
+                    <form action="#" onSubmit={form.handleSubmit(handleLogin)}>
+                        <FieldGroup className="mb-4">
+                            <Controller
                                 name="email"
-                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <div className="icon-field relative">
+                                            <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                                            <Input
+                                                {...field}
+                                                type="email"
+                                                aria-invalid={fieldState.invalid}
+                                                disabled={isSubmitting}
+                                                placeholder="Email"
+                                                name="email"
+                                                autoComplete="off"
+                                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                            />
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
                             />
-                        </div>
-                        <div className="relative mb-5">
-                            <div className="icon-field">
-                                <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
-                                <Input
-                                    type={showPassword ? 'text' : 'password'}
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    disabled={isSubmitting}
-                                    placeholder="Password"
-                                    name="password"
-                                    className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
-                                />
-                                <Button
-                                    type="button"
-                                    onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-4 top-1/2 transform -translate-y-1/2 !p-0 bg-transparent hover:bg-transparent text-muted-foreground h-[unset]"
-                                >
-                                    {showPassword ? (
-                                        <EyeOff className="w-5 h-5" />
-                                    ) : (
-                                        <Eye className="w-5 h-5" />
-                                    )}
-                                </Button>
-                            </div>
-                            <span className="toggle-password ri-eye-line cursor-pointer absolute end-0 top-1/2 -translate-y-1/2 me-4 text-secondary-light" data-toggle="#your-password"></span>
-                        </div>
+                        </FieldGroup>
+                        <FieldGroup className="mb-4">
+                            <Controller
+                                name="password"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid}>
+                                        <div className="icon-field relative">
+                                            <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                                            <Input
+                                                {...field}
+                                                type={showPassword ? 'text' : 'password'}
+                                                aria-invalid={fieldState.invalid}
+                                                disabled={isSubmitting}
+                                                placeholder="Password"
+                                                name="password"
+                                                autoComplete="off"
+                                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                            />
+                                            <Button
+                                                type="button"
+                                                onClick={() => setShowPassword(!showPassword)}
+                                                className="absolute right-4 top-1/2 transform -translate-y-1/2 !p-0 bg-transparent hover:bg-transparent text-muted-foreground h-[unset]"
+                                            >
+                                                {showPassword ? (
+                                                    <EyeOff className="w-5 h-5" />
+                                                ) : (
+                                                    <Eye className="w-5 h-5" />
+                                                )}
+                                            </Button>
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                        </FieldGroup>
 
                         {/* Remember Me & Forgot Password */}
                         <div className="mt-2 flex justify-between items-center">
