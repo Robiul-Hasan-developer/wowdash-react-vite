@@ -1,24 +1,27 @@
-// import Logout from "@/components/auth/logout";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { auth } from "@/firebase";
+import { auth, getUserProfile } from "@/firebase";
 import { cn } from "@/lib/utils";
 import { signOut } from "firebase/auth";
 import { LogOutIcon, Mail, Settings, User } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+interface UserProfile {
+  username?: string;
+}
 
 const ProfileDropdown = () => {
+  const navigate = useNavigate();
   const [loggingOut, setLoggingOut] = useState(false);
   const [user, loading, error] = useAuthState(auth);
-  const navigate = useNavigate();
+  const [profile, setProfile] = useState<UserProfile | null>(null);
 
   const handleLogout = () => {
     setTimeout(() => {
@@ -31,6 +34,17 @@ const ProfileDropdown = () => {
       });
     }, 1000);
   }
+
+
+  // Set User info
+  useEffect(() => {
+    if (user?.uid) {
+      getUserProfile(user.uid).then((data) => {
+        setProfile(data as UserProfile);
+      });
+    }
+  }, [user]);
+
 
   if (loading) {
     return (
@@ -75,9 +89,7 @@ const ProfileDropdown = () => {
         <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primar flex items-center justify-between">
           <div>
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
-              {
-                user?.displayName || "User Name"
-              }
+              {profile?.username || user?.displayName || "User Name"}
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">
               Admin
@@ -111,7 +123,7 @@ const ProfileDropdown = () => {
                 <Settings className="w-5 h-5" /> Settings
               </Link>
             </li>
-            <li className="flex">
+            <li className="flex ms-[2px]">
               <Button
                 variant="ghost"
                 className={`!p-0 h-auto w-full justify-start font-normal !bg-transparent cursor-pointer dark:text-neutral-200 flex items-center gap-3 text-[16px] hover:text-red-600 focus:text-red-600 ${loggingOut ? 'text-red-600 focus:text-red-600' : 'text-black'}`}
