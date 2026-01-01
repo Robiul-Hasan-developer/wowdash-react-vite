@@ -5,11 +5,35 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { useIsSubmitting } from "@/context/isSubmittingContext";
 import { registerWithEmailAndPassword } from "@/firebase";
-import { Eye, EyeOff, Loader2, Lock, Mail, UserRound } from 'lucide-react';
+import { Eye, EyeOff, Loader2, Lock, Mail } from 'lucide-react';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import SocialLogin from "../components/SocialLogin";
+
+import {
+    Field,
+    FieldError,
+    FieldGroup
+} from "@/components/ui/field";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
+import * as z from "zod";
+
+
+const formSchema = z.object({
+    username: z
+        .string("Username is required!")
+        .min(3, "Username must be at least 6 characters.")
+        .max(20, "Username must be at most 10 characters."),
+    email: z.string().email("Enter a valid email address."),
+    password: z
+        .string()
+        .min(6, "Password must be at least 6 characters.")
+        .max(20, "Password must be at most 10 characters."),
+});
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -17,27 +41,33 @@ const Register = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const [showPassword, setShowPassword] = useState(false);
-    const [user, setUser] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
 
-    const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            username: "",
+            email: "",
+            password: "",
+        },
+    });
+
+    const handleRegister = async (data: z.infer<typeof formSchema>) => {
         setIsSubmitting(true);
         setIsLoading(true);
 
         try {
-            await registerWithEmailAndPassword(email, password);
-            toast.success(`User registered successfully.`);
-            navigate("/auth/login");
+            const user = await registerWithEmailAndPassword(data.email, data.password);
+            if(user) {
+                toast.success(`User registered successfully.`);
+                navigate("/auth/login");
+            }
         } catch (error) {
             toast.error(`${error}`);
         } finally {
             setIsSubmitting(false);
             setIsLoading(false);
-            setUser("");
-            setEmail("");
-            setPassword("");
+            form.reset();
         }
     }
 
@@ -57,20 +87,112 @@ const Register = () => {
                         <h4 className="mb-3">Sign up to your Account</h4>
                         <p className="mb-8 text-neutral-600 dark:text-neutral-200 text-lg">Welcome back! Please enter your details</p>
                     </div>
-                    <form action="#" onSubmit={handleRegister}>
-                        <div className="icon-field mb-4 relative">
+                    <form action="#" onSubmit={form.handleSubmit(handleRegister)}>
+                        <FieldGroup className="mb-4">
+                            <Controller
+                                name="username"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid} className={cn('gap-1')}>
+                                        <div className="icon-field relative">
+                                            <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                                            <Input
+                                                {...field}
+                                                type="text"
+                                                aria-invalid={fieldState.invalid}
+                                                disabled={isSubmitting}
+                                                placeholder="Username"
+                                                name="username"
+                                                autoComplete="off"
+                                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                            />
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                        </FieldGroup>
+                        <FieldGroup className="mb-4">
+                            <Controller
+                                name="email"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid} className={cn('gap-1')}>
+                                        <div className="icon-field relative">
+                                            <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                                            <Input
+                                                {...field}
+                                                type="email"
+                                                aria-invalid={fieldState.invalid}
+                                                disabled={isSubmitting}
+                                                placeholder="Email"
+                                                name="email"
+                                                autoComplete="off"
+                                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                            />
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                        </FieldGroup>
+                        <FieldGroup className="mb-4">
+                            <Controller
+                                name="password"
+                                control={form.control}
+                                render={({ field, fieldState }) => (
+                                    <Field data-invalid={fieldState.invalid} className={cn('gap-1')}>
+                                        <div className="icon-field relative">
+                                            <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                                            <Input
+                                                {...field}
+                                                type={showPassword ? 'text' : 'password'}
+                                                aria-invalid={fieldState.invalid}
+                                                disabled={isSubmitting}
+                                                placeholder="Password"
+                                                name="password"
+                                                autoComplete="off"
+                                                className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
+                                            />
+                                            <Button
+                                                type="button"
+                                                onClick={() => setShowPassword(!showPassword)}
+                                                className="absolute right-4 top-1/2 transform -translate-y-1/2 !p-0 bg-transparent hover:bg-transparent text-muted-foreground h-[unset]"
+                                            >
+                                                {showPassword ? (
+                                                    <EyeOff className="w-5 h-5" />
+                                                ) : (
+                                                    <Eye className="w-5 h-5" />
+                                                )}
+                                            </Button>
+                                        </div>
+                                        {fieldState.invalid && (
+                                            <FieldError errors={[fieldState.error]} />
+                                        )}
+                                    </Field>
+                                )}
+                            />
+                        </FieldGroup>
+
+
+
+
+
+                        {/* <div className="icon-field mb-4 relative">
                             <UserRound className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
                             <Input
                                 type="text"
-                                value={user}
-                                onChange={(e) => setUser(e.target.value)}
                                 disabled={isSubmitting}
                                 placeholder="Username"
                                 name="username"
                                 className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                             />
-                        </div>
-                        <div className="icon-field mb-4 relative">
+                        </div> */}
+                        {/* <div className="icon-field mb-4 relative">
                             <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
                             <Input
                                 type="email"
@@ -107,7 +229,7 @@ const Register = () => {
                                 </Button>
                             </div>
                             <span className="toggle-password ri-eye-line cursor-pointer absolute end-0 top-1/2 -translate-y-1/2 me-4 text-secondary-light" data-toggle="#your-password"></span>
-                        </div>
+                        </div> */}
 
                         {/* Remember Me & Forgot Password */}
                         <div className="flex items-start gap-2 flex justify-between items-center">

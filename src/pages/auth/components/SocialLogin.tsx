@@ -22,8 +22,10 @@ const SocialLogin = () => {
             setIsLoading(true);
             const user = await signInWithGoogle();
             if (!user) return;
-            toast.success('Google login successful.');
-            navigate('/');
+            if (user) {
+                toast.success('Google login successful.');
+                navigate('/');
+            }
         } catch (error) {
             toast.error(`${error}`);
         } finally {
@@ -39,8 +41,10 @@ const SocialLogin = () => {
             setIsLoadingTwo(true);
             const user = await signInWithGithub();
             if (!user) return;
-            toast.success('Github login successful.');
-            navigate('/');
+            if (user) {
+                toast.success('Github login successful.');
+                navigate('/');
+            }
         } catch (error) {
             toast.error(`${error}`);
         } finally {

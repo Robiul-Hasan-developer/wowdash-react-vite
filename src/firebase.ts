@@ -37,7 +37,8 @@ export const registerWithEmailAndPassword = async (email, password) => {
     const user = res.user;
     return user;
   } catch (error) {
-    toast.success(`${error}`);
+    console.log(error);
+    toast.error(`${error}`);
   }
 };
 
@@ -47,6 +48,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
     const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
+    console.log(error);
     toast.error(`Invalid Credentials. Credentials does not match!`);
   }
 };

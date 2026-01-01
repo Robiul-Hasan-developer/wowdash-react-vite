@@ -13,6 +13,7 @@ import {
     FieldError,
     FieldGroup
 } from "@/components/ui/field";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
@@ -48,6 +49,7 @@ const ForgotPassword = () => {
         }
 
         setIsSubmitting(false);
+        form.reset();
     };
 
     return (
@@ -75,7 +77,7 @@ const ForgotPassword = () => {
                                 name="email"
                                 control={form.control}
                                 render={({ field, fieldState }) => (
-                                    <Field data-invalid={fieldState.invalid}>
+                                    <Field data-invalid={fieldState.invalid} className={cn('gap-1')}>
                                         <div className="icon-field relative">
                                             <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
                                             <Input
