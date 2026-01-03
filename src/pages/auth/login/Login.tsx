@@ -46,8 +46,6 @@ const Login = () => {
     });
 
     const handleLogin = async (data: z.infer<typeof formSchema>) => {
-        console.log(data);
-
         setIsSubmitting(true);
         setIsLoading(true);
 

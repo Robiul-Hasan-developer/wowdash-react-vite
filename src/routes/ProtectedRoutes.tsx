@@ -2,7 +2,7 @@ import { auth } from "@/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, Outlet } from "react-router-dom";
 
-const AuthRoutes = () => {
+const ProtectedRoutes = () => {
     const [user, loading] = useAuthState(auth);
 
     if (loading) return <p>Loading...</p>
@@ -16,4 +16,4 @@ const AuthRoutes = () => {
     );
 };
 
-export default AuthRoutes;
+export default ProtectedRoutes;

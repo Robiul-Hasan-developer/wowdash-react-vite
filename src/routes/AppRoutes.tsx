@@ -50,24 +50,31 @@ import Crm from "../pages/dashboards/crm/Crm";
 import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
 import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
-import AuthRoutes from "./AuthRoutes";
+import GuestRoutes from "./GuestRoutes";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 export const router = createBrowserRouter([
+
   {
-    path: "/auth/login",
-    element: <Login />,
-  },
-  {
-    path: "/auth/register",
-    element: <Register />,
-  },
-  {
-    path: "/auth/forgot-password",
-    element: <ForgotPassword />,
+    element: <GuestRoutes />,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Login />,
+      },
+      {
+        path: "/auth/register",
+        element: <Register />,
+      },
+      {
+        path: "/auth/forgot-password",
+        element: <ForgotPassword />,
+      },
+    ]
   },
 
   {
-    element: <AuthRoutes />,
+    element: <ProtectedRoutes />,
     children: [
       {
         path: "/",

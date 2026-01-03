@@ -58,7 +58,6 @@ const Register = () => {
 
         try {
             const user = await registerWithEmailAndPassword(data.email, data.password, data.username);
-            console.log(`Registered User: ${user}`);
             
             if(user) {
                 toast.success(`User registered successfully.`);
