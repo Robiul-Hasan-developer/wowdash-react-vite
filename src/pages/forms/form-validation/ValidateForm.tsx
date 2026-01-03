@@ -22,6 +22,7 @@ const ValidateForm = () => {
     });
 
     const onSubmit = (data: FormSchemaType, event?: React.BaseSyntheticEvent) => {
+        console.log(`Registered users is: ${data}`);
         event?.preventDefault();
         toast.success("Form submitted successfully!");
         reset();

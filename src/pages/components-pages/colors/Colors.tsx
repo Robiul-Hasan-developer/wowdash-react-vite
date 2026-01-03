@@ -34,6 +34,8 @@ const Colors = () => {
         <>
             <Breadcrumb title="Colors" text="Colors" />
 
+            {copied && <span className="text-green-500 hidden">Copied!</span>}
+
             <Suspense fallback={<LoadingSkeleton />}>
                 <div className="row gy-4">
                     <div className="col-12">
