@@ -23,7 +23,7 @@ export const data = {
       items: [
         {
           title: "AI",
-          url: "/",
+          url: "/dashboard",
           circleColor: "bg-primary",
         },
         {

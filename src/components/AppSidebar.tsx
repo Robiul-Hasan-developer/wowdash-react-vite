@@ -1,25 +1,3 @@
-// import {
-//     Sidebar,
-//     SidebarContent,
-//     SidebarFooter,
-//     SidebarGroup,
-//     SidebarHeader,
-// } from "@/components/ui/sidebar"
-
-// export function AppSidebar() {
-//     return (
-//         <Sidebar>
-//             <SidebarHeader />
-//             <SidebarContent>
-//                 <SidebarGroup />
-//                 <SidebarGroup />
-//             </SidebarContent>
-//             <SidebarFooter />
-//         </Sidebar>
-//     )
-// }
-
-
 import {
     Sidebar,
     SidebarContent,
@@ -40,10 +18,9 @@ export function AppSidebar() {
                     <ThemeLogo />
                 </Link>
             </SidebarHeader>
+            
             <SidebarContent className={cn(`scrollbar-thin`)}>
-              
                 <NavMain items={data.navMain} />
-
             </SidebarContent>
         </Sidebar>
     )
