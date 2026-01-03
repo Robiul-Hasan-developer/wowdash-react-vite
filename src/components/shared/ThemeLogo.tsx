@@ -1,5 +1,4 @@
 
-// import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
 import LogoWhite from "@/assets/images/logo-light.png";
 import LogoDark from "@/assets/images/logo.png";
 import { useTheme } from '@/components/theme-provider';
