@@ -42,7 +42,7 @@ import UsersGrid from "@/pages/users/users-grid/UsersGrid";
 import UsersList from "@/pages/users/UsersList";
 import ViewProfile from "@/pages/users/view-profile/ViewProfile";
 import Widgets from "@/pages/widgets/Widgets";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
 import MainLayout from "../layouts/MainLayout";
@@ -81,6 +81,10 @@ export const router = createBrowserRouter([
         element: <MainLayout />,
         errorElement: <ErrorBoundary />,
         children: [
+          {
+            index: true,
+            element: <Navigate to="/dashboard" replace />,
+          },
           {
             path: "dashboard", element: <AiDashboard />
           },

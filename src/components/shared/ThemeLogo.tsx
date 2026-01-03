@@ -6,15 +6,6 @@ import { useTheme } from '@/components/theme-provider';
 
 function ThemeLogo() {
   const { theme } = useTheme();
-//   const isCollapsed = useSidebarCollapsed();
-
-
-  // const [isMounted, setIsMounted] = useState(false);
-  // useEffect(() => {
-  //   Promise.resolve().then(() => setIsMounted(true))
-  // }, []);
-  // if (!isMounted) return null;
-
   if (!theme) return null;
 
   return (

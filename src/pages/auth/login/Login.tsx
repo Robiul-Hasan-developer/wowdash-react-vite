@@ -55,7 +55,7 @@ const Login = () => {
             if (!user) return;
             toast.success(`Login in successful.`);
             if (user) {
-                navigate("/");
+                navigate("dashboard");
             };
         } catch (error) {
             toast.error(`${error}`);
@@ -76,7 +76,7 @@ const Login = () => {
             <div className="lg:w-1/2 py-8 px-6 flex flex-col justify-center">
                 <div className="lg:max-w-[464px] mx-auto w-full">
                     <div>
-                        <Link to="/" className="mb-2.5 max-w-[290px] inline-block">
+                        <Link to="/dashboard" className="mb-2.5 max-w-[290px] inline-block">
                             <ThemeLogo />
                         </Link>
                         <h4 className="mb-3">Sign In to your Account</h4>

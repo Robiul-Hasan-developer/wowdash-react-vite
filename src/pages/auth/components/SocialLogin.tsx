@@ -25,7 +25,7 @@ const SocialLogin = () => {
             if (!user) return;
 
             toast.success("Welcome back! Google login successful 🎉");
-            navigate("/");
+            navigate("dashboard");
         } catch {
             toast.error("GitHub sign-in failed. Please try again.");
         } finally {
@@ -44,7 +44,7 @@ const SocialLogin = () => {
             if (!user) return;
 
             toast.success("Welcome back! Github login successful 🎉");
-            navigate("/");
+            navigate("dashboard");
         } catch {
             toast.error("GitHub sign-in failed. Please try again.");
         } finally {
