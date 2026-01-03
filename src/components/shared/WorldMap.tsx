@@ -45,67 +45,13 @@
 
 
 
-
-
-import worldMapData from "@/data/countries-data.json";
-import { useState } from "react";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import { Tooltip } from "react-tooltip";
-
-interface geographiesProps {
-  geographies: string
-}
+import WorldMapImage from '@/assets/world-map/world-map-img.png';
 
 const WorldMap = () => {
-  const [tooltipContent, setTooltipContent] = useState("");
 
   return (
     <div className="relative">
-      <Tooltip id="map-tooltip" place="top" content={tooltipContent} />
-
-      <ComposableMap>
-        <Geographies geography={worldMapData}>
-          {({ geographies }: geographiesProps) =>
-            geographies.map((geo) => {
-              const countryName =
-                geo.properties.name ||
-                geo.properties.ADMIN || // for 110m dataset
-                "Unknown";
-
-              return (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  data-tooltip-id="map-tooltip"
-                  data-tooltip-content={countryName}
-                  onMouseEnter={() => {
-                    setTooltipContent(countryName);
-                  }}
-                  onMouseLeave={() => {
-                    setTooltipContent("");
-                  }}
-                  style={{
-                    default: {
-                      fill: "#d1d5db",
-                      outline: "none",
-                      stroke: "#fff",     // country border
-                      strokeWidth: 1,
-                    },
-                    hover: {
-                      fill: "#333",
-                      outline: "none",
-                    },
-                    pressed: {
-                      fill: "#000",
-                      outline: "none",
-                    },
-                  }}
-                />
-              );
-            })
-          }
-        </Geographies>
-      </ComposableMap>
+        <img src={WorldMapImage} alt="World Map" />
     </div>
   );
 };
