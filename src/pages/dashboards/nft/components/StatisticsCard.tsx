@@ -21,7 +21,7 @@ const StatisticsCard = () => {
                                 <span className="text-neutral-500 dark:text-neutral-300 font-normal text-xl">Total Art Sold</span>
                             </div>
                             <div className="x-axies-value-none h-[110px]">
-                                <BarLightChart chartHeight={135} chartWidth={180} chartBorderRadius={6} />
+                                <BarLightChart chartHeight={135} chartWidth={'180'} chartBorderRadius={6} />
                             </div>
                         </div>
                         <div className="flex items-center gap-1 justify-between">

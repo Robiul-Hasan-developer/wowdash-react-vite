@@ -15,7 +15,7 @@ const TotalSubscriberCard = () => {
                     - 20 Per Day
                 </div>
 
-                <BarLightChart chartHeight={235} chartWidth={310} chartBorderRadius={6} />
+                <BarLightChart chartHeight={235} chartBorderRadius={6} />
 
             </CardContent>
         </Card>

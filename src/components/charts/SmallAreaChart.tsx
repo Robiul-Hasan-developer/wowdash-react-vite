@@ -7,14 +7,12 @@ interface ChartColorType {
     chartHeight?: number;
 }
 
-//  chartColor={item.bgCircle} chartWidth={80} chartHeight={42}
 
 const SmallAreaChart = ({ chartColor = "#487fff", chartWidth = 80, chartHeight = 42 }: ChartColorType) => {
 
     const currentYear = new Date().getFullYear();
 
     const chartOptions: ApexOptions = {
-
         chart: {
             type: 'area',
             width: chartWidth,

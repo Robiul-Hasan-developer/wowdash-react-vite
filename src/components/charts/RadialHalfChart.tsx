@@ -6,7 +6,7 @@ interface RadialHalfChartType {
     chartWidth?: number;
 }
 
-const RadialHalfChart = ({ chartHeight=165,chartWidth=165 }: RadialHalfChartType) => {
+const RadialHalfChart = ({ chartHeight=165, chartWidth=165 }: RadialHalfChartType) => {
     const chartOptions: ApexOptions = {
       chart: {
         height: chartHeight,

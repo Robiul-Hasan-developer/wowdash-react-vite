@@ -49,7 +49,7 @@ const StaticCard = () => {
               <h5 className="font-semibold mb-0">$5.5k</h5>
             </div>
             <div className="x-axies-value-none">
-              <BarLightChart chartHeight={135} chartWidth={180} chartBorderRadius={6} />
+              <BarLightChart chartHeight={135} chartWidth={'180'} chartBorderRadius={6} />
             </div>
           </div>
         </div>
