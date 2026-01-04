@@ -16,11 +16,11 @@ const Investment = () => {
         <>
             <Breadcrumb title="Investment" text="Investment" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-6">
-                <Suspense fallback={<LoadingSkeleton />}>
+            <Suspense fallback={<LoadingSkeleton />}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-6">
                     <StatsCard />
-                </Suspense>
-            </div>
+                </div>
+            </Suspense>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
                 <div className="col-span-12 2xl:col-span-8">
