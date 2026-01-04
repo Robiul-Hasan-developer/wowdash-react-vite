@@ -1,5 +1,6 @@
 import CountryList from '@/components/shared/CountryList';
 import CustomSelect from '@/components/shared/CustomSelect';
+import WorldMap from '@/components/shared/WorldMap';
 import { Card, CardContent } from '@/components/ui/card';
 
 const CountriesStatusCard = () => {
@@ -15,7 +16,7 @@ const CountriesStatusCard = () => {
                 </div>
 
                 <div className="bg-neutral-100 dark:bg-slate-700/50 h-[200px] overflow-hidden">
-                  {/* <WorldMap mapHeight={400} /> */}
+                  <WorldMap />
                 </div> 
 
                 <div className="max-h-[284px] overflow-y-auto p-6 scrollbar-thin">
