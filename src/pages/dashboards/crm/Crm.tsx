@@ -1,18 +1,18 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import TopPerformerCard from "../dashboard/components/TopPerformerCard";
-import CampaignCard from "./components/CampaignCard";
-import ClientPaymentStatusCard from "./components/ClientPaymentStatusCard";
-import CountriesStatusCard from "./components/CountriesStatusCard";
-import CustomerOverviewCard from "./components/CustomerOverviewCard";
-import EarningStatisticsCard from "./components/EarningStatisticsCard";
-import LastTransactionCard from "./components/LastTransactionCard";
-import RevenueGrowthCard from "./components/RevenueGrowthCard";
-import StatsCard from "./components/StatsCard";
-import TodoListRecentCard from "./components/TodoListRecentCard";
+import { lazy, Suspense } from "react";
+const TopPerformerCard = lazy(() => import("../dashboard/components/TopPerformerCard"))
+const CampaignCard = lazy(() => import("./components/CampaignCard"))
+const ClientPaymentStatusCard = lazy(() => import("./components/ClientPaymentStatusCard"))
+const CountriesStatusCard = lazy(() => import("./components/CountriesStatusCard"))
+const CustomerOverviewCard = lazy(() => import("./components/CustomerOverviewCard"))
+const EarningStatisticsCard = lazy(() => import("./components/EarningStatisticsCard"))
+const LastTransactionCard = lazy(() => import("./components/LastTransactionCard"))
+const RevenueGrowthCard = lazy(() => import("./components/RevenueGrowthCard"))
+const StatsCard = lazy(() => import("./components/StatsCard"))
+const TodoListRecentCard = lazy(() => import("./components/TodoListRecentCard"))
 
-const AiDashboard = () => {
+const Crm = () => {
     return (
         <>
             <Breadcrumb title="CRM" text="CRM" />
@@ -20,11 +20,11 @@ const AiDashboard = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
 
                 <div className="lg:col-span-12 2xl:col-span-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                    <Suspense fallback={<LoadingSkeleton />}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6">
                             <StatsCard />
-                        </Suspense>
-                    </div>
+                        </div>
+                    </Suspense>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
@@ -89,4 +89,4 @@ const AiDashboard = () => {
     );
 };
 
-export default AiDashboard;
+export default Crm;

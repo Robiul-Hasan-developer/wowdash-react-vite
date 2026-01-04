@@ -1,15 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import AverageDailySalesCard from "./components/AverageDailySalesCard";
-import MonthlyCampaignStateCard from "./components/MonthlyCampaignStateCard";
-import RecentActivityCard from "./components/RecentActivityCard";
-import RevenueStatisticCard from "./components/RevenueStatisticCard";
-import SalesByCountriesCard from "./components/SalesByCountriesCard";
-import SourceVisitorsCard from "./components/SourceVisitorsCard";
-import SupportTrackerCard from "./components/SupportTrackerCard";
-import TransactionsCard from "./components/TransactionsCard";
-import UpgradePlanCard from "./components/UpgradePlanCard";
+import { lazy, Suspense } from "react";
+const AverageDailySalesCard = lazy(() => import("./components/AverageDailySalesCard"))
+const MonthlyCampaignStateCard = lazy(() => import("./components/MonthlyCampaignStateCard"))
+const RecentActivityCard = lazy(() => import("./components/RecentActivityCard"))
+const RevenueStatisticCard = lazy(() => import("./components/RevenueStatisticCard"))
+const SalesByCountriesCard = lazy(() => import("./components/SalesByCountriesCard"))
+const SourceVisitorsCard = lazy(() => import("./components/SourceVisitorsCard"))
+const SupportTrackerCard = lazy(() => import("./components/SupportTrackerCard"))
+const TransactionsCard = lazy(() => import("./components/TransactionsCard"))
+const UpgradePlanCard = lazy(() => import("./components/UpgradePlanCard"))
 
 const Analytics = () => {
     return (

@@ -1,14 +1,14 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import IncomeExpenseCard from "./components/IncomeExpenseCard";
-import OverallReportCard from "./components/OverallReportCard";
-import PurchaseSalesCard from "./components/PurchaseSalesCard";
-import RecentTransactionsCard from "./components/RecentTransactionsCard";
-import StateCards from "./components/StateCards";
-import TopCustomerCard from "./components/TopCustomerCard";
-import TopSuppliersCard from "./components/TopSuppliersCard";
-import UsersCard from "./components/users-card";
+import { lazy, Suspense } from "react";
+const IncomeExpenseCard = lazy(() => import("./components/IncomeExpenseCard"))
+const OverallReportCard = lazy(() => import("./components/OverallReportCard"))
+const PurchaseSalesCard = lazy(() => import("./components/PurchaseSalesCard"))
+const RecentTransactionsCard = lazy(() => import("./components/RecentTransactionsCard"))
+const StateCards = lazy(() => import("./components/StateCards"))
+const TopCustomerCard = lazy(() => import("./components/TopCustomerCard"))
+const TopSuppliersCard = lazy(() => import("./components/TopSuppliersCard"))
+const UsersCard = lazy(() => import("./components/users-card"))
 
 const Inventory = () => {
     return (

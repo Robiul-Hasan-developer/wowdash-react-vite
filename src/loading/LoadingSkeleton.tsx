@@ -2,21 +2,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function LoadingSkeleton() {
   return (
-    <div className="space-y-6 p-4">
-      {/* Left Aligned Bubble */}
-      <div className="flex items-center space-x-4">
-        <Skeleton className="h-12 w-12 rounded-full" />
-        <div className="space-y-2">
-          <Skeleton className="h-4 w-[250px]" />
-          <Skeleton className="h-4 w-[200px]" />
-        </div>
-      </div>
-      {/* Right Aligned Bubble */}
-      <div className="flex flex-row-reverse items-center space-x-4 space-x-reverse">
-        <Skeleton className="h-12 w-12 rounded-full" />
-        <div className="space-y-2">
-          <Skeleton className="h-4 w-[200px]" />
-        </div>
+    <div className="flex flex-col space-y-3 h-full min-h-[400px] bg-white dark:bg-slate-700/50 p-6 rounded-xl">
+      <Skeleton className="h-[200px] w-[250px] rounded-xl bg-neutral-300 dark:bg-slate-600 w-full" />
+      <div className="space-y-2">
+        <Skeleton className="h-5 bg-neutral-300 dark:bg-slate-600 w-full" />
+        <Skeleton className="h-5 bg-neutral-300 dark:bg-slate-600 w-full" />
       </div>
     </div>
   )

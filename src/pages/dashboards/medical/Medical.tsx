@@ -1,15 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import AvailableTreatmentsCard from "./components/AvailableTreatmentsCard";
-import DoctorListCard from "./components/DoctorListCard";
-import EarningStatisticCard from "./components/EarningStatisticCard";
-import HealthReportsDocumentCard from "./components/HealthReportsDocumentCard";
-import LatestAppointmentsCard from "./components/LatestAppointmentsCard";
-import PatientVisitedDepartment from "./components/PatientVisitedDepartment";
-import PatientVisitedGender from "./components/PatientVisitedGender";
-import StatCards from "./components/StatCards";
-import TotalIncomeCard from "./components/TotalIncomeCard";
+import { lazy, Suspense } from "react";
+const AvailableTreatmentsCard = lazy(() => import("./components/AvailableTreatmentsCard"))
+const DoctorListCard = lazy(() => import("./components/DoctorListCard"))
+const EarningStatisticCard = lazy(() => import("./components/EarningStatisticCard"))
+const HealthReportsDocumentCard = lazy(() => import("./components/HealthReportsDocumentCard"))
+const LatestAppointmentsCard = lazy(() => import("./components/LatestAppointmentsCard"))
+const PatientVisitedDepartment = lazy(() => import("./components/PatientVisitedDepartment"))
+const PatientVisitedGender = lazy(() => import("./components/PatientVisitedGender"))
+const StatCards = lazy(() => import("./components/StatCards"))
+const TotalIncomeCard = lazy(() => import("./components/TotalIncomeCard"))
 
 const Medical = () => {
     return (

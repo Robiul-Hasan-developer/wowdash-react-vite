@@ -1,5 +1,5 @@
 
-import WorldMapImage from '@/assets/world-map/world-map-img.png';
+import WorldMapImage from '@/assets/world-map/world-map.png';
 
 const WorldMap = () => {
 

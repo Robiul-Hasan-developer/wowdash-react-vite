@@ -1,17 +1,17 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import CustomersStatisticsCard from "./components/CustomersStatisticsCard";
-import DailySalesCard from "./components/DailySalesCard";
-import DistributionMapsCard from "./components/DistributionMapsCard";
-import RecentOrdersCard from "./components/RecentOrdersCard";
-import RevenueReportCard from "./components/RevenueReportCard";
-import StockReportCard from "./components/StockReportCard";
-import TopCustomersCard from "./components/TopCustomersCard";
-import TopSellingProductCard from "./components/TopSellingProductCard";
-import TransactionsCard from "./components/TransactionsCard";
+import { lazy, Suspense } from "react";
+const CustomersStatisticsCard = lazy(() => import("./components/CustomersStatisticsCard"))
+const DailySalesCard = lazy(() => import("./components/DailySalesCard"))
+const DistributionMapsCard = lazy(() => import("./components/DistributionMapsCard"))
+const RecentOrdersCard = lazy(() => import("./components/RecentOrdersCard"))
+const RevenueReportCard = lazy(() => import("./components/RevenueReportCard"))
+const StockReportCard = lazy(() => import("./components/StockReportCard"))
+const TopCustomersCard = lazy(() => import("./components/TopCustomersCard"))
+const TopSellingProductCard = lazy(() => import("./components/TopSellingProductCard"))
+const TransactionsCard = lazy(() => import("./components/TransactionsCard"))
 
-const AiDashboard = () => {
+const Ecommerce = () => {
     return (
         <>
             <Breadcrumb title="eCommerce" text="eCommerce" />
@@ -78,4 +78,4 @@ const AiDashboard = () => {
     );
 };
 
-export default AiDashboard;
+export default Ecommerce;

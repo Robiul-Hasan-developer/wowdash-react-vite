@@ -1,25 +1,25 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import GenerateContentCard from "./components/GenerateContentCard";
-import SalesStatisticCard from "./components/SalesStatisticCard";
-import StatCard from "./components/StatCard";
-import TabsWithTableCard from "./components/TabsWithTableCard";
-import TopCountriesCard from "./components/TopCountriesCard";
-import TopPerformerCard from "./components/TopPerformerCard";
-import TotalSubscriberCard from "./components/TotalSubscriberCard";
-import UserOverviewCard from "./components/UserOverviewCard";
+import { lazy, Suspense } from "react";
+const GenerateContentCard = lazy(() => import("./components/GenerateContentCard"))
+const SalesStatisticCard = lazy(() => import("./components/SalesStatisticCard"))
+const StatCard = lazy(() => import("./components/StatCard"))
+const TabsWithTableCard = lazy(() => import("./components/TabsWithTableCard"))
+const TopCountriesCard = lazy(() => import("./components/TopCountriesCard"))
+const TopPerformerCard = lazy(() => import("./components/TopPerformerCard"))
+const TotalSubscriberCard = lazy(() => import("./components/TotalSubscriberCard"))
+const UserOverviewCard = lazy(() => import("./components/UserOverviewCard"))
 
 const AiDashboard = () => {
     return (
         <>
             <Breadcrumb title="AI" text="AI" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
-                <Suspense fallback={<LoadingSkeleton />}>
+            <Suspense fallback={<LoadingSkeleton />}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
                     <StatCard />
-                </Suspense>
-            </div>
+                </div>
+            </Suspense>
 
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
                 <div className="xl:col-span-12 2xl:col-span-6">

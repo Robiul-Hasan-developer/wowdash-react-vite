@@ -1,14 +1,14 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import EthPriceCard from "./components/EthPriceCard";
-import FeaturedCreatorsCard from "./components/FeaturedCreatorsCard";
-import NftPromoBanner from "./components/NftPromoBanner";
-import RecentBidCard from "./components/RecentBidCard";
-import StatisticsCard from "./components/StatisticsCard";
-import TopCreatorsCard from "./components/TopCreatorsCard";
-import TrendingBidWidgets from "./components/TrendingBidWidgets";
-import TrendingNftCard from "./components/TrendingNftCard";
+import { lazy, Suspense } from "react";
+const EthPriceCard = lazy(() => import("./components/EthPriceCard"))
+const FeaturedCreatorsCard = lazy(() => import("./components/FeaturedCreatorsCard"))
+const NftPromoBanner = lazy(() => import("./components/NftPromoBanner"))
+const RecentBidCard = lazy(() => import("./components/RecentBidCard"))
+const StatisticsCard = lazy(() => import("./components/StatisticsCard"))
+const TopCreatorsCard = lazy(() => import("./components/TopCreatorsCard"))
+const TrendingBidWidgets = lazy(() => import("./components/TrendingBidWidgets"))
+const TrendingNftCard = lazy(() => import("./components/TrendingNftCard"))
 
 const Nft = () => {
     return (

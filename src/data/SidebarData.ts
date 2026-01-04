@@ -1,22 +1,22 @@
 import {
-    Boxes,
-    CalendarDays,
-    ChartPie,
-    Component,
-    House,
-    Mail,
-    MessageCircleMore,
-    Server,
-    Settings,
-    ShieldCheck,
-    StickyNote,
-    UsersRound,
+  Boxes,
+  CalendarDays,
+  ChartPie,
+  Component,
+  House,
+  Mail,
+  MessageCircleMore,
+  Server,
+  Settings,
+  ShieldCheck,
+  StickyNote,
+  UsersRound,
 } from "lucide-react";
 
 export const data = {
   navMain: [
     {
-      title: "/dashboard",
+      title: "Dashboard",
       url: "#",
       icon: House,
       isActive: true,

@@ -23,13 +23,6 @@ import SwitchPage from "@/pages/components-pages/switch/SwitchPage";
 import TabAccordion from "@/pages/components-pages/tab-accordion/TabAccordion";
 import Tags from "@/pages/components-pages/tags/Tags";
 import TooltipPopover from "@/pages/components-pages/tooltip-popover/TooltipPopover";
-import Analytics from "@/pages/dashboards/analytics/Analytics";
-import Cryptocurrency from "@/pages/dashboards/cryptocurrency/Cryptocurrency";
-import Inventory from "@/pages/dashboards/inventory/Inventory";
-import Investment from "@/pages/dashboards/investment/Investment";
-import Lms from "@/pages/dashboards/lms/Lms";
-import Medical from "@/pages/dashboards/medical/Medical";
-import Nft from "@/pages/dashboards/nft/Nft";
 import EmailDetails from "@/pages/emails/email-details/EmailDetails";
 import Email from "@/pages/emails/email/Email";
 import FormValidation from "@/pages/forms/form-validation/FormValidation";
@@ -42,19 +35,26 @@ import UsersGrid from "@/pages/users/users-grid/UsersGrid";
 import UsersList from "@/pages/users/UsersList";
 import ViewProfile from "@/pages/users/view-profile/ViewProfile";
 import Widgets from "@/pages/widgets/Widgets";
+import { lazy } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import NotFound from '../error/404';
 import ErrorBoundary from "../error/ErrorBoundary";
 import MainLayout from "../layouts/MainLayout";
-import Crm from "../pages/dashboards/crm/Crm";
-import AiDashboard from "../pages/dashboards/dashboard/AiDashboard";
-import Ecommerce from "../pages/dashboards/ecommerce/Ecommerce";
 import Typography from './../pages/components-pages/typography/Typography';
 import GuestRoutes from "./GuestRoutes";
 import ProtectedRoutes from "./ProtectedRoutes";
+const Analytics = lazy(() => import("@/pages/dashboards/analytics/Analytics"));
+const Cryptocurrency = lazy(() => import("@/pages/dashboards/cryptocurrency/Cryptocurrency"));
+const Inventory = lazy(() => import("@/pages/dashboards/inventory/Inventory"));
+const Investment = lazy(() => import("@/pages/dashboards/investment/Investment"));
+const Lms = lazy(() => import("@/pages/dashboards/lms/Lms"));
+const Medical = lazy(() => import("@/pages/dashboards/medical/Medical"));
+const Nft = lazy(() => import("@/pages/dashboards/nft/Nft"));
+const Crm = lazy(() => import("../pages/dashboards/crm/Crm"));
+const Ecommerce = lazy(() => import("../pages/dashboards/ecommerce/Ecommerce"));
+const AiDashboard = lazy(() => import("../pages/dashboards/dashboard/AiDashboard"));
 
 export const router = createBrowserRouter([
-
   {
     element: <GuestRoutes />,
     errorElement: <ErrorBoundary />,

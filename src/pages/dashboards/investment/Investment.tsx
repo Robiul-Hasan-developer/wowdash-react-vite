@@ -1,15 +1,15 @@
 import Breadcrumb from "@/layouts/Breadcrumb";
 import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
-import LatestInvestmentsCard from "./components/LatestInvestmentsCard";
-import MostLocationCard from "./components/MostLocationCard";
-import MyPortfolioCard from "./components/MyPortfolioCard";
-import NoticeBoardCard from "./components/NoticeBoardCard";
-import ProjectStatusCard from "./components/ProjectStatusCard";
-import RevenueStatisticsCard from "./components/RevenueStatisticsCard";
-import StaticCard from "./components/StaticCard";
-import StatsCard from "./components/StatsCard";
-import TotalTransactionsCard from "./components/TotalTransactionsCard";
+import { lazy, Suspense } from "react";
+const LatestInvestmentsCard = lazy(() => import("./components/LatestInvestmentsCard"))
+const MostLocationCard = lazy(() => import("./components/MostLocationCard"))
+const MyPortfolioCard = lazy(() => import("./components/MyPortfolioCard"))
+const NoticeBoardCard = lazy(() => import("./components/NoticeBoardCard"))
+const ProjectStatusCard = lazy(() => import("./components/ProjectStatusCard"))
+const RevenueStatisticsCard = lazy(() => import("./components/RevenueStatisticsCard"))
+const StaticCard = lazy(() => import("./components/StaticCard"))
+const StatsCard = lazy(() => import("./components/StatsCard"))
+const TotalTransactionsCard = lazy(() => import("./components/TotalTransactionsCard"))
 
 const Investment = () => {
     return (
