@@ -7,7 +7,7 @@ import {
 import { auth, getUserProfile } from "@/firebase";
 import { cn } from "@/lib/utils";
 import { signOut } from "firebase/auth";
-import { LogOutIcon, Mail, Settings, User } from "lucide-react";
+import { Loader2, LogOutIcon, Mail, Settings, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
@@ -48,11 +48,13 @@ const ProfileDropdown = () => {
 
   if (loading) {
     return (
-      <div>
-        <p>Loading...</p>
-      </div>
+     <div className="fixed inset-0 flex flex-col items-center justify-center bg-background z-50">
+           <Loader2 className="h-11 w-11 animate-spin text-neutral-900" />
+           <p className="mt-4 text-neutral-900 font-semibold animate-pulse text-xl">Loading...</p>
+         </div>
     );
   }
+
   if (error) {
     return (
       <div>
