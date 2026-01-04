@@ -55,7 +55,7 @@ const Login = () => {
             if (!user) return;
             toast.success(`Login in successful.`);
             if (user) {
-                navigate("dashboard");
+                navigate("/dashboard");
             };
         } catch (error) {
             toast.error(`${error}`);
@@ -187,7 +187,7 @@ const Login = () => {
                             type="button"
                             name="action"
                             value="google"
-                              onClick={() => {
+                            onClick={() => {
                                 form.setValue("email", "wowdash@gmail.com");
                                 form.setValue("password", "123456");
                             }}

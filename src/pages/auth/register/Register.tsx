@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { useIsSubmitting } from "@/context/isSubmittingContext";
-import { registerWithEmailAndPassword } from "@/firebase";
+import { auth, registerWithEmailAndPassword } from "@/firebase";
 import { Eye, EyeOff, Loader2, Lock, Mail } from 'lucide-react';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/field";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { signOut } from "firebase/auth";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -58,10 +59,11 @@ const Register = () => {
 
         try {
             const user = await registerWithEmailAndPassword(data.email, data.password, data.username);
-            
-            if(user) {
-                toast.success(`User registered successfully.`);
-                navigate("/auth/login");
+
+            if (user) {
+                await signOut(auth);
+                navigate("/auth/login", { replace: true });
+                toast.success("User registered successfully");
             }
         } catch (error) {
             toast.error(`${error}`);

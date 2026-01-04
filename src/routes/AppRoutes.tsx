@@ -57,6 +57,7 @@ export const router = createBrowserRouter([
 
   {
     element: <GuestRoutes />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: "/auth/login",
@@ -86,7 +87,7 @@ export const router = createBrowserRouter([
             element: <Navigate to="/dashboard" replace />,
           },
           {
-            path: "dashboard", element: <AiDashboard />
+            path: "/dashboard", element: <AiDashboard />
           },
           {
             path: "crm", element: <Crm />
@@ -230,6 +231,7 @@ export const router = createBrowserRouter([
 
   {
     path: "*",
-    element: <NotFound />
+    element: <NotFound />,
+    errorElement: <ErrorBoundary />,
   },
 ]);
