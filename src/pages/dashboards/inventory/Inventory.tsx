@@ -8,7 +8,7 @@ const RecentTransactionsCard = lazy(() => import("./components/RecentTransaction
 const StateCards = lazy(() => import("./components/StateCards"))
 const TopCustomerCard = lazy(() => import("./components/TopCustomerCard"))
 const TopSuppliersCard = lazy(() => import("./components/TopSuppliersCard"))
-const UsersCard = lazy(() => import("./components/users-card"))
+const UsersCard = lazy(() => import("./components/UsersCard"))
 
 const Inventory = () => {
     return (
@@ -59,7 +59,6 @@ const Inventory = () => {
                 </div>
 
             </div>
-
         </>
     );
 };
