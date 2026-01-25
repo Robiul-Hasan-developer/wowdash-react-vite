@@ -10,7 +10,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 500);
+    const timer = setTimeout(() => setLoading(false));
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <LoadingProvider>
         <IsSubmittingContextProvider>
-        <RouterProvider router={router} />
+          <RouterProvider router={router} />
         </IsSubmittingContextProvider>
       </LoadingProvider>
     </ThemeProvider>
