@@ -1,11 +1,10 @@
 import type { ReactNode } from "react";
 import { createContext, useContext, useState } from "react";
-import { EmailSidebarProvider } from "./EmailSidebarContext";
 
 interface LoadingContextType {
   loading: boolean;
   setLoading: (value: boolean) => void;
-};
+}
 
 const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
 
@@ -14,9 +13,7 @@ export const LoadingProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <LoadingContext.Provider value={{ loading, setLoading }}>
-      <EmailSidebarProvider>
-        {children}
-      </EmailSidebarProvider>
+      {children}
     </LoadingContext.Provider>
   );
 };
