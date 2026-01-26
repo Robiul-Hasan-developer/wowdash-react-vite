@@ -123,6 +123,8 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     setValue,
     formState: { errors },
   } = useForm<FormValues>()
+  console.log(`This is Error ${errors}`);
+  
 
   const onSubmit = (data: FormValues) => {
     if (!state.startDate || !state.endDate) {
