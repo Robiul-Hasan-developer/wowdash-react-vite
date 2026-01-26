@@ -1,7 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 import ClientPaymentStatusCard from "../dashboards/crm/components/ClientPaymentStatusCard";
 import EarningStatisticsCard from "../dashboards/crm/components/EarningStatisticsCard";
 import StatsCard from "../dashboards/crm/components/StatsCard";
@@ -23,24 +22,24 @@ const Widgets = () => {
                 <DefaultCardComponent title="Metrics">
                     <div className="flex flex-col gap-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-neutral-200 dark:border-neutral-600">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatsCardEcommerce />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatsCardCryptocurrency />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </DefaultCardComponent>
@@ -48,37 +47,37 @@ const Widgets = () => {
 
                 <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
                     <div className="col-span-12 xl:col-span-12 2xl:col-span-6">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <SalesStatisticCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                     <div className="col-span-12 2xl:col-span-6">
                         <TopCountriesCard />
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <ClientPaymentStatusCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-8">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <EarningStatisticsCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <UserOverviewCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <DailySalesCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                     <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
-                        <Suspense fallback={<LoadingSkeleton />}>
+                        <LazyWrapper>
                             <StaticCard />
-                        </Suspense>
+                        </LazyWrapper>
                     </div>
                 </div>
             </div>

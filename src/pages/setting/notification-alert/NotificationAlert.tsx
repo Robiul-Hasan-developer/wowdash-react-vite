@@ -1,17 +1,17 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import React, { Suspense } from "react";
+import React from "react";
 
 const NotificationAlert = () => {
     return (
         <>
             <Breadcrumb title="Notification Alert" text="Notification Alert" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div>
                     <div className="card rounded-xl border border-border bg-background shadow-sm p-6">
                         <div className="card-body p-0">
@@ -58,7 +58,7 @@ const NotificationAlert = () => {
                         </div>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

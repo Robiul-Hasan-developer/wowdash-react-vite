@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const TopPerformerCard = lazy(() => import("../dashboard/components/TopPerformerCard"))
 const CampaignCard = lazy(() => import("./components/CampaignCard"))
 const ClientPaymentStatusCard = lazy(() => import("./components/ClientPaymentStatusCard"))
@@ -20,68 +20,68 @@ const Crm = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
 
                 <div className="lg:col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6">
                             <StatsCard />
                         </div>
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RevenueGrowthCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <EarningStatisticsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <CampaignCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="lg:col-span-6 2xl:col-span-12 col-xxl-12 col-sm-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <CustomerOverviewCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <ClientPaymentStatusCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <CountriesStatusCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopPerformerCard listClasses="space-y-6 max-h-[458px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible" />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TodoListRecentCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="lg:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <LastTransactionCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
             </div>

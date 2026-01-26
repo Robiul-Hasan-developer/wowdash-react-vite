@@ -1,6 +1,5 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 import EmailHeader from "../components/EmailHeader";
 import EmailList from "../components/EmailList";
 import EmailSidebar from "../components/EmailSidebar";
@@ -17,26 +16,26 @@ const Email = () => {
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <EmailSidebar />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <EmailSidebarToggleButton />
-                    </Suspense>
+                    </LazyWrapper>
 
                     <div className="card h-full !p-0 border-0 email-card">
                         <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <EmailHeader />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="card-body p-0">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <EmailList />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>

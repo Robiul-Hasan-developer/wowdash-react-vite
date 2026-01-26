@@ -10,18 +10,17 @@ import AvatarShape3 from "@/assets/images/avatar/avatar-shape3.png";
 import Avatar1 from "@/assets/images/avatar/avatar1.png";
 import Avatar2 from "@/assets/images/avatar/avatar2.png";
 import StatusAvatar from "@/assets/images/avatar/status-avatar.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Plus } from "lucide-react";
-import { Suspense } from "react";
 
 const Avatar = () => {
     return (
         <>
             <Breadcrumb title="Avatar" text="Avatar" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div className="col-span-12 xl:col-span-6">
                         <DefaultCardComponent title="Avatar Sizes">
@@ -186,7 +185,7 @@ const Avatar = () => {
                         </DefaultCardComponent>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

@@ -1,17 +1,16 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { cn } from "@/lib/utils";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { ArrowDownSquare, ArrowLeftSquare, ArrowRightSquare, ArrowUpSquare } from 'lucide-react';
-import { Suspense } from "react";
 
 const Buttons = () => {
     return (
         <>
             <Breadcrumb title="Buttons" text="Buttons" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                     <DefaultCardComponent title="Default Buttons">
                         <div className="flex flex-wrap items-center gap-3">
@@ -603,7 +602,7 @@ const Buttons = () => {
                         </Button>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

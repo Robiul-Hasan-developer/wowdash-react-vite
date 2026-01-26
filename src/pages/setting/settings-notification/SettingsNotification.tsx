@@ -1,6 +1,5 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 import ClientFirebaseWrapper from "./ClientFirebaseWrapper";
 
 const SettingsNotification = () => {
@@ -8,11 +7,11 @@ const SettingsNotification = () => {
         <>
             <Breadcrumb title="Settings Notification" text="Settings Notification" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="rounded-xl border border-border bg-white dark:bg-[#273142] p-6 shadow-sm">
                     <ClientFirebaseWrapper />
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

@@ -1,20 +1,19 @@
 import TabsImage1 from "@/assets/images/tabs/tabs-image1.png";
 import TabsImage2 from "@/assets/images/tabs/tabs-image2.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { TabsList } from "@radix-ui/react-tabs";
 import { FileText, Home, Settings, User } from 'lucide-react';
-import { Suspense } from "react";
 
 const TabAccordion = () => {
     return (
         <>
             <Breadcrumb title="TabAccordion" text="TabAccordion" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div className="col-span-12 xl:col-span-6">
                         <DefaultCardComponent title="Default Tabs">
@@ -354,7 +353,7 @@ const TabAccordion = () => {
                     </div>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
         </>
     );
 };

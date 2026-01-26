@@ -3,18 +3,17 @@ import ListImg2 from "@/assets/images/lists/list-img2.png";
 import ListImg3 from "@/assets/images/lists/list-img3.png";
 import ListImg4 from "@/assets/images/lists/list-img4.png";
 import ListImg5 from "@/assets/images/lists/list-img5.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { BellDot, FolderOpen, Reply, ShieldX, ShoppingCart } from "lucide-react";
-import { Suspense } from "react";
 
 const List = () => {
     return (
         <>
             <Breadcrumb title="List" text="List" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default List">
@@ -208,7 +207,7 @@ const List = () => {
                     </DefaultCardComponent>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

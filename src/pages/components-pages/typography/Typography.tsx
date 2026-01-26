@@ -1,14 +1,13 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const Typography = () => {
     return (
         <>
             <Breadcrumb title="Typography" text="Typography" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div className="col-span-12 md:col-span-6">
                         <Card className="card h-full !p-0 !block border-0 overflow-hidden">
@@ -349,7 +348,7 @@ const Typography = () => {
                         </Card>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

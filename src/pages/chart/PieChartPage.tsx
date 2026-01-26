@@ -2,10 +2,9 @@ import DonutSixSeriesChart from "@/components/charts/DonutSixSeriesChart";
 import MultipleSeriesChart from "@/components/charts/MultipleSeriesChart";
 import PieChart from "@/components/charts/PieChart";
 import RadarChart from "@/components/charts/RadarChart";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const PieChartPage = () => {
     return (
@@ -15,21 +14,21 @@ const PieChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <DefaultCardComponent title="Basic Pie Chart">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <div className="-m-4">
                             <PieChart />
                         </div>
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Donut Chart">
                     <div className="text-center flex flex-wrap items-start gap-5 justify-center">
                         <div className="relative">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <div className="-m-4">
                                     <DonutSixSeriesChart />
                                 </div>
-                            </Suspense>
+                            </LazyWrapper>
                             <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <span className="text-lg text-neutral-500 dark:text-neutral-300 font-medium">Total Value</span>
                                 <h4 className="mb-0">72</h4>
@@ -89,15 +88,15 @@ const PieChartPage = () => {
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Radar Chart">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RadarChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Multiple series">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <MultipleSeriesChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
 
             </div>

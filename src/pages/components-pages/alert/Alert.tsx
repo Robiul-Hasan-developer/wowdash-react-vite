@@ -1,15 +1,14 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { AlertCircle, BadgeCheck, CheckCheck, Clock, Link, ShieldCheck, Smile, Trash2, X } from 'lucide-react';
-import { Suspense } from "react";
 
 const Alert = () => {
     return (
         <>
             <Breadcrumb title="Alert" text="Alert" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
                     <div className="col-span-1 lg:col-span-6">
@@ -389,7 +388,7 @@ const Alert = () => {
                     </div>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

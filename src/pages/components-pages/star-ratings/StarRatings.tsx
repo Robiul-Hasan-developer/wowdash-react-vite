@@ -1,15 +1,14 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Star } from "lucide-react";
-import { Suspense } from "react";
 
 const StarRatings = () => {
     return (
         <>
             <Breadcrumb title="Star Ratings" text="Star Ratings" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <DefaultCardComponent title="Default Star Ratings">
                         <ul className="flex flex-wrap items-center gap-3">
@@ -83,7 +82,7 @@ const StarRatings = () => {
                         </ul>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

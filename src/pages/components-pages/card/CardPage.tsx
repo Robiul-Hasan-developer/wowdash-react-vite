@@ -7,12 +7,11 @@ import HorizontalCardImg1 from "@/assets/images/card-component/horizontal-card-i
 import HorizontalCardImg2 from "@/assets/images/card-component/horizontal-card-img2.png";
 import HorizontalCardImg3 from "@/assets/images/card-component/horizontal-card-img3.png";
 import HorizontalCardImg4 from "@/assets/images/card-component/horizontal-card-img4.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import { Button } from "@/components/ui/button";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { cn } from "@/lib/utils";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { BriefcaseBusiness, ChevronRight, Code, Medal, Monitor, UserPlus, X } from "lucide-react";
-import { Suspense } from "react";
 import { Link } from "react-router-dom";
 
 const CardPage = () => {
@@ -20,7 +19,7 @@ const CardPage = () => {
         <>
             <Breadcrumb title="CardPage" text="CardPage" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="">
 
                     <div className="mb-10">
@@ -372,7 +371,7 @@ const CardPage = () => {
                         </div>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

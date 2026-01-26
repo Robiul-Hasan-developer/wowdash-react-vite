@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const AvailableTreatmentsCard = lazy(() => import("./components/AvailableTreatmentsCard"))
 const DoctorListCard = lazy(() => import("./components/DoctorListCard"))
 const EarningStatisticCard = lazy(() => import("./components/EarningStatisticCard"))
@@ -21,34 +21,34 @@ const Medical = () => {
                 <div className="col-span-12 2xl:col-span-9">
                     <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                         <div className="col-span-12 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatCards />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <EarningStatisticCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <PatientVisitedDepartment />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <PatientVisitedGender />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 2xl:col-span-4">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <DoctorListCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 2xl:col-span-8">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <LatestAppointmentsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>
@@ -56,19 +56,19 @@ const Medical = () => {
                 <div className="col-span-12 2xl:col-span-3">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TotalIncomeCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <AvailableTreatmentsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 2xl:col-span-6 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <HealthReportsDocumentCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>

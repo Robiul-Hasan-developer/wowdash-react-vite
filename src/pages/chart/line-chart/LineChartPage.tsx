@@ -4,10 +4,9 @@ import LineChartAnimation from "@/components/charts/LineChartAnimation";
 import LineChartLabel from "@/components/charts/LineChartLabel";
 import SteplineChart from "@/components/charts/SteplineChart";
 import ZoomableChart from "@/components/charts/ZoomableChart";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const LineChartPage = () => {
     return (
@@ -16,34 +15,34 @@ const LineChartPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Default Line Chart">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <LineChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Zoomable Chart">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <ZoomableChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart with Data Labels">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <LineChartLabel />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart Animation">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <LineChartAnimation />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Stepline Charts">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <SteplineChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Gradient Charts">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <GradientChart />
-                    </Suspense>
+                    </LazyWrapper>
                 </DefaultCardComponent>
             </div>
         </>

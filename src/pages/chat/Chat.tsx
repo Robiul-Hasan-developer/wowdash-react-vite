@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const ChatBox = lazy(() => import("./components/ChatBox"));
 
 const Chat = () => {
@@ -8,9 +8,9 @@ const Chat = () => {
         <>
             <Breadcrumb title="Chat" text="Chat" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <ChatBox />
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

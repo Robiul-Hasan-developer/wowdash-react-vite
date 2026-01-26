@@ -1,8 +1,7 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
-import { Suspense } from "react";
 import { Link } from "react-router-dom";
 
 const Pagination = () => {
@@ -10,7 +9,7 @@ const Pagination = () => {
         <>
             <Breadcrumb title="Pagination" text="Pagination" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Solid">
@@ -365,7 +364,7 @@ const Pagination = () => {
                     </DefaultCardComponent>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

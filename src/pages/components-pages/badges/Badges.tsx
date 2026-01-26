@@ -1,16 +1,15 @@
 import FlagImage from "@/assets/images/lang-flag.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { BellRing, Mail } from "lucide-react";
-import { Suspense } from "react";
 
 const Badges = () => {
     return (
         <>
             <Breadcrumb title="Badges" text="Badges" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Badges">
@@ -228,7 +227,7 @@ const Badges = () => {
                     </DefaultCardComponent>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

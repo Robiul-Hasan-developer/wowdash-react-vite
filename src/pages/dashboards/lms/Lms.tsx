@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const CourseActivityCard = lazy(() => import("./components/CourseActivityCard"))
 const CoursesCard = lazy(() => import("./components/CoursesCard"))
 const StudentProgressCard = lazy(() => import("./components/StudentProgressCard"))
@@ -16,41 +16,41 @@ const Lms = () => {
 
             <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
                 <div className="col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <div className="">
                             <WidgetsAverageChart />
                         </div>
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TrafficSourceCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopCategoriesCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopInstructorsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <StudentProgressCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <CoursesCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
                 <div className="col-span-12 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <CourseActivityCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
             </div>
 

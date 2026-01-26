@@ -1,3 +1,4 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,16 +8,14 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { CircleHelp } from "lucide-react";
-import { Suspense } from "react";
 
 const TooltipPopover = () => {
     return (
         <>
             <Breadcrumb title="TooltipPopover" text="TooltipPopover" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Tooltip">
@@ -463,7 +462,7 @@ const TooltipPopover = () => {
                         </TooltipProvider>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

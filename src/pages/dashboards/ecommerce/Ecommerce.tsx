@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const CustomersStatisticsCard = lazy(() => import("./components/CustomersStatisticsCard"))
 const DailySalesCard = lazy(() => import("./components/DailySalesCard"))
 const DistributionMapsCard = lazy(() => import("./components/DistributionMapsCard"))
@@ -19,57 +19,57 @@ const Ecommerce = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
                 <div className="md:col-span-12 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RevenueReportCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <CustomersStatisticsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RecentOrdersCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TransactionsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <DailySalesCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <DistributionMapsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopCustomersCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopSellingProductCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="md:col-span-12 2xl:col-span-6">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <StockReportCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
             </div>

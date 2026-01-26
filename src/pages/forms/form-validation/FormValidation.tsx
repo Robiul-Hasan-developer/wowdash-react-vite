@@ -1,6 +1,5 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 import ValidateForm from "./ValidateForm";
 
 const FormValidation = () => {
@@ -8,9 +7,9 @@ const FormValidation = () => {
         <>
             <Breadcrumb title="FormValidation" text="FormValidation" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <ValidateForm />
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

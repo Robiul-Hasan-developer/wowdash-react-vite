@@ -1,13 +1,12 @@
 import UserList1 from "@/assets/images/user-list/user-list1.png";
 import UserList2 from "@/assets/images/user-list/user-list2.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Images, LinkIcon, MoveLeft, Printer, Send, Star, Trash2 } from "lucide-react";
-import { Suspense } from "react";
 import { Link } from "react-router-dom";
 import EmailSidebar from "../components/EmailSidebar";
 import EmailSidebarOverlay from "../components/EmailSidebarOverlay";
@@ -23,15 +22,15 @@ const EmailDetails = () => {
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <EmailSidebar />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <EmailSidebarToggleButton />
-                    </Suspense>
+                    </LazyWrapper>
 
                     <div className="card h-full p-0 email-card overflow-x-auto block border-0 !p-0">
                         <div className="min-w-[450px] flex flex-col justify-between h-full">

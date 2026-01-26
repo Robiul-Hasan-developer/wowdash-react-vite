@@ -1,16 +1,15 @@
 import FlagImage from "@/assets/images/flags/flag-tag.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { X } from "lucide-react";
-import { Suspense } from "react";
 
 const Tags = () => {
     return (
         <>
             <Breadcrumb title="Tags" text="Tags" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <DefaultCardComponent title="Default Tags">
                         <ul className="flex flex-wrap items-center gap-4 md:gap-8">
@@ -140,7 +139,7 @@ const Tags = () => {
                         </ul>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

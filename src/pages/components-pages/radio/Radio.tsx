@@ -1,15 +1,14 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Input } from "@/components/ui/input";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const Radio = () => {
     return (
         <>
             <Breadcrumb title="Radio" text="Radio" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Radio">
@@ -168,7 +167,7 @@ const Radio = () => {
                     </DefaultCardComponent>
 
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

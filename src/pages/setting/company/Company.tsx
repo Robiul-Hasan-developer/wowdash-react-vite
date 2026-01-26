@@ -1,3 +1,4 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,15 +10,13 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const Company = () => {
     return (
         <>
             <Breadcrumb title="Company" text="Company" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div>
                     <div className="card h-full rounded-lg border-0 p-6">
                         <div className="card-body p-0">
@@ -103,7 +102,7 @@ const Company = () => {
                         </div>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
         </>
     );
 };

@@ -1,7 +1,7 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { toast } from 'react-toastify';
 
 const Colors = () => {
@@ -36,7 +36,7 @@ const Colors = () => {
 
             {copied && <span className="text-green-500 hidden">Copied!</span>}
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="row gy-4">
                     <div className="col-12">
                         <Card className="card border-0">
@@ -1092,7 +1092,7 @@ const Colors = () => {
                         </Card>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

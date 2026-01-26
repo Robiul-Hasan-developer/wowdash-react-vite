@@ -1,3 +1,4 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,16 +12,14 @@ import {
 } from "@/components/ui/select";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { cn } from "@/lib/utils";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Lock, Mail, PhoneCall, UserRound } from "lucide-react";
-import { Suspense } from "react";
 
 const InputLayout = () => {
     return (
         <>
             <Breadcrumb title="Input Layout" text="Input Layout" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-12 gap-5">
                     <div className="md:col-span-6 col-span-12">
                         <DefaultCardComponent title="Vertical Input Form">
@@ -200,7 +199,7 @@ const InputLayout = () => {
                         </DefaultCardComponent>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

@@ -1,6 +1,6 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const EthPriceCard = lazy(() => import("./components/EthPriceCard"))
 const FeaturedCreatorsCard = lazy(() => import("./components/FeaturedCreatorsCard"))
 const NftPromoBanner = lazy(() => import("./components/NftPromoBanner"))
@@ -19,27 +19,27 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-8">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <NftPromoBanner />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TrendingBidWidgets />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TrendingNftCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
 
                         <div className="col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <RecentBidCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>
@@ -47,24 +47,24 @@ const Nft = () => {
                 <div className="col-span-12 2xl:col-span-4">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <EthPriceCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <StatisticsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <FeaturedCreatorsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TopCreatorsCard />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>

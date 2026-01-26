@@ -1,9 +1,9 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Label } from "@/components/ui/label";
 import { Switch } from '@/components/ui/switch';
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 
 const SwitchPage = () => {
     
@@ -36,7 +36,7 @@ const SwitchPage = () => {
         <>
             <Breadcrumb title="Switch" text="Switch" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Default Switch">
@@ -377,7 +377,7 @@ const SwitchPage = () => {
                         </div>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
 
         </>
     );

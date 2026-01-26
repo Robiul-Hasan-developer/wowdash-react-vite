@@ -1,14 +1,13 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
-import { Suspense } from "react";
 
 const ProgressBar = () => {
     return (
         <>
             <Breadcrumb title="Progress Bar" text="Progress Bar" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid sm:grid-cols-12 gap-6">
 
                     <div className="col-span-12 sm:col-span-6">
@@ -156,7 +155,7 @@ const ProgressBar = () => {
                         </DefaultCardComponent>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
         </>
     );
 };

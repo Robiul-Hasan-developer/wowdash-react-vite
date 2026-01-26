@@ -1,3 +1,4 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import DefaultCardComponent from '@/components/shared/DefaultCardComponent';
 import {
     DropdownMenu,
@@ -8,16 +9,14 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Ellipsis, EllipsisVertical } from 'lucide-react';
-import { Suspense } from "react";
 
 const Dropdown = () => {
     return (
         <>
             <Breadcrumb title="Dropdown" text="Dropdown" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
 
                     <DefaultCardComponent title="Basic Dropdown Primary">
@@ -531,7 +530,7 @@ const Dropdown = () => {
                         </div>
                     </DefaultCardComponent>
                 </div>
-            </Suspense>
+            </LazyWrapper>
         </>
     );
 };

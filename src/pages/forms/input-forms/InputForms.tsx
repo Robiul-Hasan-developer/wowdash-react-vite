@@ -1,4 +1,5 @@
 import PaymentIcon from "@/assets/images/card/payment-icon.png";
+import LazyWrapper from "@/components/LazyWrapper";
 import { DatePicker } from "@/components/shared/DatePicker";
 import DefaultCardComponent from "@/components/shared/DefaultCardComponent";
 import { Input } from "@/components/ui/input";
@@ -12,16 +13,14 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import LoadingSkeleton from "@/loading/LoadingSkeleton";
 import { Copy, Mail } from "lucide-react";
-import { Suspense } from "react";
 
 const InputForms = () => {
     return (
         <>
             <Breadcrumb title="Input Forms" text="Input Forms" />
 
-            <Suspense fallback={<LoadingSkeleton />}>
+            <LazyWrapper>
                 <div className="grid grid-cols-12 gap-5">
                     <div className="md:col-span-6 col-span-12 space-y-6">
                         <div className="h-auto">
@@ -223,7 +222,7 @@ const InputForms = () => {
                         </div>
                     </div>
                 </div>
-            </Suspense>
+            </LazyWrapper>
         </>
     );
 };
