@@ -38,7 +38,7 @@ import Widgets from "@/pages/widgets/Widgets";
 import { lazy } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import NotFound from '../error/404';
-import ErrorBoundary from "../error/ErrorBoundary";
+import RouteErrorBoundary from "../error/RouteErrorBoundary";
 import MainLayout from "../layouts/MainLayout";
 import Typography from './../pages/components-pages/typography/Typography';
 import GuestRoutes from "./GuestRoutes";
@@ -57,7 +57,7 @@ const AiDashboard = lazy(() => import("../pages/dashboards/dashboard/AiDashboard
 export const router = createBrowserRouter([
   {
     element: <GuestRoutes />,
-    errorElement: <ErrorBoundary />,
+    errorElement: <RouteErrorBoundary />,
     children: [
       {
         path: "/auth/login",
@@ -80,7 +80,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <MainLayout />,
-        errorElement: <ErrorBoundary />,
+        errorElement: <RouteErrorBoundary />,
         children: [
           {
             index: true,
@@ -232,6 +232,6 @@ export const router = createBrowserRouter([
   {
     path: "*",
     element: <NotFound />,
-    errorElement: <ErrorBoundary />,
+    errorElement: <RouteErrorBoundary />,
   },
 ]);
