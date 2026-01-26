@@ -30,7 +30,7 @@ import { cn } from "@/lib/utils"
 -------------------------------- */
 
 export interface CalendarEvent {
-  id: string
+  id: number
   title: string
   label: string
   color: string
@@ -130,7 +130,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     dispatch({ type: "SET_LOADING", payload: true })
 
     const newEvent: CalendarEvent = {
-      id: generateEventId(),
+      id: Number(generateEventId()),
       title: data.title,
       label: data.label,
       description: data.description,
