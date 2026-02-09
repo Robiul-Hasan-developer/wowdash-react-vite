@@ -2,7 +2,7 @@ import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { lazy } from "react";
 const StateCards = lazy(() => import("./components/StatisticsCard"))
-// const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
+const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
 // const EarningCategories = lazy(() => import("./components/EarningCategories"))
 // const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
 // const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
@@ -27,9 +27,9 @@ const Finance = () => {
                     <div className="col-span-12 xl:col-span-8">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                             <div className="col-span-12">
-                                {/* <LazyWrapper>
+                                <LazyWrapper>
                                     <BalanceStatistic />
-                                </LazyWrapper> */}
+                                </LazyWrapper>
                             </div>
                             <div className="col-span-12 md:col-span-6">
                                 {/* <LazyWrapper>

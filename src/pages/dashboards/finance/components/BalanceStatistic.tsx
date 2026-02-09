@@ -1,5 +1,4 @@
-import GenerateContentChart from '@/components/charts/generate-content-chart';
-import CustomSelect from "@/components/shared/custom-select";
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from "@/components/ui/card";
 
 const BalanceStatistic = () => {
@@ -29,7 +28,7 @@ const BalanceStatistic = () => {
                 </ul>
 
                 <div className="mt-4">
-                    <GenerateContentChart />
+                    {/* <GenerateContentChart /> */}
                 </div>
             </CardContent>
         </Card>
