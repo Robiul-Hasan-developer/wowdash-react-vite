@@ -43,6 +43,7 @@ import MainLayout from "../layouts/MainLayout";
 import Typography from './../pages/components-pages/typography/Typography';
 import GuestRoutes from "./GuestRoutes";
 import ProtectedRoutes from "./ProtectedRoutes";
+const Finance = lazy(() => import("@/pages/dashboards/finance/Finance"));
 const Analytics = lazy(() => import("@/pages/dashboards/analytics/Analytics"));
 const Cryptocurrency = lazy(() => import("@/pages/dashboards/cryptocurrency/Cryptocurrency"));
 const Inventory = lazy(() => import("@/pages/dashboards/inventory/Inventory"));
@@ -115,6 +116,9 @@ export const router = createBrowserRouter([
           },
           {
             path: "inventory", element: <Inventory />
+          },
+          {
+            path: "finance", element: <Finance />
           },
           {
             path: "email", element: <Email />
