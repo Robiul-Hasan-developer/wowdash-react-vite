@@ -1,5 +1,7 @@
+import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-// const StateCards = lazy(() => import("./components/StatisticsCard"))
+import { lazy } from "react";
+const StateCards = lazy(() => import("./components/StatisticsCard"))
 // const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
 // const EarningCategories = lazy(() => import("./components/EarningCategories"))
 // const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
@@ -14,11 +16,11 @@ const Finance = () => {
         <>
             <Breadcrumb title="Finance" text="Finance" />
 
-            {/* <LazyWrapper>
+            <LazyWrapper>
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                     <StateCards />
                 </div>
-            </LazyWrapper> */}
+            </LazyWrapper>
 
             <div className="mt-6">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
