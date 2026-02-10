@@ -1,0 +1,88 @@
+import LazyWrapper from "@/components/LazyWrapper";
+import Breadcrumb from "@/layouts/Breadcrumb";
+// const UpgradePlanCard = lazy(() => import("./components/UpgradePlanCard"))
+
+const Booking = () => {
+    return (
+        <>
+            <Breadcrumb title="Booking" text="Booking" />
+
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
+                <div className="col-span-12 2xl:col-span-6">
+                    <LazyWrapper>
+                        {/* <UpgradePlanCard /> */}
+                        Hi
+                    </LazyWrapper>
+                </div>
+            </div>
+
+
+            {/* <div className="mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+
+                    <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                        <LazyWrapper>
+                            <StatisticsCards />
+                        </LazyWrapper>
+                    </div>
+
+                    <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                        <LazyWrapper>
+                            <AvailableRoom />
+                        </LazyWrapper>
+                    </div>
+
+                    <div className="col-span-12 2xl:col-span-4">
+                        <LazyWrapper>
+                            <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-[#273142] h-full">
+                                <div className="flex items-center flex-wrap gap-2 justify-between">
+                                    <h6 className="mb-0 font-bold text-lg">Booking Statistic</h6>
+                                    <CustomSelect
+                                        placeholder="Monthly"
+                                        options={["Monthly", "Weekly", "Yearly",]}
+                                    />
+                                </div>
+                                <div className="relative text-style label-bold">
+                                    <StatisticBarChart />
+                                </div>
+                            </div>
+                        </LazyWrapper>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+                <div className="col-span-12 md:col-span-6 xl:col-span-8">
+                    <div className="flex flex-col gap-6">
+                        <LazyWrapper>
+                            <ExclusiveTravelPackages />
+                        </LazyWrapper>
+                        <LazyWrapper>
+                            <EarningStatisticCard />
+                        </LazyWrapper>
+                        <LazyWrapper>
+                            <TransactionHistory />
+                        </LazyWrapper>
+                    </div>
+                </div>
+                <div className="col-span-12 md:col-span-6 xl:col-span-4">
+                    <div className="flex flex-col gap-6">
+                        <LazyWrapper>
+                            <BookingCountriesStatus />
+                        </LazyWrapper>
+                        <LazyWrapper>
+                            <CheckInOut />
+                        </LazyWrapper>
+                        <LazyWrapper>
+                            <SpendOverview />
+                        </LazyWrapper>
+                    </div>
+                </div>
+            </div> */}
+
+        </>
+    );
+};
+
+export default Booking;
