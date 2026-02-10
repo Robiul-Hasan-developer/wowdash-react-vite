@@ -1,5 +1,3 @@
-"use client";
-
 import CommonLink from "@/components/shared/common-link";
 import BookingTransactionHistoryTable from "@/components/table/booking-transaction-history-table";
 import { Card, CardContent } from "@/components/ui/card";

@@ -1,5 +1,5 @@
 import { ArrowLeftToLine, ArrowRightToLine } from "lucide-react";
-import RadialProgress from "./radial-progress";
+import RadialProgress from "./RadialProgress";
 
 const CheckInOut = () => {
     return (
