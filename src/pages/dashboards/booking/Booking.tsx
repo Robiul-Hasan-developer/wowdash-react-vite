@@ -1,23 +1,14 @@
 import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
-// const UpgradePlanCard = lazy(() => import("./components/UpgradePlanCard"))
+import { lazy } from "react";
+const StatisticsCards = lazy(() => import("./components/StatisticsCards"))
 
 const Booking = () => {
     return (
         <>
             <Breadcrumb title="Booking" text="Booking" />
 
-            <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
-                <div className="col-span-12 2xl:col-span-6">
-                    <LazyWrapper>
-                        {/* <UpgradePlanCard /> */}
-                        Hi
-                    </LazyWrapper>
-                </div>
-            </div>
-
-
-            {/* <div className="mb-6">
+            <div className="mb-6">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
 
                     <div className="col-span-12 md:col-span-6 2xl:col-span-4">
@@ -26,7 +17,7 @@ const Booking = () => {
                         </LazyWrapper>
                     </div>
 
-                    <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                         <LazyWrapper>
                             <AvailableRoom />
                         </LazyWrapper>
@@ -47,12 +38,12 @@ const Booking = () => {
                                 </div>
                             </div>
                         </LazyWrapper>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                 <div className="col-span-12 md:col-span-6 xl:col-span-8">
                     <div className="flex flex-col gap-6">
                         <LazyWrapper>
