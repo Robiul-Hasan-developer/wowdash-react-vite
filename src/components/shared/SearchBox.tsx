@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 const SearchBox = () => {
     return (
         <Dialog>
-            <DialogTrigger>
+            <DialogTrigger className=" md:flex hidden">
                 <InputGroup className="border border-neutral-300 dark:border dark:border-slate-600 !bg-transparent shadow-none">
                     <InputGroupInput placeholder="Search..." readOnly />
                     <InputGroupAddon>
