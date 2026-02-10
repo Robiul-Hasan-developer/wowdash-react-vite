@@ -1,13 +1,14 @@
 import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { lazy } from "react";
+import TransactionHistoryCard from "./components/TransactionHistoryCard";
 const StateCards = lazy(() => import("./components/StatisticsCard"))
 const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
 const EarningCategories = lazy(() => import("./components/EarningCategories"))
 const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
 const PaymentHistory = lazy(() => import("./components/PaymentHistory"))
 // const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
-// const MonthlyExpenseBreakdown = lazy(() => import("./components/MonthlyExpenseBreakdown"))
+const MonthlyExpenseBreakdown = lazy(() => import("./components/MonthlyExpenseBreakdown"))
 // const QuickTransfer = lazy(() => import("./components/QuickTransfer"))
 // const TransactionHistoryCard = lazy(() => import("./components/TransactionHistoryCard"))
 
@@ -47,9 +48,9 @@ const Finance = () => {
                                 </LazyWrapper>
                             </div>
                             <div className="col-span-12 md:col-span-6">
-                                {/* <LazyWrapper>
+                                <LazyWrapper>
                                     <MonthlyExpenseBreakdown />
-                                </LazyWrapper> */}
+                                </LazyWrapper>
                             </div>
                         </div>
                     </div>
@@ -67,9 +68,9 @@ const Finance = () => {
                 </div>
             </div>
             <div className="mt-6 lg:block hidden">
-                {/* <LazyWrapper>
+                <LazyWrapper>
                     <TransactionHistoryCard />
-                </LazyWrapper> */}
+                </LazyWrapper>
             </div>
 
         </>

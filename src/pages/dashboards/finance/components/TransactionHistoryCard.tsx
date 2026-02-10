@@ -1,5 +1,5 @@
-import CommonLink from "@/components/shared/common-link";
-import TransactionHistoryTable from "@/components/table/transaction-history-table";
+import CommonLink from "@/components/shared/CommonLink";
+import PaymentHistoryTable from "@/components/tables/PaymentHistoryTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TransactionHistoryCard: React.FC = () => {
@@ -17,7 +17,7 @@ const TransactionHistoryCard: React.FC = () => {
 
                     {/* Users list */}
                     <div className="p-6">
-                        <TransactionHistoryTable />
+                        <PaymentHistoryTable />
                     </div>
                 </div>
             </CardContent>
