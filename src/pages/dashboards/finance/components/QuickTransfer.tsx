@@ -1,4 +1,6 @@
+import BgOrangeGradient from "@/assets/images/home-eleven/bg/bg-orange-gradient.png";
 import CommonLink from "@/components/shared/CommonLink";
+import OfficeSlider from "@/components/slider/OfficeSlider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Send } from "lucide-react";
+
 
 const QuickTransfer: React.FC = () => {
     return (
@@ -23,7 +26,7 @@ const QuickTransfer: React.FC = () => {
                     <div className="card-body p-0">
                         <div className="p-5">
                             <div className="relative z-[1] py-8 text-center px-4">
-                                <img src="assets/images/home-eleven/bg/bg-orange-gradient.png" alt="Image" className="absolute top-0 start-0 w-full h-full -z-[1]" />
+                                <img src={BgOrangeGradient} alt="Image" className="absolute top-0 start-0 w-full h-full -z-[1]" />
                                 <h3 className="text-white">$500.00</h3>
                                 <span className="text-white">Your Balance</span>
                             </div>
@@ -37,7 +40,7 @@ const QuickTransfer: React.FC = () => {
                         </div>
 
                         <div className="py-4 px-6">
-                            {/* <OfficeSlider /> */}
+                            <OfficeSlider />
 
                             <form action="#" className="mt-10">
                                 <div className="mb-5">

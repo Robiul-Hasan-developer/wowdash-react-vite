@@ -7,7 +7,7 @@ const EarningCategories = lazy(() => import("./components/EarningCategories"))
 const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
 const PaymentHistory = lazy(() => import("./components/PaymentHistory"))
 const MonthlyExpenseBreakdown = lazy(() => import("./components/MonthlyExpenseBreakdown"))
-// const QuickTransfer = lazy(() => import("./components/QuickTransfer"))
+const QuickTransfer = lazy(() => import("./components/QuickTransfer"))
 const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
 const TransactionHistoryCard = lazy(() => import("./components/TransactionHistoryCard"))
 
@@ -56,9 +56,9 @@ const Finance = () => {
 
                     <div className="col-span-12 xl:col-span-4">
                         <div className="flex flex-col gap-6">
-                            {/* <LazyWrapper>
+                            <LazyWrapper>
                                 <QuickTransfer />
-                            </LazyWrapper> */}
+                            </LazyWrapper>
                             <LazyWrapper>
                                 <InvestmentCard />
                             </LazyWrapper>
