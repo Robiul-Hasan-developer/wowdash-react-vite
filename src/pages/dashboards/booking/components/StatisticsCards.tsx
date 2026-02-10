@@ -1,4 +1,13 @@
+import bookingIcon1 from "@/assets/images/home-twelve/icons/booking-card-icon1.png";
+import bookingIcon2 from "@/assets/images/home-twelve/icons/booking-card-icon2.png";
+import bookingIcon3 from "@/assets/images/home-twelve/icons/booking-card-icon3.png";
+import bookingIcon4 from "@/assets/images/home-twelve/icons/booking-card-icon4.png";
 import { Card } from "@/components/ui/card";
+
+import bookingBigIcon1 from "@/assets/images/home-twelve/icons/booking-card-big-icon1.png";
+import bookingBigIcon2 from "@/assets/images/home-twelve/icons/booking-card-big-icon2.png";
+import bookingBigIcon3 from "@/assets/images/home-twelve/icons/booking-card-big-icon3.png";
+import bookingBigIcon4 from "@/assets/images/home-twelve/icons/booking-card-big-icon4.png";
 
 const statisticsData = [
   {
@@ -6,32 +15,32 @@ const statisticsData = [
     title: "New Booking",
     value: "170",
     bg: "bg-[#A8C9F4]",
-    icon: "/assets/images/home-twelve/icons/booking-card-icon1.png",
-    bigIcon: "/assets/images/home-twelve/icons/booking-card-big-icon1.png",
+    icon: bookingIcon1,
+    bigIcon: bookingBigIcon1,
   },
   {
     id: 2,
     title: "Schedule Room",
     value: "285",
     bg: "bg-[#A4E7BC]",
-    icon: "/assets/images/home-twelve/icons/booking-card-icon2.png",
-    bigIcon: "/assets/images/home-twelve/icons/booking-card-big-icon2.png",
+    icon: bookingIcon2,
+    bigIcon: bookingBigIcon2,
   },
   {
     id: 3,
     title: "Total Customers",
     value: "175",
     bg: "bg-[#FFBAAA]",
-    icon: "/assets/images/home-twelve/icons/booking-card-icon3.png",
-    bigIcon: "/assets/images/home-twelve/icons/booking-card-big-icon3.png",
+    icon: bookingIcon3,
+    bigIcon: bookingBigIcon3,
   },
   {
     id: 4,
     title: "Total Revenue",
     value: "$750.00",
     bg: "bg-[#FFDD96]",
-    icon: "/assets/images/home-twelve/icons/booking-card-icon4.png",
-    bigIcon: "/assets/images/home-twelve/icons/booking-card-big-icon4.png",
+    icon: bookingIcon4,
+    bigIcon: bookingBigIcon4,
   },
 ];
 
