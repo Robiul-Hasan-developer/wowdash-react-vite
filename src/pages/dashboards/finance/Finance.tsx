@@ -1,16 +1,15 @@
 import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { lazy } from "react";
-import TransactionHistoryCard from "./components/TransactionHistoryCard";
 const StateCards = lazy(() => import("./components/StatisticsCard"))
 const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
 const EarningCategories = lazy(() => import("./components/EarningCategories"))
 const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
 const PaymentHistory = lazy(() => import("./components/PaymentHistory"))
-// const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
 const MonthlyExpenseBreakdown = lazy(() => import("./components/MonthlyExpenseBreakdown"))
 // const QuickTransfer = lazy(() => import("./components/QuickTransfer"))
-// const TransactionHistoryCard = lazy(() => import("./components/TransactionHistoryCard"))
+const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
+const TransactionHistoryCard = lazy(() => import("./components/TransactionHistoryCard"))
 
 const Finance = () => {
     return (
@@ -60,9 +59,9 @@ const Finance = () => {
                             {/* <LazyWrapper>
                                 <QuickTransfer />
                             </LazyWrapper> */}
-                            {/* <LazyWrapper>
+                            <LazyWrapper>
                                 <InvestmentCard />
-                            </LazyWrapper> */}
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>

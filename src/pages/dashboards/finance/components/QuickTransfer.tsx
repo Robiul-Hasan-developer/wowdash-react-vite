@@ -1,5 +1,4 @@
-import CommonLink from "@/components/shared/common-link";
-import OfficeSlider from "@/components/slider/office-slider";
+import CommonLink from "@/components/shared/CommonLink";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -38,7 +37,7 @@ const QuickTransfer: React.FC = () => {
                         </div>
 
                         <div className="py-4 px-6">
-                            <OfficeSlider />
+                            {/* <OfficeSlider /> */}
 
                             <form action="#" className="mt-10">
                                 <div className="mb-5">

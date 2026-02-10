@@ -1,6 +1,9 @@
-import CustomSelect from "@/components/shared/custom-select";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
+import radialBg1 from "@/assets/images/home-eleven/bg/radial-bg1.png";
+import radialBg2 from "@/assets/images/home-eleven/bg/radial-bg2.png";
+import radialBg3 from "@/assets/images/home-eleven/bg/radial-bg3.png";
 
 const InvestmentCard: React.FC = () => {
     return (
@@ -25,15 +28,15 @@ const InvestmentCard: React.FC = () => {
 
                             <div className="mt-10 mb-6 text-center pe-[110px] relative max-w-[282px] mx-auto">
                                 <div className="w-[170px] h-[170px] rounded-full z-[1] relative inline-flex justify-center items-center border border-white border-width-2-px">
-                                    <img src="assets/images/home-eleven/bg/radial-bg1.png" alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
+                                    <img src={radialBg1} alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
                                     <h5 className="text-white"> 60% </h5>
                                 </div>
                                 <div className="w-[144px] h-[144px] rounded-full z-[1] inline-flex justify-center items-center border border-white border-width-3-px absolute top-0 end-0 -mt-9">
-                                    <img src="assets/images/home-eleven/bg/radial-bg2.png" alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
+                                    <img src={radialBg2} alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
                                     <h5 className="text-white"> 30% </h5>
                                 </div>
                                 <div className="w-[110px] h-[110px] rounded-full z-[1] inline-flex justify-center items-center border border-white border-width-3-px absolute bottom-0 start-[50%] translate-x-[-50%] ms-12">
-                                    <img src="assets/images/home-eleven/bg/radial-bg3.png" alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
+                                    <img src={radialBg3} alt="Image" className="absolute top-0 start-0 -z-[1] w-full h-full object-cover" />
                                     <h5 className="text-white"> 10% </h5>
                                 </div>
                             </div>
