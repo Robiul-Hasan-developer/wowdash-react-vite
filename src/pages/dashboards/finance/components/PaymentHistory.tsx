@@ -1,4 +1,4 @@
-import CommonLink from "@/components/shared/common-link";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PaymentHistory: React.FC = () => {
