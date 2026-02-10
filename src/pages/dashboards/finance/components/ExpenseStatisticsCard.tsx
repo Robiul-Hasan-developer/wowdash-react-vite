@@ -1,6 +1,6 @@
-import ExpenseStatisticsChart from "@/components/charts/expense-statistics-chart";
-import CustomSelect from "@/components/shared/custom-select";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
+import PieFourChart from "@/pages/chart/PieFourChart";
 
 
 const ExpenseStatisticsCard: React.FC = () => {
@@ -21,7 +21,7 @@ const ExpenseStatisticsCard: React.FC = () => {
 
                     {/* Users list */}
                     <div className="p-6">
-                        <ExpenseStatisticsChart />
+                        <PieFourChart />
                     </div>
                 </div>
             </CardContent>
