@@ -1,3 +1,4 @@
+import DoubleBarChart from '@/components/charts/DoubleBarChart';
 import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -27,8 +28,8 @@ const BalanceStatistic = () => {
                     </li>
                 </ul>
 
-                <div className="mt-4">
-                    {/* <GenerateContentChart /> */}
+                <div className="">
+                    <DoubleBarChart chartHeight={264} colorOne="487FFF" colorTwo="FF9F29" />
                 </div>
             </CardContent>
         </Card>
