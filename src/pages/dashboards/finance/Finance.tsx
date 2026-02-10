@@ -3,7 +3,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import { lazy } from "react";
 const StateCards = lazy(() => import("./components/StatisticsCard"))
 const BalanceStatistic = lazy(() => import("./components/BalanceStatistic"))
-// const EarningCategories = lazy(() => import("./components/EarningCategories"))
+const EarningCategories = lazy(() => import("./components/EarningCategories"))
 // const ExpenseStatisticsCard = lazy(() => import("./components/ExpenseStatisticsCard"))
 // const InvestmentCard = lazy(() => import("./components/InvestmentCard"))
 // const MonthlyExpenseBreakdown = lazy(() => import("./components/MonthlyExpenseBreakdown"))
@@ -32,9 +32,9 @@ const Finance = () => {
                                 </LazyWrapper>
                             </div>
                             <div className="col-span-12 md:col-span-6">
-                                {/* <LazyWrapper>
+                                <LazyWrapper>
                                     <EarningCategories />
-                                </LazyWrapper> */}
+                                </LazyWrapper>
                             </div>
                             <div className="col-span-12 md:col-span-6">
                                 {/* <LazyWrapper>

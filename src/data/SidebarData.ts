@@ -71,6 +71,11 @@ export const data = {
           url: "/inventory",
           circleColor: "bg-yellow-500",
         },
+        {
+          title: "Finance & Banking",
+          url: "/finance",
+          circleColor: "bg-green-500",
+        },
       ],
     },
     {

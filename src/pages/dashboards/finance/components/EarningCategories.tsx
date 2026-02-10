@@ -1,10 +1,9 @@
-import CommonLink from "@/components/shared/common-link";
+import earnCatIcon1 from "@/assets/images/home-eleven/icons/earn-cat-icon1.svg";
+import earnCatIcon2 from "@/assets/images/home-eleven/icons/earn-cat-icon2.svg";
+import earnCatIcon3 from "@/assets/images/home-eleven/icons/earn-cat-icon3.svg";
+import earnCatIcon4 from "@/assets/images/home-eleven/icons/earn-cat-icon4.svg";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import earnCatIcon1 from "@/public/assets/images/home-eleven/icons/earn-cat-icon1.svg";
-import earnCatIcon2 from "@/public/assets/images/home-eleven/icons/earn-cat-icon2.svg";
-import earnCatIcon3 from "@/public/assets/images/home-eleven/icons/earn-cat-icon3.svg";
-import earnCatIcon4 from "@/public/assets/images/home-eleven/icons/earn-cat-icon4.svg";
-import Image from "next/image";
 
 type Category = {
     id: number;
@@ -85,7 +84,7 @@ const EarningCategories: React.FC = () => {
                                         <span
                                             className={`w-10 h-10 rounded-full flex justify-center items-center shrink-0 ${cat.iconBg}`}
                                         >
-                                            <Image
+                                            <img
                                                 src={cat.icon}
                                                 alt={cat.title}
                                                 width={20}
