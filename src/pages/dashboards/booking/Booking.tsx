@@ -1,6 +1,8 @@
 import LazyWrapper from "@/components/LazyWrapper";
+import CustomSelect from "@/components/shared/CustomSelect";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import { lazy } from "react";
+const AvailableRoom = lazy(() => import("./components/AvailableRoom"))
 const StatisticsCards = lazy(() => import("./components/StatisticsCards"))
 
 const Booking = () => {
@@ -17,7 +19,7 @@ const Booking = () => {
                         </LazyWrapper>
                     </div>
 
-                    {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                         <LazyWrapper>
                             <AvailableRoom />
                         </LazyWrapper>
@@ -34,11 +36,11 @@ const Booking = () => {
                                     />
                                 </div>
                                 <div className="relative text-style label-bold">
-                                    <StatisticBarChart />
+                                    {/* <StatisticBarChart /> */}
                                 </div>
                             </div>
                         </LazyWrapper>
-                    </div> */}
+                    </div>
 
                 </div>
             </div>

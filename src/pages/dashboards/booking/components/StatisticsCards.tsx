@@ -46,7 +46,7 @@ const statisticsData = [
 
 const StatisticsCards = () => {
     return (
-        <Card className="rounded-xl p-4 shadow-7 bg-white dark:bg-[#273142]">
+        <Card className="card rounded-xl p-4 bg-white dark:bg-[#273142]">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-12">
                 {statisticsData.map((item) => (
                     <div
