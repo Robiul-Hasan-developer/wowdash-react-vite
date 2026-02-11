@@ -1,5 +1,6 @@
 import LazyWrapper from "@/components/LazyWrapper";
 import CustomSelect from "@/components/shared/CustomSelect";
+import { Card } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
@@ -28,7 +29,7 @@ const Booking = () => {
 
                     <div className="col-span-12 2xl:col-span-4">
                         <LazyWrapper>
-                            <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-[#273142] h-full">
+                            <Card className="card p-5 rounded-xl bg-white dark:bg-[#273142] h-full">
                                 <div className="flex items-center flex-wrap gap-2 justify-between">
                                     <h6 className="mb-0 font-bold text-lg">Booking Statistic</h6>
                                     <CustomSelect
@@ -39,7 +40,7 @@ const Booking = () => {
                                 <div className="relative text-style label-bold">
                                     <HorizontalBarChart />
                                 </div>
-                            </div>
+                            </Card>
                         </LazyWrapper>
                     </div>
 
