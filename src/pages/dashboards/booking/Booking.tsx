@@ -14,7 +14,6 @@ const Booking = () => {
 
             <div className="mb-6">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
-
                     <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                         <LazyWrapper>
                             <StatisticsCards />
@@ -43,7 +42,6 @@ const Booking = () => {
                             </Card>
                         </LazyWrapper>
                     </div>
-
                 </div>
             </div>
 
