@@ -1,6 +1,10 @@
-import CustomSelect from '@/components/shared/custom-select';
+import spentIcon1 from '@/assets/images/home-twelve/icons/spen-icon1.png';
+import spentIcon2 from '@/assets/images/home-twelve/icons/spen-icon2.png';
+import spentIcon3 from '@/assets/images/home-twelve/icons/spen-icon3.png';
+import spentIcon4 from '@/assets/images/home-twelve/icons/spen-icon4.png';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
-import RadialProgressBarSmall from './radial-progress-small';
+import RadialProgressBarSmall from './RadialProgressSmall';
 
 const SpendOverview = () => {
     return (
@@ -20,7 +24,7 @@ const SpendOverview = () => {
                         <div className="flex items-center gap-3">
                             <span
                                 className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#E8EDFB]">
-                                <img src="assets/images/home-twelve/icons/spen-icon1.png" alt="Icon" />
+                                <img src={spentIcon1} alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Flights</h6>
@@ -38,7 +42,7 @@ const SpendOverview = () => {
                         <div className="flex items-center gap-3">
                             <span
                                 className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#FDE4EA]">
-                                <img src="assets/images/home-twelve/icons/spen-icon2.png" alt="Icon" />
+                                <img src={spentIcon2} alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Hotels</h6>
@@ -56,7 +60,7 @@ const SpendOverview = () => {
                         <div className="flex items-center gap-3">
                             <span
                                 className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#FDE4EA]">
-                                <img src="assets/images/home-twelve/icons/spen-icon3.png" alt="Icon" />
+                                <img src={spentIcon3} alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Trains</h6>
@@ -74,7 +78,7 @@ const SpendOverview = () => {
                         <div className="flex items-center gap-3">
                             <span
                                 className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#E3F4E9]">
-                                <img src="assets/images/home-twelve/icons/spen-icon4.png" alt="Icon" />
+                                <img src={spentIcon4} alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Cars</h6>
