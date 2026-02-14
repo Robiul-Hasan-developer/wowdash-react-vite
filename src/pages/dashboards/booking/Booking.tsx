@@ -4,7 +4,8 @@ import { Card } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
-import TransactionHistoryCard from "../finance/components/TransactionHistoryCard";
+const TransactionHistoryCard = lazy(() => import("../finance/components/TransactionHistoryCard"))
+const BookingCountriesStatus = lazy(() => import("./components/BookingCountriesStatus"))
 const EarningStatisticCard = lazy(() => import("./components/EarningStatisticCard"))
 const ExclusiveTravelPackages = lazy(() => import("./components/ExclusiveTravelPackages"))
 const AvailableRoom = lazy(() => import("./components/AvailableRoom"))
@@ -64,9 +65,9 @@ const Booking = () => {
                 </div>
                 <div className="col-span-12 md:col-span-6 xl:col-span-4">
                     <div className="flex flex-col gap-6">
-                        {/* <LazyWrapper>
+                        <LazyWrapper>
                             <BookingCountriesStatus />
-                        </LazyWrapper> */}
+                        </LazyWrapper>
                         {/* <LazyWrapper>
                             <CheckInOut />
                         </LazyWrapper> */}
