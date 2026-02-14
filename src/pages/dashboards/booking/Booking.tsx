@@ -2,8 +2,8 @@ import LazyWrapper from "@/components/LazyWrapper";
 import CustomSelect from "@/components/shared/CustomSelect";
 import { Card } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
-import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
+const HorizontalBarChart = lazy(() => import("@/pages/chart/line-chart/HorizontalBarChart"))
 const SpendOverview = lazy(() => import("./components/SpendOverview"))
 const CheckInOut = lazy(() => import("./components/CheckInOut"))
 const TransactionHistoryCard = lazy(() => import("../finance/components/TransactionHistoryCard"))
