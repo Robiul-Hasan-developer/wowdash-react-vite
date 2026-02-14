@@ -76,6 +76,11 @@ export const data = {
           url: "/finance",
           circleColor: "bg-green-500",
         },
+        {
+          title: "Booking System",
+          url: "/booking",
+          circleColor: "bg-red-500",
+        },
       ],
     },
     {
