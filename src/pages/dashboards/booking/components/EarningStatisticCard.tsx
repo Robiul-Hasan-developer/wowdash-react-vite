@@ -1,5 +1,5 @@
-import DoubleLineChartTwo from '@/components/charts/double-line-chart-two';
-import CustomSelect from '@/components/shared/custom-select';
+import DoubleLineChart from '@/components/charts/DoubleLineChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const EarningStatisticCard = () => {
@@ -29,7 +29,7 @@ const EarningStatisticCard = () => {
                     </li>
                 </ul>
 
-                <DoubleLineChartTwo colors={["#487FFF", "#FF9F29"]} chartHeight="200" />
+                <DoubleLineChart chartHeight={200} colors={["#487fff", "#ff9f29"]} />
 
             </CardContent>
         </Card>

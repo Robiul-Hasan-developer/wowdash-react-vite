@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
+const EarningStatisticCard = lazy(() => import("./components/EarningStatisticCard"))
 const ExclusiveTravelPackages = lazy(() => import("./components/ExclusiveTravelPackages"))
 const AvailableRoom = lazy(() => import("./components/AvailableRoom"))
 const StatisticsCards = lazy(() => import("./components/StatisticsCards"))
@@ -52,9 +53,9 @@ const Booking = () => {
                         <LazyWrapper>
                             <ExclusiveTravelPackages />
                         </LazyWrapper>
-                        {/* <LazyWrapper>
+                        <LazyWrapper>
                             <EarningStatisticCard />
-                        </LazyWrapper> */}
+                        </LazyWrapper>
                         {/* <LazyWrapper>
                             <TransactionHistory />
                         </LazyWrapper> */}
