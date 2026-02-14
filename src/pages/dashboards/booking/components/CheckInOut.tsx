@@ -4,7 +4,7 @@ import RadialProgress from "./RadialProgress";
 const CheckInOut = () => {
     return (
         <div className="bg-card text-card-foreground flex flex-col gap-6 shadow-sm card h-full rounded-lg border-0 !py-0">
-            <div className="card-body py-12 px-4 flex items-center justify-between gap-24 flex-wrap">
+            <div className="card-body py-12 px-4 flex items-center justify-evenly gap-24 flex-wrap">
                 <RadialProgress
                     percentage={70}
                     color="#45b369"
