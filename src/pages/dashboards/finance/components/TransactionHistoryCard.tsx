@@ -1,5 +1,5 @@
 import CommonLink from "@/components/shared/CommonLink";
-import PaymentHistoryTable from "@/components/tables/PaymentHistoryTable";
+import TransactionHistoryTable from "@/components/tables/TransactionHistoryTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TransactionHistoryCard: React.FC = () => {
@@ -10,14 +10,14 @@ const TransactionHistoryCard: React.FC = () => {
                     {/* Header */}
                     <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
-                            <h6 className="font-bold text-lg mb-0">Payment History</h6>
+                            <h6 className="font-bold text-lg mb-0">Transaction History</h6>
                             <CommonLink />
                         </div>
                     </div>
 
                     {/* Users list */}
-                    <div className="p-6">
-                        <PaymentHistoryTable />
+                    <div className="p-0">
+                        <TransactionHistoryTable />
                     </div>
                 </div>
             </CardContent>
