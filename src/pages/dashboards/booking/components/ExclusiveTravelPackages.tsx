@@ -1,4 +1,4 @@
-import ExclusiveTravelPackagesSlider from "@/components/slider/exclusive-travel-packages-slider";
+import ExclusiveTravelPackagesSlider from "@/components/slider/ExclusiveTravelPackagesSlider";
 
 const ExclusiveTravelPackages = () => {
     return (

@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
+const ExclusiveTravelPackages = lazy(() => import("./components/ExclusiveTravelPackages"))
 const AvailableRoom = lazy(() => import("./components/AvailableRoom"))
 const StatisticsCards = lazy(() => import("./components/StatisticsCards"))
 
@@ -36,7 +37,7 @@ const Booking = () => {
                                         options={["Monthly", "Weekly", "Yearly",]}
                                     />
                                 </div>
-                                <div className="relative text-style label-bold">
+                                <div className="relative text-style label-bold -my-6">
                                     <HorizontalBarChart />
                                 </div>
                             </Card>
@@ -45,34 +46,34 @@ const Booking = () => {
                 </div>
             </div>
 
-            {/* <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                 <div className="col-span-12 md:col-span-6 xl:col-span-8">
                     <div className="flex flex-col gap-6">
                         <LazyWrapper>
                             <ExclusiveTravelPackages />
                         </LazyWrapper>
-                        <LazyWrapper>
+                        {/* <LazyWrapper>
                             <EarningStatisticCard />
-                        </LazyWrapper>
-                        <LazyWrapper>
+                        </LazyWrapper> */}
+                        {/* <LazyWrapper>
                             <TransactionHistory />
-                        </LazyWrapper>
+                        </LazyWrapper> */}
                     </div>
                 </div>
                 <div className="col-span-12 md:col-span-6 xl:col-span-4">
                     <div className="flex flex-col gap-6">
-                        <LazyWrapper>
+                        {/* <LazyWrapper>
                             <BookingCountriesStatus />
-                        </LazyWrapper>
-                        <LazyWrapper>
+                        </LazyWrapper> */}
+                        {/* <LazyWrapper>
                             <CheckInOut />
-                        </LazyWrapper>
-                        <LazyWrapper>
+                        </LazyWrapper> */}
+                        {/* <LazyWrapper>
                             <SpendOverview />
-                        </LazyWrapper>
+                        </LazyWrapper> */}
                     </div>
                 </div>
-            </div> */}
+            </div>
 
         </>
     );
