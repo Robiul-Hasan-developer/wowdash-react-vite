@@ -43,6 +43,7 @@ import MainLayout from "../layouts/MainLayout";
 import Typography from './../pages/components-pages/typography/Typography';
 import GuestRoutes from "./GuestRoutes";
 import ProtectedRoutes from "./ProtectedRoutes";
+const Help = lazy(() => import("@/pages/dashboards/help/Help"));
 const Booking = lazy(() => import("@/pages/dashboards/booking/Booking"));
 const Finance = lazy(() => import("@/pages/dashboards/finance/Finance"));
 const Analytics = lazy(() => import("@/pages/dashboards/analytics/Analytics"));
@@ -123,6 +124,9 @@ export const router = createBrowserRouter([
           },
           {
             path: "booking", element: <Booking />
+          },
+          {
+            path: "help", element: <Help />
           },
           {
             path: "email", element: <Email />
