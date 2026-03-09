@@ -81,6 +81,11 @@ export const data = {
           url: "/booking",
           circleColor: "bg-red-500",
         },
+        {
+          title: "Help Desk",
+          url: "/help",
+          circleColor: "bg-blue-500",
+        },
       ],
     },
     {
