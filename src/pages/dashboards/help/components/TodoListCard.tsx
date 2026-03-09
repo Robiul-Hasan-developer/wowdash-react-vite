@@ -1,5 +1,3 @@
-"use client";
-
 import CommonLink from "@/components/shared/CommonLink";
 import TodoListTable from "@/components/tables/ToDoListTable";
 import { Card, CardContent } from "@/components/ui/card";

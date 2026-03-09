@@ -3,6 +3,8 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
 import PendingSolvedTicketsCard from "./components/PendingSolvedTicketsCard";
+import PerformanceAgentsCard from "./components/PerformanceAgentsCard";
+import ResponseTimeCard from "./components/ResponseTimeCard";
 import TicketStatusCard from "./components/TicketStatusCard";
 import TodoListCard from "./components/TodoListCard";
 import TopPodcasterCard from "./components/TopPodcasterCard";
@@ -60,15 +62,15 @@ const Help = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <PerformanceAgentsCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <ResponseTimeCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
             </div>
 

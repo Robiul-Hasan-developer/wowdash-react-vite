@@ -1,6 +1,6 @@
-import SemiCircleGaugeTwo from '@/components/charts/semi-circle-gauge-two';
-import CustomSelect from '@/components/shared/custom-select';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
+import SemiCircleGauge from '@/pages/chart/circle-chart/SemiCircleGauge';
 import { Clock } from 'lucide-react';
 
 const ResponseTimeCard = () => {
@@ -17,8 +17,8 @@ const ResponseTimeCard = () => {
 
                 <div className="text-center">
                     <div className="relative">
-                        <div className="big-semi-circle-gauge flex justify-center">
-                            <SemiCircleGaugeTwo />
+                        <div className="big-semi-circle-gauge flex justify-center -me-5">
+                            <SemiCircleGauge />
                         </div>
                         <span className="w-[90px] h-[90px] rounded-full bg-blue-100 dark:bg-blue-900 flex justify-center items-center absolute start-[50%] translate-x-[-50%] rtl:translate-x-[50%] top-[50%] text-blue-600">
                             <Clock className="w-[48px] h-[48px]" />

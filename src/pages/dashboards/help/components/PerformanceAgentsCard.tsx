@@ -1,7 +1,5 @@
-"use client";
-
-import CommonLink from "@/components/shared/common-link";
-import PerformanceAgentsTable from "@/components/table/performance-agents-table";
+import CommonLink from "@/components/shared/CommonLink";
+import PerformanceAgentsTable from "@/components/tables/PerformanceAgentsTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const PerformanceAgentsCard = () => {
