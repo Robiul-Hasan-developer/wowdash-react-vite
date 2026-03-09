@@ -12,11 +12,6 @@ import {
     TableRow,
 } from "@/components/ui/table";
 
-interface ActivityStatus {
-    label: string;
-    type: "success" | "warning" | "purple";
-}
-
 interface PerformanceAgentsTableTypeItem {
     customer: {
         name: string;
