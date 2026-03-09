@@ -29,7 +29,6 @@ const PendingSolvedTicketsCard = () => {
                     </li>
                 </ul>
 
-                {/* <PendingSolvedTicketsChart colors={["#f0b100", "#16a34a"]} /> */}
                 <DoubleLineChart chartHeight={270} colors={["#f0b100", "#16a34a"]} />
 
             </CardContent>

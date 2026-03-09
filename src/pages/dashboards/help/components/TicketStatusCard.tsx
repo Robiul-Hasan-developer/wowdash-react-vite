@@ -18,16 +18,16 @@ const TicketStatusCard = () => {
                     <MultipleSeriesChart chartHeight={264} Legend={false} />
                     
                     <div className="flex items-center gap-3 text-sm justify-center mt-6">
-                        <span className="text-neutral-600 font-medium">Pending:
+                        <span className="text-neutral-600 dark:text-neutral-200 font-medium">Pending:
                             <span className="font-semibold text-yellow-600 dark:text-yellow-600 ps-1">32</span>
                         </span>
-                        <span className="text-neutral-600 font-medium">Hold:
+                        <span className="text-neutral-600 dark:text-neutral-200 font-medium">Hold:
                             <span className="font-semibold text-purple-600 dark:text-purple-600 ps-1">10</span>
                         </span>
-                        <span className="text-neutral-600 font-medium">Complete:
+                        <span className="text-neutral-600 dark:text-neutral-200 font-medium">Complete:
                             <span className="font-semibold text-green-600 dark:text-green-600 ps-1">25</span>
                         </span>
-                        <span className="text-neutral-600 font-medium">Cancelled:
+                        <span className="text-neutral-600 dark:text-neutral-200 font-medium">Cancelled:
                             <span className="font-semibold text-red-600 dark:text-red-600 ps-1">28</span>
                         </span>
                     </div>

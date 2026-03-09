@@ -1,7 +1,7 @@
 "use client";
 
-import CommonLink from "@/components/shared/common-link";
-import TodoListTable from "@/components/table/todo-list-table";
+import CommonLink from "@/components/shared/CommonLink";
+import TodoListTable from "@/components/tables/ToDoListTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const TodoListCard = () => {
