@@ -378,3 +378,15 @@
     --sidebar-ring: oklch(0.439 0 0);
   }
 }
+
+
+.gradient-bg-chart::before {
+  @apply absolute w-full h-[106px] blur-[25px] -z-[1] content-[''] bottom-0;
+  background: linear-gradient(
+    90deg,
+    rgba(156, 43, 255, 0.15) 0%,
+    rgba(6, 207, 221, 0.15) 36.35%,
+    rgba(91, 134, 255, 0.15) 70.54%,
+    rgba(253, 164, 58, 0.15) 100%
+  );
+}

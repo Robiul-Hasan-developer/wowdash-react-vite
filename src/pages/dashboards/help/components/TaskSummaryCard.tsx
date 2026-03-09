@@ -1,9 +1,9 @@
-// import TimeCompletionChart from "@/components/charts/time-completion-chart";
 import taskSummaryIcon1 from "@/assets/images/homeThirteen/icon/task-summary-icon1.svg";
 import taskSummaryIcon2 from "@/assets/images/homeThirteen/icon/task-summary-icon2.svg";
 import taskSummaryIcon3 from "@/assets/images/homeThirteen/icon/task-summary-icon3.svg";
 import taskSummaryIcon4 from "@/assets/images/homeThirteen/icon/task-summary-icon4.svg";
 import moonShapeBorder from "@/assets/images/homeThirteen/shape/moon-shape-border.png";
+import SingleLineChart from "@/pages/chart/line-chart/SingleLineChart";
 
 const TaskSummaryCard = () => {
     return (
@@ -75,9 +75,7 @@ const TaskSummaryCard = () => {
                         </div>
                     </div>
                     <div className="">
-                        <div className="apexcharts-tooltip-style-1">
-                            {/* <TimeCompletionChart colors={["#487FFF", "#FF9F29"]} /> */}
-                        </div>
+                        <SingleLineChart />
                     </div>
                 </div>
         </div>
