@@ -2,6 +2,7 @@ import LazyWrapper from "@/components/LazyWrapper";
 import Breadcrumb from "@/layouts/Breadcrumb";
 import HorizontalBarChart from "@/pages/chart/line-chart/HorizontalBarChart";
 import { lazy } from "react";
+import TicketStatusCard from "./components/TicketStatusCard";
 const TaskSummaryCard = lazy(() => import("./components/TaskSummaryCard"))
 
 const Help = () => {
@@ -32,9 +33,9 @@ const Help = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <TicketStatusCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">

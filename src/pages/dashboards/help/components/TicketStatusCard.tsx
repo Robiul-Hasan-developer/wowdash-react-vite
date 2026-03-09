@@ -1,5 +1,5 @@
-import MultipleSeriesChartTwo from '@/components/charts/multiple-series-chart-two';
-import CustomSelect from '@/components/shared/custom-select';
+import MultipleSeriesChart from '@/components/charts/MultipleSeriesChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const TicketStatusCard = () => {
@@ -15,7 +15,8 @@ const TicketStatusCard = () => {
                 </div>
 
                 <div className="p-4">
-                    <MultipleSeriesChartTwo />
+                    <MultipleSeriesChart chartHeight={264} Legend={false} />
+                    
                     <div className="flex items-center gap-3 text-sm justify-center mt-6">
                         <span className="text-neutral-600 font-medium">Pending:
                             <span className="font-semibold text-yellow-600 dark:text-yellow-600 ps-1">32</span>
