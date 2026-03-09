@@ -1,19 +1,18 @@
-import CommonLink from "@/components/shared/common-link";
+import podcasterImage1 from "@/assets/images/homeThirteen/podcaster-img1.png";
+import podcasterImage2 from "@/assets/images/homeThirteen/podcaster-img2.png";
+import podcasterImage3 from "@/assets/images/homeThirteen/podcaster-img3.png";
+import podcasterImage4 from "@/assets/images/homeThirteen/podcaster-img4.png";
+import podcasterImage5 from "@/assets/images/homeThirteen/podcaster-img5.png";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
 import React from "react";
-import podcasterImage1 from "@/public/assets/images/homeThirteen/podcaster-img1.png";
-import podcasterImage2 from "@/public/assets/images/homeThirteen/podcaster-img2.png";
-import podcasterImage3 from "@/public/assets/images/homeThirteen/podcaster-img3.png";
-import podcasterImage4 from "@/public/assets/images/homeThirteen/podcaster-img4.png";
-import podcasterImage5 from "@/public/assets/images/homeThirteen/podcaster-img5.png";
 
 interface Podcaster {
   id: number;
   name: string;
   agentId: string;
-  image: StaticImageData;
+  image: string;
   rating: number;
 }
 
@@ -116,7 +115,7 @@ const TopPodcasterCard: React.FC = () => {
               >
                 {/* Info */}
                 <div className="flex items-center">
-                  <Image
+                  <img
                     src={podcaster.image}
                     alt={podcaster.name}
                     width={40}

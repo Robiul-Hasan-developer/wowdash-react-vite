@@ -5,6 +5,7 @@ import { lazy } from "react";
 import PendingSolvedTicketsCard from "./components/PendingSolvedTicketsCard";
 import TicketStatusCard from "./components/TicketStatusCard";
 import TodoListCard from "./components/TodoListCard";
+import TopPodcasterCard from "./components/TopPodcasterCard";
 const TaskSummaryCard = lazy(() => import("./components/TaskSummaryCard"))
 
 const Help = () => {
@@ -53,9 +54,9 @@ const Help = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <TopPodcasterCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">
