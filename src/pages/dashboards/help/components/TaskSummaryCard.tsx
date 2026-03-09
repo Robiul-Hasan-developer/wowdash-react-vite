@@ -75,7 +75,7 @@ const TaskSummaryCard = () => {
                         </div>
                     </div>
                     <div className="">
-                        <SingleLineChart />
+                        <SingleLineChart colors={["#487FFF", "#FF9F29"]} />
                     </div>
                 </div>
         </div>
