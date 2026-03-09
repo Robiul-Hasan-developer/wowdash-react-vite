@@ -1,5 +1,5 @@
-import PendingSolvedTicketsChart from '@/components/charts/pending-solved-tickets-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import DoubleLineChart from '@/components/charts/DoubleLineChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const PendingSolvedTicketsCard = () => {
@@ -29,7 +29,8 @@ const PendingSolvedTicketsCard = () => {
                     </li>
                 </ul>
 
-                <PendingSolvedTicketsChart colors={["#f0b100", "#16a34a"]} />
+                {/* <PendingSolvedTicketsChart colors={["#f0b100", "#16a34a"]} /> */}
+                <DoubleLineChart chartHeight={270} colors={["#f0b100", "#16a34a"]} />
 
             </CardContent>
         </Card>
