@@ -43,6 +43,7 @@ import MainLayout from "../layouts/MainLayout";
 import Typography from './../pages/components-pages/typography/Typography';
 import GuestRoutes from "./GuestRoutes";
 import ProtectedRoutes from "./ProtectedRoutes";
+const Podcast = lazy(() => import("@/pages/dashboards/podcast/Podcast"));
 const Help = lazy(() => import("@/pages/dashboards/help/Help"));
 const Booking = lazy(() => import("@/pages/dashboards/booking/Booking"));
 const Finance = lazy(() => import("@/pages/dashboards/finance/Finance"));
@@ -127,6 +128,9 @@ export const router = createBrowserRouter([
           },
           {
             path: "help", element: <Help />
+          },
+          {
+            path: "podcast", element: <Podcast />
           },
           {
             path: "email", element: <Email />
