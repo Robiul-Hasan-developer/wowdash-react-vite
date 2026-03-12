@@ -4,7 +4,6 @@ import trendingImg1 from "@/public/assets/images/home-fourteen/trending-img1.png
 import trendingImg2 from "@/public/assets/images/home-fourteen/trending-img2.png";
 import trendingImg3 from "@/public/assets/images/home-fourteen/trending-img3.png";
 import trendingImg4 from "@/public/assets/images/home-fourteen/trending-img4.png";
-import Image, { StaticImageData } from "next/image";
 
 interface PodcastItem {
     id: number;
@@ -58,7 +57,7 @@ const trendingPodcasts: PodcastItem[] = [
     },
 ];
 
-const TrendingPodcastCard = () => {
+const TrendingEpisodesCard = () => {
     return (
         <Card className="card !p-0 border-0 rounded-xl shadow-none">
             <CardContent className="p-0">
@@ -118,4 +117,4 @@ const TrendingPodcastCard = () => {
     );
 };
 
-export default TrendingPodcastCard;
+export default TrendingEpisodesCard;

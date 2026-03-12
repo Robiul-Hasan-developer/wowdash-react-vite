@@ -1,8 +1,5 @@
-"use client";
-
 import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
-import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 
 import podcasterImg1 from "@/public/assets/images/homeThirteen/podcaster-img1.png";

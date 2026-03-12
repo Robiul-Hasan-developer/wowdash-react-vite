@@ -1,5 +1,3 @@
-"use client";
-
 import CommonLink from "@/components/shared/common-link";
 import RecentPurposePlanTable from "@/components/table/RecentPurposePlanTable";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,7 +11,6 @@ const RecentPurposePlanCard = () => {
                     <CommonLink />
                 </div>
 
-                {/* Transactions List */}
                 <div className="">
                     <RecentPurposePlanTable />
                 </div>

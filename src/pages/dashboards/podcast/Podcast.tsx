@@ -1,96 +1,92 @@
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import LoadingSkeleton from "@/components/loading-skeleton";
-import type { Metadata } from "next";
-import { Suspense } from "react";
-import CountriesStatusCard from "../crm/components/countries-status-card";
+import LazyWrapper from "@/components/LazyWrapper";
+import Breadcrumb from "@/layouts/Breadcrumb";
+import CountriesStatusCard from "../crm/components/CountriesStatusCard";
 import AudienceStatsCard from "./components/AudienceStatsCard";
 import PodcastEarningsOverviewCard from "./components/PodcastEarningsOverviewCard";
 import PodcastTopCategoriesCard from "./components/PodcastTopCategoriesCard";
-import RecentlyPlayedCard from "./components/recently-played-card";
-import RecentPurposePlanCard fro./components/RecentlyPlayedCardCard";
+import RecentlyPlayedCard from "./components/RecentlyPlayedCard";
+import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
 import TopPodcasterCard from "./components/TopPodcasterCard";
 import TotalPodcasts from "./components/TotalPodcasts";
 import TotalUsers from "./components/TotalUsers";
 import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
-
-const metadata: Metadata = {
-    title: "Podcast Dashboard | Manage Shows, Episodes & Analytics - WowDash Admin Panel",
-    description:
-        "Easily manage podcast shows, episodes, guests, and performance analytics with the Podcast Dashboard in WowDash Admin Template. Built using Next.js, Tailwind CSS, and ShadCN UI for seamless performance and modern design.",
-};
+// const TaskSummaryCard = lazy(() => import("./components/TaskSummaryCard"))
 
 const Podcast = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Podcast" text="Podcast" />
+            <Breadcrumb title="Podcast Desk" text="Podcast Desk" />
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                
+
                 <div className="col-span-12 lg:col-span-5 2xl:col-span-4">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                         <div className="col-span-12 md:col-span-6 lg:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TotalUsers />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                         <div className="col-span-12 md:col-span-6 lg:col-span-12">
-                            <Suspense fallback={<LoadingSkeleton />}>
+                            <LazyWrapper>
                                 <TotalPodcasts />
-                            </Suspense>
+                            </LazyWrapper>
                         </div>
                     </div>
                 </div>
 
                 <div className="col-span-12 lg:col-span-7 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <AudienceStatsCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <PodcastEarningsOverviewCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RecentlyPlayedCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 2xl:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <RecentPurposePlanCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <CountriesStatusCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
-                
+
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TrendingEpisodesCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
-                
+
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <PodcastTopCategoriesCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
-                
+
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <Suspense fallback={<LoadingSkeleton />}>
+                    <LazyWrapper>
                         <TopPodcasterCard />
-                    </Suspense>
+                    </LazyWrapper>
                 </div>
 
             </div>
+
+
         </>
     );
 };
+
 export default Podcast;

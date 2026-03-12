@@ -1,4 +1,3 @@
-
 import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
 import podcastImage1 from "@/public/assets/images/home-fourteen/podcast-img1.png";
@@ -6,7 +5,6 @@ import podcastImage2 from "@/public/assets/images/home-fourteen/podcast-img2.png
 import podcastImage3 from "@/public/assets/images/home-fourteen/podcast-img3.png";
 import podcastImage4 from "@/public/assets/images/home-fourteen/podcast-img4.png";
 import { Play } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
 
 interface Podcast {
   id: number;
