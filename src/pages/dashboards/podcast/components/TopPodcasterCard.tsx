@@ -2,11 +2,11 @@ import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 
-import podcasterImg1 from "@/public/assets/images/homeThirteen/podcaster-img1.png";
-import podcasterImg2 from "@/public/assets/images/homeThirteen/podcaster-img2.png";
-import podcasterImg3 from "@/public/assets/images/homeThirteen/podcaster-img3.png";
-import podcasterImg4 from "@/public/assets/images/homeThirteen/podcaster-img4.png";
-import podcasterImg5 from "@/public/assets/images/homeThirteen/podcaster-img5.png";
+import podcasterImg1 from "@/assets/images/homeThirteen/podcaster-img1.png";
+import podcasterImg2 from "@/assets/images/homeThirteen/podcaster-img2.png";
+import podcasterImg3 from "@/assets/images/homeThirteen/podcaster-img3.png";
+import podcasterImg4 from "@/assets/images/homeThirteen/podcaster-img4.png";
+import podcasterImg5 from "@/assets/images/homeThirteen/podcaster-img5.png";
 
 interface Podcaster {
     id: number;

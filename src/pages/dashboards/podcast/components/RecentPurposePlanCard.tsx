@@ -1,5 +1,5 @@
-import CommonLink from "@/components/shared/common-link";
-import RecentPurposePlanTable from "@/components/table/RecentPurposePlanTable";
+import CommonLink from "@/components/shared/CommonLink";
+import RecentPurposePlanTable from "@/components/tables/RecentPurposePlanTable";
 import { Card, CardContent } from "@/components/ui/card";
 
 const RecentPurposePlanCard = () => {

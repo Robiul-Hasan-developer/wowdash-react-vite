@@ -1,16 +1,16 @@
-import CommonLink from "@/components/shared/common-link";
+import podcastImage1 from "@/assets/images/home-fourteen/podcast-img1.png";
+import podcastImage2 from "@/assets/images/home-fourteen/podcast-img2.png";
+import podcastImage3 from "@/assets/images/home-fourteen/podcast-img3.png";
+import podcastImage4 from "@/assets/images/home-fourteen/podcast-img4.png";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
-import podcastImage1 from "@/public/assets/images/home-fourteen/podcast-img1.png";
-import podcastImage2 from "@/public/assets/images/home-fourteen/podcast-img2.png";
-import podcastImage3 from "@/public/assets/images/home-fourteen/podcast-img3.png";
-import podcastImage4 from "@/public/assets/images/home-fourteen/podcast-img4.png";
 import { Play } from "lucide-react";
 
 interface Podcast {
   id: number;
   title: string;
   host: string;
-  image: StaticImageData | string;
+  image: string;
 }
 
 const podcasts: Podcast[] = [
@@ -56,7 +56,7 @@ const RecentlyPlayedCard = () => {
             {podcasts.map((podcast) => (
               <div key={podcast.id} className="group">
                 <div className="rounded-lg overflow-hidden relative">
-                  <Image
+                  <img
                     src={podcast.image}
                     alt={podcast.title}
                     width={300}
