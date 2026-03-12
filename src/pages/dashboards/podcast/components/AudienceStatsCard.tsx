@@ -1,5 +1,5 @@
-import AudienceStatsChart from '@/components/charts/audience-stats-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import ThreeBarChart from '@/components/charts/ThreeBarChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AudienceStatsCard = () => {
@@ -23,8 +23,8 @@ const AudienceStatsCard = () => {
                     </li>
                 </ul>
 
-                <div className="-mx-6">
-                    <AudienceStatsChart />
+                <div className="-mx-4">
+                    <ThreeBarChart />
                 </div>
 
             </CardContent>

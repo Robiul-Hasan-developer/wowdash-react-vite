@@ -7,6 +7,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 // import RecentlyPlayedCard from "./components/RecentlyPlayedCard";
 // import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
 // import TopPodcasterCard from "./components/TopPodcasterCard";
+import AudienceStatsCard from "./components/AudienceStatsCard";
 import TotalPodcasts from "./components/TotalPodcasts";
 import TotalUsers from "./components/TotalUsers";
 // import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
@@ -14,7 +15,7 @@ import TotalUsers from "./components/TotalUsers";
 const Podcast = () => {
     return (
         <>
-            <Breadcrumb title="Podcast Desk" text="Podcast Desk" />
+            <Breadcrumb title="Podcast" text="Podcast" />
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-5 2xl:col-span-4">
@@ -33,9 +34,9 @@ const Podcast = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-7 2xl:col-span-8">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <AudienceStatsCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
