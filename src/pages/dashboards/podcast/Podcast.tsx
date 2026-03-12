@@ -13,6 +13,7 @@ import PodcastEarningsOverviewCard from "./components/PodcastEarningsOverviewCar
 import PodcastTopCategoriesCard from "./components/PodcastTopCategoriesCard";
 import RecentlyPlayedCard from "./components/RecentlyPlayedCard";
 import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
+import TopPodcasterCard from "./components/TopPodcasterCard";
 import TotalPodcasts from "./components/TotalPodcasts";
 import TotalUsers from "./components/TotalUsers";
 import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
@@ -82,9 +83,9 @@ const Podcast = () => {
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <TopPodcasterCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
             </div>

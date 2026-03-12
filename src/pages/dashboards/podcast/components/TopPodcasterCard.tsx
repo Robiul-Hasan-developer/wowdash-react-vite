@@ -1,4 +1,3 @@
-import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 
@@ -7,12 +6,13 @@ import podcasterImg2 from "@/assets/images/homeThirteen/podcaster-img2.png";
 import podcasterImg3 from "@/assets/images/homeThirteen/podcaster-img3.png";
 import podcasterImg4 from "@/assets/images/homeThirteen/podcaster-img4.png";
 import podcasterImg5 from "@/assets/images/homeThirteen/podcaster-img5.png";
+import CommonLink from "@/components/shared/CommonLink";
 
 interface Podcaster {
     id: number;
     name: string;
     category: string;
-    image: StaticImageData | string;
+    image: string;
 }
 
 const podcastersData: Podcaster[] = [
@@ -52,7 +52,7 @@ const TopPodcasterCard = () => {
                         >
                             {/* Left Side */}
                             <div className="flex items-center">
-                                <Image
+                                <img
                                     src={podcaster.image}
                                     alt={podcaster.name}
                                     width={40}

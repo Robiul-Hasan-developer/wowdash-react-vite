@@ -86,6 +86,11 @@ export const data = {
           url: "/help",
           circleColor: "bg-blue-500",
         },
+        {
+          title: "Podcast",
+          url: "/podcast",
+          circleColor: "bg-violet-500",
+        },
       ],
     },
     {
