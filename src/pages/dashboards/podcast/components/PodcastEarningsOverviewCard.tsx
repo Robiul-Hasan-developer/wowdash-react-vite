@@ -1,5 +1,5 @@
-import PodcastEarningsOverviewChart from '@/components/charts/podcast-earnings-overview-chart';
-import CustomSelect from '@/components/shared/custom-select';
+import AreaWithoutLineChart from '@/components/charts/AreaWithoutLineChart';
+import CustomSelect from '@/components/shared/CustomSelect';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronUp } from 'lucide-react';
 
@@ -28,8 +28,8 @@ const PodcastEarningsOverviewCard = () => {
                     </li>
                 </ul>
 
-                <div className="-ms-6">
-                    <PodcastEarningsOverviewChart />
+                <div className="-ms-4">
+                    <AreaWithoutLineChart />
                 </div>
 
             </CardContent>

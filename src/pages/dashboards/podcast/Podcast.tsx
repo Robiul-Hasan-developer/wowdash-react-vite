@@ -8,6 +8,7 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 // import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
 // import TopPodcasterCard from "./components/TopPodcasterCard";
 import AudienceStatsCard from "./components/AudienceStatsCard";
+import PodcastEarningsOverviewCard from "./components/PodcastEarningsOverviewCard";
 import TotalPodcasts from "./components/TotalPodcasts";
 import TotalUsers from "./components/TotalUsers";
 // import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
@@ -40,9 +41,9 @@ const Podcast = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <PodcastEarningsOverviewCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">
