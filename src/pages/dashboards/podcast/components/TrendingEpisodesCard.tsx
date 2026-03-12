@@ -2,7 +2,7 @@ import trendingImg1 from "@/assets/images/home-fourteen/trending-img1.png";
 import trendingImg2 from "@/assets/images/home-fourteen/trending-img2.png";
 import trendingImg3 from "@/assets/images/home-fourteen/trending-img3.png";
 import trendingImg4 from "@/assets/images/home-fourteen/trending-img4.png";
-import CustomSelect from "@/components/shared/custom-select";
+import CustomSelect from "@/components/shared/CustomSelect";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface PodcastItem {
@@ -11,7 +11,7 @@ interface PodcastItem {
     host: string;
     duration: string;
     views: string;
-    image: StaticImageData | string;
+    image: string;
 }
 
 const trendingPodcasts: PodcastItem[] = [
@@ -77,7 +77,7 @@ const TrendingEpisodesCard = () => {
                         >
                             {/* Left: Podcast info */}
                             <div className="flex items-center">
-                                <Image
+                                <img
                                     src={podcast.image}
                                     alt={podcast.title}
                                     width={40}

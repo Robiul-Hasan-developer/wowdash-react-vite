@@ -1,5 +1,5 @@
-import PodcastTopCategoriesChart from "@/components/charts/podcast-top-categories-chart";
-import CommonLink from "@/components/shared/common-link";
+import DonutFiveSeriesChart from "@/components/charts/DonutFiveSeriesChart";
+import CommonLink from "@/components/shared/CommonLink";
 import { Card, CardContent } from "@/components/ui/card";
 
 
@@ -14,7 +14,7 @@ const PodcastTopCategoriesCard = () => {
 
                 <div className="card-body py-[32px] px-6 mt-5 flex items-center justify-between">
                     <div className="">
-                        <PodcastTopCategoriesChart />
+                        <DonutFiveSeriesChart />
                     </div>
                     <ul className="flex flex-col gap-3">
                         <li>

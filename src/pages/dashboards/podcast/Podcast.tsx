@@ -7,12 +7,15 @@ import Breadcrumb from "@/layouts/Breadcrumb";
 // import RecentlyPlayedCard from "./components/RecentlyPlayedCard";
 // import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
 // import TopPodcasterCard from "./components/TopPodcasterCard";
+import CountriesStatusCard from "../crm/components/CountriesStatusCard";
 import AudienceStatsCard from "./components/AudienceStatsCard";
 import PodcastEarningsOverviewCard from "./components/PodcastEarningsOverviewCard";
+import PodcastTopCategoriesCard from "./components/PodcastTopCategoriesCard";
 import RecentlyPlayedCard from "./components/RecentlyPlayedCard";
 import RecentPurposePlanCard from "./components/RecentPurposePlanCard";
 import TotalPodcasts from "./components/TotalPodcasts";
 import TotalUsers from "./components/TotalUsers";
+import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
 // import TrendingEpisodesCard from "./components/TrendingEpisodesCard";
 
 const Podcast = () => {
@@ -61,21 +64,21 @@ const Podcast = () => {
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <CountriesStatusCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <TrendingEpisodesCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    {/* <LazyWrapper>
+                    <LazyWrapper>
                         <PodcastTopCategoriesCard />
-                    </LazyWrapper> */}
+                    </LazyWrapper>
                 </div>
 
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
